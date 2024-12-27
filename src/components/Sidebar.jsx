@@ -29,6 +29,7 @@ import privacy from '../assets/images/sidebar/privacy.svg';
 import privacyActive from '../assets/images/sidebar/privacyActive.svg';
 
 const Sidebar = ({ isCloseSidebar, getTitle }) => {
+    
     const location = useLocation();  // Get the current location (pathname)
     const [closeMenu, setCloseMenu] = useState(false);
 

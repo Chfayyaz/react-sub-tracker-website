@@ -6,6 +6,7 @@ import { Outlet } from 'react-router-dom';
 const Layout = () => {
   const [isSidebar, setIsSidebar] = useState(false);
   const [headerTitle, setHeaderTitle] = useState('');
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 991);
 
   const isCloseSidebar = (props) => {
     setIsSidebar(props);
@@ -18,11 +19,7 @@ const Layout = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.matchMedia('(max-width: 991px)').matches) {
-        console.log("Small screen - tablet or mobile");
-      } else {
-        console.log("Large screen - desktop");
-      }
+      setIsSmallScreen(window.innerWidth <= 991);
     };
 
     // Initial check
@@ -40,11 +37,13 @@ const Layout = () => {
   return (
     <div className='container-fluid'>
       <div className='row'>
-        <div className={`${isSidebar ? "col-1" : "col-3"} `}>
-          <Sidebar isCloseSidebar={isCloseSidebar} getTitle={getTitle} />
-        </div>
-        <div className={`${isSidebar ? "col-11" : "col-9"} ps-5`}>
-          <Header title={headerTitle} />
+        {!isSmallScreen && (
+          <div className={` ${isSidebar ? "col-1" : "col-3"} `}>
+            <Sidebar isCloseSidebar={isCloseSidebar} getTitle={getTitle} />
+          </div>
+        )}
+        <div className={`${isSmallScreen ? "col-12" : isSidebar ? "col-11" : "col-9"} px-5`}>
+          <Header title={headerTitle} isShowIcon={isSmallScreen} />
           <div>
             <Outlet />
           </div>

@@ -15,7 +15,6 @@ import arrowDown from '../assets/images/header/arrowDown.svg';
 import avatar from '../assets/images/header/avatar.png';
 import setting from '../assets/images/header/setting.svg';
 import logout from '../assets/images/header/logout.svg';
-
 import profile from '../assets/images/header/profile.svg';
 import arrowRight from '../assets/images/header/arrowRight.svg'
 import language from '../assets/images/header/language.svg';
