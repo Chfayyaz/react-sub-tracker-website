@@ -24,7 +24,7 @@ html {
    color: #758AFF;
 } 
 .text-color-red {
-   color: #A41D30;
+   color: #A41D30 !important;
 }
 .calendar-card {
    background-color: #F1F1FF;

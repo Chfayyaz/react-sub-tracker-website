@@ -27,11 +27,15 @@ import services from '../assets/images/sidebar/services.svg';
 import servicesActive from '../assets/images/sidebar/servicesActive.svg';
 import privacy from '../assets/images/sidebar/privacy.svg';
 import privacyActive from '../assets/images/sidebar/privacyActive.svg';
+import logout from '../assets/images/sidebar/logout.svg';
+import sidebarBanner from '../assets/images/sidebar/sidebarBanner.png';
+
+
 
 const Sidebar = ({ isCloseSidebar, getTitle }) => {
+
     const location = useLocation();  // Get the current location (pathname)
     const [closeMenu, setCloseMenu] = useState(false);
-
     const handleCloseMenu = () => {
         const newState = !closeMenu;
         setCloseMenu(newState);
@@ -39,14 +43,13 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
             isCloseSidebar(newState);
         }
     };
-
     const renderMenuItem = (path, iconActive, iconInactive, label) => {
         const isActive = location.pathname === path;
         return (
             <li className={classNames({ active: isActive })} >
-                    <img src={isActive ? iconActive : iconInactive} alt={label} />
-                <Link to={path} className="text-decoration-none" onClick={() => getTitle(label)}>
-                {label}
+                <img src={isActive ? iconActive : iconInactive} alt={label} />
+                <Link to={path} className={`text-decoration-none ${label === "Logout" && "text-color-red"}`} onClick={() => getTitle(label)}>
+                    {label}
                 </Link>
             </li>
         );
@@ -74,6 +77,14 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
                     {renderMenuItem("/contactUs", headPhoneActive, headPhone, "Contact & Support")}
                     {renderMenuItem("/term-of-services", servicesActive, services, "Terms of Service")}
                     {renderMenuItem("/privacy-policy", privacyActive, privacy, "Privacy Policy")}
+                   <div >
+                    {!closeMenu &&  <img src={sidebarBanner} alt="" width={"80%" } className="ms-4 my-3"/>}
+                  
+                   </div>
+                   
+                    {renderMenuItem("/", logout, logout, "Logout")}
+
+
                 </ul>
             </div>
         </div>
