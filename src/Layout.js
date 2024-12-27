@@ -21,14 +21,8 @@ const Layout = () => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 991);
     };
-
-    // Initial check
     handleResize();
-
-    // Add event listener
     window.addEventListener('resize', handleResize);
-
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
