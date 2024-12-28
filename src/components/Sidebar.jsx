@@ -64,6 +64,7 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
             </div>
 
             <div className={classNames("contentsContainer", { active: closeMenu })}>
+            
                 <ul>
                     {renderMenuItem("/", DashboardActive, Dashboard, "Dashboard")}
                     {renderMenuItem("/budget-spending", spendingActive, spending, "Budget & Spending")}
