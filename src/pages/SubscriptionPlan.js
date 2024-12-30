@@ -11,11 +11,8 @@ import subscriptionArrowRightWhite from '../assets/images/subscriptionArrowRight
 
 
 const SubscriptionPlan = () => {
-
-
-
   return (
-    <>
+    < div className='container'>
       <p className='text-color  fs-20 fw-400'>Choose the Plan That Fits Your Subscription Needs</p>
 
       <div className="row bg-white border rounded">
@@ -77,7 +74,7 @@ const SubscriptionPlan = () => {
 
 
 
-    </>
+    </div>
   );
 };
 

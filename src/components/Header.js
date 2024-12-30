@@ -53,7 +53,7 @@ const Header = ({ title, isShowIcon }) => {
   };
   return (
 
-    <>
+    <div className='container'>
 
       <div className='d-flex justify-content-between align-item-center mt-4'>
 
@@ -93,7 +93,7 @@ const Header = ({ title, isShowIcon }) => {
           </div>
         </OffcanvasBody>
       </Offcanvas>
-    </>
+    </div>
 
   );
 };

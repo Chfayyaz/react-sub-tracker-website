@@ -28,9 +28,9 @@ const Subscription = () => {
 
 
   return (
-    <>
+    <div className='container'>
       <p className='text-color  fs-20 fw-400'>Here you can view and manage all your subscriptions</p>
-      <div className='d-flex justify-content-end gap-2'>
+      <div className='d-flex justify-content-end gap-2 flex-wrap'>
         <Button className='btn-outline-color fw-500 fs-15 py-2' outline onClick={() => setIsAddCategory(!isAddCategory)} > <span className='fw-600 fs-15'>+</span> Add Category</Button>
         <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><span className='fw-600 fs-15'>+</span> Add Subscription</Button>
       </div>
@@ -307,7 +307,7 @@ const Subscription = () => {
         </ModalBody>
 
       </Modal>
-    </>
+    </div>
   );
 };
 

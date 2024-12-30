@@ -47,11 +47,11 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
         const isActive = location.pathname === path;
         return (
             <li className={classNames({ active: isActive })} >
-                 <Link to={path} onClick={() => getTitle(label)}>
-                 <img src={isActive ? iconActive : iconInactive} alt={label} />
+                <Link to={path} onClick={() => getTitle(label)}>
+                    <img src={isActive ? iconActive : iconInactive} alt={label} />
                 </Link>
-               
-                <Link to={path} className={`text-decoration-none sidebar-text ${label === "Logout" && "text-color-red"}`} onClick={() => getTitle(label)}>
+
+                <Link to={path} className={`text-decoration-none sidebar-text fs-18 fw-500 ${label === "Logout" && "text-color-red"}`} onClick={() => getTitle(label)}>
                     {label}
                 </Link>
             </li>
@@ -60,9 +60,9 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
 
     return (
         <div className={classNames("sidebar border", { active: closeMenu })}>
-            <div className={classNames("logoContainer", { active: closeMenu })}>
-                <img src={Icon} alt="icon" className="logo" />
-                <h2 className="title">SubTrackr</h2>
+            <div className={classNames("logoContainer mt-3", { active: closeMenu })}>
+                <img src={Icon} alt="icon" className="logo" width={60} height={60} />
+                <h2 className="title  fw-600">SubTrackr</h2>
             </div>
             <div className={classNames("toggleIcon", { active: closeMenu })} onClick={handleCloseMenu}>
                 <img src={closeMenu ? sidebarOpen : sidebarClose} width={30} height={30} alt={closeMenu ? "open" : "close"} />
@@ -71,20 +71,27 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
             <div className={classNames("contentsContainer", { active: closeMenu })}>
                 <ul>
                     {renderMenuItem("/", DashboardActive, Dashboard, "Dashboard")}
-                    {renderMenuItem("/budget-spending", spendingActive, spending, "Budget & Spending")}
-                    {renderMenuItem("/calendar", calendarActive, calendar, "Calendar")}
+                    <hr className="w-100 " />
+                    {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18 ">Subscription Management</p> }
                     {renderMenuItem("/subscription", subscriptionActive, subscription, "Subscriptions")}
                     {renderMenuItem("/subscription-plan", subscriptionPlanActive, subscriptionPlan, "Subscription Plans")}
+                    <hr className="w-100 " />
+                    {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18">Tracking & Analytics</p> }
+
+                    {renderMenuItem("/budget-spending", spendingActive, spending, "Budget & Spending")}
+                    {renderMenuItem("/calendar", calendarActive, calendar, "Calendar")}
+                    <hr className="w-100 " />
+                    {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18">My Subtrackr Plan</p> }
                     {renderMenuItem("/manage-payment", paymentActive, payment, "Manage Payment")}
                     {renderMenuItem("/FAQs", FAQsActive, FAQs, "FAQs")}
                     {renderMenuItem("/contactUs", headPhoneActive, headPhone, "Contact & Support")}
                     {renderMenuItem("/term-of-services", servicesActive, services, "Terms of Service")}
                     {renderMenuItem("/privacy-policy", privacyActive, privacy, "Privacy Policy")}
-                   <div >
-                    {!closeMenu &&  <img src={sidebarBanner} alt="" width={"80%" } className="ms-4 my-3"/>}
-                  
-                   </div>
-                   
+                    <div >
+                        {!closeMenu && <img src={sidebarBanner} alt="" width={"80%"} className="ms-4 my-3" />}
+
+                    </div>
+
                     {renderMenuItem("/", logout, logout, "Logout")}
 
 

@@ -96,7 +96,7 @@ const PaymentScheduleCalendar = () => {
   };
 
   return (
-    <>
+    <div className='container'>
       <div className='d-flex justify-content-between '>
         <p className='text-color  fs-20 fw-400'>Stay on track with our subscription scheduling feature, ensuring timely <br /> payments and effortless management.</p>
         <div className='mt-4' >
@@ -115,7 +115,7 @@ const PaymentScheduleCalendar = () => {
             <div>
               <h3 id="current-date " className='dark-purple'>{today.getDate()} {monthNames[currentMonth]}, {currentYear} <sub className="ps-3 text-color fs-13">Today</sub></h3>
             </div>
-            <div>
+            <div className='d-flex align-item-center text-end'>
               <img src={leftArrow} alt='' width={20} height={25} onClick={prevWeek} className='cursor-pointer' />
               <img src={rightArrow} alt='' width={20} height={25} onClick={nextWeek} className='cursor-pointer' />
             </div>
@@ -164,29 +164,29 @@ const PaymentScheduleCalendar = () => {
         </div>
       </div>
       <div className='row mb-5'>
-        <div className='col-6 col-md-4 col-lg-3'>
+        <div className='col-12 col-md-4 col-lg-3'>
           <div className='ps-4 pe-5 py-3 calendar-card rounded'>
             <img src={lockIcon} alt='icon' width={40} height={40} />
             <p className='fs-16 fw-500 mt-5 mb-1'>Tresorly</p>
             <h2 className='fs-22 fw-600'>$24.98</h2>
           </div>
         </div>
-        <div className='col-6 col-md-4 col-lg-3'>
-          <div className='ps-4 pe-5 py-3 calendar-card rounded'>
+        <div className='col-12 col-md-4 col-lg-3'>
+          <div className='ps-4 pe-5 py-3 calendar-card rounded mt-4 mt-md-0'>
             <img src={ptarp} alt='icon' width={40} height={40} />
             <p className='fs-16 fw-500 mt-5 mb-1'>Profilio</p>
             <h2 className='fs-22 fw-600'>$18.99</h2>
           </div>
         </div>
-        <div className='col-6 col-md-4 col-lg-3 '>
-          <div className='ps-4 pe-5 py-3 calendar-card rounded mt-4 mt-lg-0'>
+        <div className='col-12 col-md-4 col-lg-3 '>
+          <div className='ps-4 pe-5 py-3 calendar-card rounded mt-4 mt-md-0'>
             <img src={icon} alt='icon' width={40} height={40} />
             <p className='fs-16 fw-500 mt-5 mb-1'>SignNTrack</p>
             <h2 className='fs-22 fw-600'>$5.99</h2>
           </div>
         </div>
       </div>
-    </>
+      </div>
 
   );
 };

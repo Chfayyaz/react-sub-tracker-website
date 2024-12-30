@@ -107,7 +107,16 @@ html {
 .cursor-pointer {
    cursor: pointer;
 }
-
+.rounded-circle-number {
+   width: 50px; 
+   height: 50px; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   font-size: 1.25rem; 
+ }
+ 
  .fs-8 {
     font-size: 8px !important;
  }

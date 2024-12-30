@@ -71,13 +71,8 @@ const SpotifySubscription = () => {
     setRenewalDate(selectedDate);
     setShowRenewalDateCalendar(false); // Close the calendar after selection
   };
-
-  
-
-
-
   return (
-    <>
+    <div className='container'>
       <div className='d-flex justify-content-start gap-2'>
         <img src={breadcrumbHome} width={20} height={20} alt='home' className='cursor-pointer' />
         <img src={breadcrumbArrowRight} width={20} height={20} alt='rightArrow' />
@@ -93,14 +88,14 @@ const SpotifySubscription = () => {
       <Form>
         <div className='d-flex justify-content-center my-4'>
           <div className='text-center border rounded px-5 py-4 bg-light'>
-              <img src={subscriptionIcon} alt='icon' width={70} height={70} />
+            <img src={subscriptionIcon} alt='icon' width={70} height={70} />
             <h2 className='fs-20 fw-600 mt-2'>SignNTrack</h2>
             <p className='text-muted fs-14 fw-500'> $5.99/month</p>
           </div>
         </div>
 
         <div className='row'>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="name" className='fs-14 fw-500'>
                 Name
@@ -116,7 +111,7 @@ const SpotifySubscription = () => {
               />
             </FormGroup>
           </div>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="name" className='fs-14 fw-500'>
                 Category
@@ -151,7 +146,7 @@ const SpotifySubscription = () => {
 
         </div>
         <div className='row'>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="startDate" className='fs-14 fw-500'>
                 Start Date
@@ -185,7 +180,7 @@ const SpotifySubscription = () => {
               </div>
             </FormGroup>
           </div>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="renewalDate" className='fs-14 fw-500'>
                 Renewal Date
@@ -221,7 +216,7 @@ const SpotifySubscription = () => {
           </div>
         </div>
         <div className='row'>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="name" className='fs-14 fw-500'>
                 Billing cycle
@@ -237,7 +232,7 @@ const SpotifySubscription = () => {
               />
             </FormGroup>
           </div>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="price" className='fs-14 fw-500'>
                 Price
@@ -253,7 +248,7 @@ const SpotifySubscription = () => {
 
         </div>
         <div className='row'>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="name" className='fs-14 fw-500'>
                 Reminder
@@ -273,67 +268,75 @@ const SpotifySubscription = () => {
 
       </Form>
       <h2 className='fs-20 fw-600 mt-1'>Documents</h2>
-      <div className='row '>
-        
-        <div className='col-1 text-start text-md-center text-lg-end '>
-          <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
-        </div>
-        <div className='col-4 gx-0'>
-          <div>
-            <p className='fs-12 text-muted m-0'>Tech design requirements.pdf</p>
-            <p className='fs-12 text-muted m-0'>200 KB</p>
-           
+      <div className='row mt-4 '>
+        <div className='col-12  col-md-6'>
+          <div className='row border rounded p-2 mb-4 mx-1'>
+            <div className='col-3 col-md-3 col-lg-2 text-start text-sm-center text-md-center text-lg-center mt-md-0 mt-3'>
+              <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
+            </div>
+            <div className='col-6 col-md-6 col-lg-8 gx-0 mt-md-0 mt-3'>
+              <div>
+                <p className='fs-12 text-muted m-0'>Tech design requirements.pdf</p>
+                <p className='fs-12 text-muted m-0'>200 KB</p>
+              </div>
+            </div>
+            <div className='col-3 col-md-3 col-lg-2 text-end mt-md-0 mt-3'>
+              <img src={documentDelete} alt='icon' />
+            </div>
           </div>
         </div>
-        <div className='col-1 text-end'>
-          <img src={documentDelete} alt='icon'  />
-        </div>
-        <div className='col-1 text-start text-md-center text-lg-end '>
-          <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
-        </div>
-        <div className='col-4 gx-0'>
-          <div>
-            <p className='fs-12 text-muted m-0'>Tech design requirements.pdf</p>
-            <p className='fs-12 text-muted m-0'>200 KB</p>
-           
+        <div className='col-12  col-md-6'>
+          <div className='row border rounded p-2 mb-4 mx-1'>
+            <div className='col-3 col-md-3 col-lg-2 text-start text-sm-center text-md-center text-lg-center mt-md-0 mt-3'>
+              <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
+            </div>
+            <div className='col-6 col-md-6 col-lg-8 gx-0 mt-md-0 mt-3'>
+              <div>
+                <p className='fs-12 text-muted m-0'>Tech design requirements.pdf</p>
+                <p className='fs-12 text-muted m-0'>200 KB</p>
+              </div>
+            </div>
+            <div className='col-3 col-md-3 col-lg-2 text-end mt-md-0 mt-3'>
+              <img src={documentDelete} alt='icon' />
+            </div>
           </div>
-        </div>
-        <div className='col-1 text-end'>
-          <img src={documentDelete} alt='icon'  />
         </div>
       </div>
-      <div className='row mt-3'>
-        
-        <div className='col-1 text-start text-md-center text-lg-end '>
-          <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
-        </div>
-        <div className='col-4 gx-0'>
-          <div>
-            <p className='fs-12 text-muted m-0'>Tech design requirements.pdf</p>
-            <p className='fs-12 text-muted m-0'>200 KB</p>
-           
+      <div className='row mt-4 '>
+        <div className='col-12  col-md-6'>
+          <div className='row border rounded p-2 mb-4 mx-1'>
+            <div className='col-3 col-md-3 col-lg-2 text-start text-sm-center text-md-center text-lg-center mt-md-0 mt-3'>
+              <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
+            </div>
+            <div className='col-6 col-md-6 col-lg-8 gx-0 mt-md-0 mt-3'>
+              <div>
+                <p className='fs-12 text-muted m-0'>Tech design requirements.pdf</p>
+                <p className='fs-12 text-muted m-0'>200 KB</p>
+              </div>
+            </div>
+            <div className='col-3 col-md-3 col-lg-2 text-end mt-md-0 mt-3'>
+              <img src={documentDelete} alt='icon' />
+            </div>
           </div>
         </div>
-        <div className='col-1 text-end'>
-          <img src={documentDelete} alt='icon'  />
-        </div>
-        <div className='col-1 text-start text-md-center text-lg-end '>
-          <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
-        </div>
-        <div className='col-4 gx-0'>
-          <div>
-            <p className='fs-12 text-muted m-0'>Tech design requirements.pdf</p>
-            <p className='fs-12 text-muted m-0'>200 KB</p>
-           
+        <div className='col-12  col-md-6'>
+          <div className='row border rounded p-2 mb-4 mx-1'>
+            <div className='col-3 col-md-3 col-lg-2 text-start text-sm-center text-md-center text-lg-center mt-md-0 mt-3'>
+              <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
+            </div>
+            <div className='col-6 col-md-6 col-lg-8 gx-0 mt-md-0 mt-3'>
+              <div>
+                <p className='fs-12 text-muted m-0'>Tech design requirements.pdf</p>
+                <p className='fs-12 text-muted m-0'>200 KB</p>
+              </div>
+            </div>
+            <div className='col-3 col-md-3 col-lg-2 text-end mt-md-0 mt-3'>
+              <img src={documentDelete} alt='icon' />
+            </div>
           </div>
-        </div>
-        <div className='col-1 text-end'>
-          <img src={documentDelete} alt='icon'  />
         </div>
       </div>
-
-
-      <div className='d-flex justify-content-end gap-2 my-5'>
+      <div className='d-flex justify-content-end gap-2 my-5 flex-wrap'>
         <Button className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
         <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5'  > Save</Button>
       </div>
@@ -346,7 +349,7 @@ const SpotifySubscription = () => {
         </ModalBody>
 
       </Modal>
-    </>
+    </div >
   );
 };
 
