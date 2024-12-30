@@ -98,7 +98,7 @@
     transition: 0.5s all;
     .logoContainer.active h2.title,
     .profileContainer .profileContents,
-    .contentsContainer a {
+    .contentsContainer .sidebar-text {
         opacity: 0;
     }
 

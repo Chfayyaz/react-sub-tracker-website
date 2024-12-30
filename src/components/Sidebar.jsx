@@ -47,8 +47,11 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
         const isActive = location.pathname === path;
         return (
             <li className={classNames({ active: isActive })} >
-                <img src={isActive ? iconActive : iconInactive} alt={label} />
-                <Link to={path} className={`text-decoration-none ${label === "Logout" && "text-color-red"}`} onClick={() => getTitle(label)}>
+                 <Link to={path} onClick={() => getTitle(label)}>
+                 <img src={isActive ? iconActive : iconInactive} alt={label} />
+                </Link>
+               
+                <Link to={path} className={`text-decoration-none sidebar-text ${label === "Logout" && "text-color-red"}`} onClick={() => getTitle(label)}>
                     {label}
                 </Link>
             </li>
