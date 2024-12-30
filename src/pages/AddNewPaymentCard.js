@@ -160,7 +160,7 @@ const AddNewPaymentCard = () => {
           ))}
         </Slider>
       </div>
-      <h2 className='fs-20 fw-600 mt-2'>Manage Cards</h2>
+      <h2 className='fs-20 fw-600 mt-2'>Add a New Card</h2>
       <Form>
         <div className='row'>
           <div className='col-12 col-md-6'>

@@ -157,7 +157,7 @@ const SubscriptionPlanPayment = () => {
       </div>
       <div className='mx-2 d-flex justify-content-between'>
         <h2 className='fs-20 fw-600 mt-2'>Manage Cards</h2>
-        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><span className='fw-600 fs-15'>+</span> Add Card</Button>
+        <Link to="/add-new-payment-card"> <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><span className='fw-600 fs-15'>+</span>Add Card</Button></Link>
       </div>
       <div className="row my-3 ms-2">
         <div className="col-12  col-md-2  mb-3 d-flex ">
@@ -253,8 +253,8 @@ const SubscriptionPlanPayment = () => {
             placeholder=" &nbsp;  &nbsp; Master card   ****  3122" />
         </div>
         <div className=" col-12 col-md-2 d-flex mt-md-2  mb-3 ">
-        <Link className='text-decoration-none text-danger ps-1'>Remove</Link>
-        <Link className='text-decoration-none dark-purple ps-2'>Edit</Link>
+          <Link className='text-decoration-none text-danger ps-1'>Remove</Link>
+          <Link className='text-decoration-none dark-purple ps-2'>Edit</Link>
         </div>
       </div>
       <div className="row my-3 ms-2">
@@ -283,16 +283,16 @@ const SubscriptionPlanPayment = () => {
           <Link className='text-decoration-none dark-purple ps-2'>Edit</Link>
         </div>
       </div>
- 
-      <h2 className='fs-20 fw-600 mt-2'>Manage Cards</h2>
+
+      <h2 className='fs-20 fw-600 mt-2'>Billing</h2>
       <div className="d-flex justify-content-between my-3 bg-light-purple px-4 rounded-2 pt-3  px-1  ">
-                <p className='fs-12 fw-500'>Yearly Subscription</p>
-                <p  className='fs-12 fw-500'>290.95 CHF</p>
+        <p className='fs-12 fw-500'>Yearly Subscription</p>
+        <p className='fs-12 fw-500'>290.95 CHF</p>
       </div>
       <div className='text-end mb-3'>
-      <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  > Checkout</Button>
+        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  > Checkout</Button>
       </div>
-     
+
     </div>
   );
 };

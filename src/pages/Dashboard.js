@@ -9,18 +9,18 @@ const Dashboard = () => {
 
   const LineChartData = [
     ["Month", "Entertainment", "Transportation", "Security"],
-    ["Jan", 1200, 800, 1000],
-    ["Feb", 1250, 820, 1020],
-    ["Mar", 1150, 840, 980],
-    ["Apr", 1300, 860, 1040],
-    ["May", 1100, 880, 960],
-    ["Jun", 1350, 900, 1060],
-    ["Jul", 1050, 920, 940],
-    ["Aug", 1400, 940, 1080],
-    ["Sep", 1000, 960, 920],
-    ["Oct", 1450, 980, 1100],
-    ["Nov", 950, 1000, 900],
-    ["Dec", 1500, 1020, 1120],
+    ["Jan", 800, 600, 700],
+    ["Feb", 850, 620, 740],
+    ["Mar", 810, 630, 690],
+    ["Apr", 880, 640, 750],
+    ["May", 830, 660, 680],
+    ["Jun", 900, 670, 760],
+    ["Jul", 800, 680, 720],
+    ["Aug", 920, 690, 780],
+    ["Sep", 780, 700, 690],
+    ["Oct", 950, 710, 800],
+    ["Nov", 760, 730, 680],
+    ["Dec", 1000, 740, 820],
   ];
 
   const LineChartOptions = {
@@ -28,7 +28,7 @@ const Dashboard = () => {
       title: "Amount Spent",
     },
     curveType: "function", // Smooths the lines
-    lineWidth: 3,
+    lineWidth: 2,
     colors: ['#758AFF', '#03E4E7', '#DC23FF'], // Colors for the lines
     legend: {
       position: "top",
@@ -46,6 +46,7 @@ const Dashboard = () => {
     vAxis: {
       title: 'Amount Spent',
     },
+ 
   };
 
   const dountChartData = [

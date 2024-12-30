@@ -53,7 +53,7 @@ const Dashboard = () => {
       title: "Amount Spent",
     },
     curveType: "function", // Smooths the lines
-    lineWidth: 3,
+    lineWidth: 2,
     colors: ['#758AFF', '#03E4E7', '#DC23FF'], // Colors for the lines
     legend: {
       position: "top",
@@ -71,6 +71,7 @@ const Dashboard = () => {
     vAxis: {
       title: 'Amount Spent',
     },
+   
   };
 
   const dountChartData = [
