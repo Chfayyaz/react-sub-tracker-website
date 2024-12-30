@@ -13,12 +13,17 @@
     .logoContainer {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         h2.title {
             font-size: 31.42px;
             color: #000000;
-            padding: 0 0 0 1rem;
+            // padding: 0 0 0 1rem;
         }
+    }
+    .logoContainer.active {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .toggleIcon {
@@ -48,17 +53,18 @@
                 align-items: center;
                 justify-content: flex-start;
                 flex-direction: row;
-                margin: 0.50rem 0;
-                padding: 0.75rem 0;
+                margin: 0.10rem 0;
+                padding: 0.60rem 0;
                 width: 100%;
                 border-radius: 1rem;
                 cursor: pointer;
+                height: 60px;
 
 
                 img {
-                    padding: 0 1rem 0 0.5rem;
-                    width: 50px;
-                    height: 40px;
+                    padding: 0 0 0 0.5rem;
+                    width: 35px;
+                    height: 30px;
                 }
 
                 a {
@@ -98,7 +104,7 @@
     transition: 0.5s all;
     .logoContainer.active h2.title,
     .profileContainer .profileContents,
-    .contentsContainer a {
+    .contentsContainer .sidebar-text {
         opacity: 0;
     }
 

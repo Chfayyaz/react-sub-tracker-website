@@ -118,7 +118,7 @@ const SubscriptionPlanPayment = () => {
   ];
 
   return (
-    <>
+    <div className='container'>
       <p className='text-color  fs-20 fw-400'>Secure and Hassle-Free Payment Processing</p>
 
       <div className='mt-5'>
@@ -157,10 +157,10 @@ const SubscriptionPlanPayment = () => {
       </div>
       <div className='mx-2 d-flex justify-content-between'>
         <h2 className='fs-20 fw-600 mt-2'>Manage Cards</h2>
-        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><span className='fw-600 fs-15'>+</span> Add Card</Button>
+        <Link to="/add-new-payment-card"> <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><span className='fw-600 fs-15'>+</span>Add Card</Button></Link>
       </div>
       <div className="row my-3 ms-2">
-        <div className="col-12 col-lg-2  mb-3 d-flex ">
+        <div className="col-12  col-md-2  mb-3 d-flex ">
           <div className="form-check pt-2 p-sm-2">
             <input className="form-check-input" type="radio" name="cardmethod" id="cardId" />
           </div>
@@ -248,17 +248,17 @@ const SubscriptionPlanPayment = () => {
             </svg>
           </div>
         </div>
-        <div className="col-12 col-lg-8 mb-3">
+        <div className="col-12 col-md-8 mb-3">
           <input type="cardNumber" className="form-control  py-3  rounded border  payment-input" id="masterCard"
             placeholder=" &nbsp;  &nbsp; Master card   ****  3122" />
         </div>
-        <div className=" col-12 col-lg-2 d-flex mt-md-2  mb-3 ">
-        <Link className='text-decoration-none text-danger ps-1'>Remove</Link>
-        <Link className='text-decoration-none dark-purple ps-2'>Edit</Link>
+        <div className=" col-12 col-md-2 d-flex mt-md-2  mb-3 ">
+          <Link className='text-decoration-none text-danger ps-1'>Remove</Link>
+          <Link className='text-decoration-none dark-purple ps-2'>Edit</Link>
         </div>
       </div>
       <div className="row my-3 ms-2">
-        <div className="col-12 col-sm-3 col-md-2 col-lg-2  mb-3 d-flex gap-0">
+        <div className="col-12  col-md-2 mb-3 d-flex gap-0">
           <div className="form-check pt-2 p-sm-2">
             <input className="form-check-input" type="radio" name="cardmethod" />
           </div>
@@ -273,27 +273,27 @@ const SubscriptionPlanPayment = () => {
             </svg>
           </div>
         </div>
-        <div className="col-12 col-sm-6 col-md-7 col-lg-8  mb-3">
+        <div className="col-12 col-md-8  mb-3">
           <input type="cardNumber" className="form-control py-3  rounded border   payment-input" id="masterCard"
             placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Visa   ****  2020" />
         </div>
 
-        <div className="col-12 col-sm-3 col-md-3 col-lg-2 d-flex mt-md-2  mb-3">
+        <div className="col-12 col-md-2 d-flex mt-md-2 d-flex mt-md-2  mb-3">
           <Link className='text-decoration-none text-danger'>Remove</Link>
           <Link className='text-decoration-none dark-purple ps-2'>Edit</Link>
         </div>
       </div>
- 
-      <h2 className='fs-20 fw-600 mt-2'>Manage Cards</h2>
+
+      <h2 className='fs-20 fw-600 mt-2'>Billing</h2>
       <div className="d-flex justify-content-between my-3 bg-light-purple px-4 rounded-2 pt-3  px-1  ">
-                <p className='fs-12 fw-500'>Yearly Subscription</p>
-                <p  className='fs-12 fw-500'>290.95 CHF</p>
+        <p className='fs-12 fw-500'>Yearly Subscription</p>
+        <p className='fs-12 fw-500'>290.95 CHF</p>
       </div>
       <div className='text-end mb-3'>
-      <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  > Checkout</Button>
+        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  > Checkout</Button>
       </div>
-     
-    </>
+
+    </div>
   );
 };
 

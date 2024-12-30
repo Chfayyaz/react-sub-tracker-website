@@ -123,7 +123,7 @@ const AddNewPaymentCard = () => {
   ];
 
   return (
-    <>
+    <div className='container'>
       <p className='text-color  fs-20 fw-400'>Secure and Hassle-Free Payment Processing</p>
 
       <div className='mt-5'>
@@ -160,7 +160,7 @@ const AddNewPaymentCard = () => {
           ))}
         </Slider>
       </div>
-      <h2 className='fs-20 fw-600 mt-2'>Manage Cards</h2>
+      <h2 className='fs-20 fw-600 mt-2'>Add a New Card</h2>
       <Form>
         <div className='row'>
           <div className='col-12 col-md-6'>
@@ -172,7 +172,7 @@ const AddNewPaymentCard = () => {
                 placeholder="Card Number"
                 type="number"
               />
-            
+
             </FormGroup>
           </div>
           <div className='col-12 col-md-6 '>
@@ -183,7 +183,7 @@ const AddNewPaymentCard = () => {
                 placeholder="Cardholder Name"
                 type="text"
               />
-              
+
             </FormGroup>
           </div>
         </div>
@@ -220,7 +220,7 @@ const AddNewPaymentCard = () => {
                 placeholder="CVV"
                 type="text"
               />
-             
+
             </FormGroup>
           </div>
         </div>
@@ -228,19 +228,19 @@ const AddNewPaymentCard = () => {
           <FormGroup check inline>
             <Input type="checkbox" />
             <Label check className='fs-15 fw-400 mb-2 text-color'>
-            Save Card Details
+              Save Card Details
             </Label>
           </FormGroup>
         </div>
-        <hr/>
+        <hr />
       </Form>
-<div className='text-end'>
-   <Button className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
-   <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 ms-3'  >Save & Confirm</Button>
+      <div className='text-end'>
+        <Button className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
+        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 ms-3'  >Save & Confirm</Button>
 
-</div>
+      </div>
 
-    </>
+    </div>
   );
 };
 

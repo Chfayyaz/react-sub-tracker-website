@@ -92,10 +92,8 @@ const NewSubscription = () => {
     setPreview(null);
   };
 
-
-
   return (
-    <>
+    <div className="container">
       <div className='d-flex justify-content-start gap-2'>
         <img src={breadcrumbHome} width={20} height={20} alt='home' className='cursor-pointer' />
         <img src={breadcrumbArrowRight} width={20} height={20} alt='rightArrow' />
@@ -123,7 +121,7 @@ const NewSubscription = () => {
                     <label htmlFor="fileInput" className="icon-button">
                       <div className="upload-placeholder position-relative">
                         <img src={bannerImage} alt="uploaded" className="uploaded-image" width={100} height={100} />
-                        <img src={edit} alt="uploaded" className="uploaded-image position-absolute bottom-0" width={20} height={20} />
+                        <img src={edit} alt="uploaded" className="uploaded-image position-absolute bottom-0 end-0" width={20} height={20} />
                         <input
                           type="file"
                           id="fileInput"
@@ -133,7 +131,6 @@ const NewSubscription = () => {
                         />
                       </div>
                     </label>
-                    {/* <img src={bannerImage} alt="uploaded" className="uploaded-image" width={50} height={50} /> */}
                     <input
                       type="file"
                       id="fileInput"
@@ -151,7 +148,7 @@ const NewSubscription = () => {
         </div>
 
         <div className='row'>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="name" className='fs-14 fw-500'>
                 Name
@@ -167,7 +164,7 @@ const NewSubscription = () => {
               />
             </FormGroup>
           </div>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="name" className='fs-14 fw-500'>
                 Category
@@ -202,7 +199,7 @@ const NewSubscription = () => {
 
         </div>
         <div className='row'>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="startDate" className='fs-14 fw-500'>
                 Start Date
@@ -236,7 +233,7 @@ const NewSubscription = () => {
               </div>
             </FormGroup>
           </div>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="renewalDate" className='fs-14 fw-500'>
                 Renewal Date
@@ -272,7 +269,7 @@ const NewSubscription = () => {
           </div>
         </div>
         <div className='row'>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="name" className='fs-14 fw-500'>
                 Billing cycle
@@ -288,7 +285,7 @@ const NewSubscription = () => {
               />
             </FormGroup>
           </div>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="price" className='fs-14 fw-500'>
                 Price
@@ -304,7 +301,7 @@ const NewSubscription = () => {
 
         </div>
         <div className='row'>
-          <div className='col-6'>
+          <div className='col-12 col-md-6'>
             <FormGroup>
               <Label for="name" className='fs-14 fw-500'>
                 Reminder
@@ -325,10 +322,10 @@ const NewSubscription = () => {
       </Form>
       <h2 className='fs-20 fw-600 mt-1'>Documents</h2>
       <div className='row '>
-        <div className='col-1 text-end'>
+        <div className='col-3 col-md-1 text-center text-md-end '>
           <img src={fileIcon} alt='icon' className='mt-1' width={20} height={20} />
         </div>
-        <div className='col-4 gx-0'>
+        <div className='col-6 col-md-4 gx-0'>
           <div>
             <p className='fs-12 text-muted m-0'>Tech design requirements.pdf</p>
             <p className='fs-12 text-muted m-0'>200 KB</p>
@@ -339,13 +336,13 @@ const NewSubscription = () => {
             />
           </div>
         </div>
-        <div className='col-1 text-end'>
+        <div className='col-3 col-md-1 text-end'>
           <img src={checkbox} alt='icon'  />
         </div>
       </div>
 
 
-      <div className='d-flex justify-content-end gap-2 my-5'>
+      <div className='d-flex justify-content-end gap-2 my-5 flex-wrap'>
         <Button className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
         <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5'  > Save</Button>
       </div>
@@ -358,7 +355,7 @@ const NewSubscription = () => {
         </ModalBody>
 
       </Modal>
-    </>
+    </div>
   );
 };
 
