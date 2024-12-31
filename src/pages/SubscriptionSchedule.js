@@ -98,7 +98,7 @@ const PaymentScheduleCalendar = () => {
   return (
     <div className='container'>
       <div className='d-flex justify-content-between '>
-        <p className='text-color  fs-20 fw-400'>Stay on track with our subscription scheduling feature, ensuring timely <br /> payments and effortless management.</p>
+        <p className='page-heading fs-22 fw-300'>Stay on track with our subscription scheduling feature, ensuring timely <br /> payments and effortless management.</p>
         <div className='mt-4' >
           <select className="form-select w-auto" id="month-select" value={currentMonth} onChange={handleMonthChange}>
             {monthNames.map((month, index) => (
@@ -111,9 +111,9 @@ const PaymentScheduleCalendar = () => {
 
         <div className="border rounded rounded-3 " style={{ overflowX: 'scroll' }}>
 
-          <div className="subs-pln-calendar-header d-flex justify-content-between align-items-center">
+          <div className="subs-pln-calendar-header d-flex justify-content-between align-items-center p-4">
             <div>
-              <h3 id="current-date " className='dark-purple'>{today.getDate()} {monthNames[currentMonth]}, {currentYear} <sub className="ps-3 text-color fs-13">Today</sub></h3>
+              <h3 id="current-date " className='dark-purple'>{today.getDate()} {monthNames[currentMonth]}, {currentYear} <sub className="ps-3 text-color fs-13 fw-400">Today</sub></h3>
             </div>
             <div className='d-flex align-item-center text-end'>
               <img src={leftArrow} alt='' width={20} height={25} onClick={prevWeek} className='cursor-pointer' />
@@ -133,7 +133,7 @@ const PaymentScheduleCalendar = () => {
                   >
                     {day && (
                       <div>
-                        <strong className='text-muted fw-600 fs-20'>{day.date}</strong><p className='fs-14 fw-500 text-color'>{day.dayOfWeek}</p>
+                        <strong className='text-color-light fw-500 fs-20'>{day.date}</strong><p className='fs-14 fw-300 text-color'>{day.dayOfWeek}</p>
                       </div>
                     )}
                   </td>
@@ -157,32 +157,32 @@ const PaymentScheduleCalendar = () => {
         </div>
       </div>
       <div className='d-flex justify-content-between mt-4'>
-        <h2 className='fs-20 fw-600 m-0'>6 January, 2022</h2>
-        <div>
-          <h2 className='fs-20 fw-600 m-0'>$24.98</h2>
-          <p className='fs-11 fw-400 text-color m-0'> in upcoming bills</p>
+        <h2 className='fs-25 fw-600 mt-1 mb-4'>6 January, 2022</h2>
+        <div className='text-end'>
+          <h2 className='fs-24 fw-600  mt-1 mb-0'>$24.98</h2>
+          <p className='fs-18 fw-400 text-color-light m-0'> in upcoming bills</p>
         </div>
       </div>
       <div className='row mb-5'>
-        <div className='col-12 col-md-4 col-lg-3'>
-          <div className='ps-4 pe-5 py-3 calendar-card rounded'>
+        <div className='col-12 col-md-3 col-lg-2'>
+          <div className='ps-2 py-3 calendar-card rounded-4'>
             <img src={lockIcon} alt='icon' width={40} height={40} />
-            <p className='fs-16 fw-500 mt-5 mb-1'>Tresorly</p>
-            <h2 className='fs-22 fw-600'>$24.98</h2>
+            <p className='fs-16 fw-400 mt-5 mb-1'>Tresorly</p>
+            <h2 className='fs-20 fw-600'>$24.98</h2>
           </div>
         </div>
-        <div className='col-12 col-md-4 col-lg-3'>
-          <div className='ps-4 pe-5 py-3 calendar-card rounded mt-4 mt-md-0'>
+        <div className='col-12 col-md-3 col-lg-2'>
+          <div className='ps-2 py-3 calendar-card rounded-4 mt-4 mt-md-0'>
             <img src={ptarp} alt='icon' width={40} height={40} />
-            <p className='fs-16 fw-500 mt-5 mb-1'>Profilio</p>
-            <h2 className='fs-22 fw-600'>$18.99</h2>
+            <p className='fs-16 fw-400 mt-5 mb-1'>Profilio</p>
+            <h2 className='fs-20 fw-600'>$18.99</h2>
           </div>
         </div>
-        <div className='col-12 col-md-4 col-lg-3 '>
-          <div className='ps-4 pe-5 py-3 calendar-card rounded mt-4 mt-md-0'>
+        <div className='col-12 col-md-3 col-lg-2 '>
+          <div className='ps-2 py-3 calendar-card rounded-4 mt-4 mt-md-0'>
             <img src={icon} alt='icon' width={40} height={40} />
-            <p className='fs-16 fw-500 mt-5 mb-1'>SignNTrack</p>
-            <h2 className='fs-22 fw-600'>$5.99</h2>
+            <p className='fs-16 fw-400 mt-5 mb-1'>SignNTrack</p>
+            <h2 className='fs-20 fw-600'>$5.99</h2>
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@ const Subscription = () => {
 
   return (
     <div className='container'>
-      <p className='text-color fs-20 fw-400'>Here you can view and manage all your subscriptions</p>
+      <p className='page-heading fs-22 fw-300 '>Here you can view and manage all your subscriptions</p>
       <div className='d-flex justify-content-end gap-2 flex-wrap'>
         <Button className='btn-outline-color fw-500 fs-15 py-2' outline onClick={() => setIsAddCategory(!isAddCategory)}>
           <span className='fw-600 fs-15'>+</span> Add Category
@@ -75,7 +75,7 @@ const Subscription = () => {
         <Table responsive>
           <thead>
             <tr>
-              <th className="table-head-bg text-nowrap">Subscription</th>
+              <th className="table-head-bg text-nowrap ps-5">Subscription</th>
               <th className="table-head-bg text-nowrap">START DATE</th>
               <th className="table-head-bg text-nowrap">RENEWAL DATE</th>
               <th className="table-head-bg text-nowrap">Price</th>
@@ -84,8 +84,8 @@ const Subscription = () => {
           </thead>
           <tbody>
             {[...Array(7)].map((_, index) => (
-              <tr className='text-nowrap' key={index}>
-                <th scope="row" className='py-3'>
+              <tr className='text-nowrap ' key={index}>
+                <th scope="row" className='py-3 ps-5'>
                   <img src={renewal01} width={20} height={20} alt='icon' />
                   <span className='fs-16 fw-500'>SignNTrack</span>
                 </th>
@@ -98,12 +98,12 @@ const Subscription = () => {
           </tbody>
         </Table>
       </div>
-      <h2 className='fs-20 fw-600 mt-3'>Categories</h2>
+      <h2 className='fs-24 fw-600 my-3'>Categories</h2>
       <div className='my-2 border rounded'>
         <Table responsive>
           <thead>
             <tr>
-              <th className="table-head-bg text-nowrap">Name</th>
+              <th className="table-head-bg text-nowrap ps-5">Name</th>
               <th className="table-head-bg text-nowrap">CREATION DATE</th>
               <th className="table-head-bg text-nowrap">ACTIVE SUBSCRIPTIONS</th>
               <th className="table-head-bg text-nowrap">TOTAL BUDGET</th>
@@ -114,7 +114,7 @@ const Subscription = () => {
           <tbody>
             {[...Array(3)].map((_, index) => (
               <tr className='text-nowrap' key={index}>
-                <th scope="row" className='py-3'>
+                <th scope="row" className='py-3  ps-5'>
                   <p className='fs-16 fw-500'>Entertainment</p>
                 </th>
                 <td className='text-muted fs-14 fw-500 py-3'>12/11/2024 07:23</td>

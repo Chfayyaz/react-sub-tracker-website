@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/style/globals.css';
+import '../assets/style/dashboard.css';
 import { Card, CardBody } from "reactstrap"
 import { Chart } from "react-google-charts";
 import renewal01 from '../assets/images/renewal01.svg'
@@ -73,61 +74,57 @@ const Dashboard = () => {
   };
   return (
     <div className='container'>
-      <p className='text-color  fs-20 fw-400'>"Gain valuable insights into your subscription usage and spending habits <br /> with our powerful analytics tool."</p>
+      <p className='page-heading fs-22 fw-300 '>"Gain valuable insights into your subscription usage and spending habits <br /> with our powerful analytics tool."</p>
       <div className='row'>
         <div className='col-12 col-md-6 col-lg-4 mb-2 mb-lg-0'>
-          <Card className='bg-white'>
-            <CardBody className='d-flex justify-content-center align-items-center'>
+          <Card className='bg-white box-shadow-custom'>
+            <div className='d-flex justify-content-start align-items-center'>
               <div>
-                <p className='rounded-circle-number bg-light-purple dark-purple me-2'>22</p>
+                <p className='rounded-circle-number bg-light-purple dark-purple ms-4 me-3 mt-3'>22</p>
               </div>
-              <div className='mb-4'>
-                <p className='text-color fs-12 fw-500 my-1 '>Total</p>
-                <p className='text-color fs-12 fw-500 m-0'>Subscriptions</p>
+              <div className=''>
+                <p className='text-color fs-17 fw-500 mb-0 '>Total</p>
+                <p className='text-color fs-17 fw-500 m-0'>Subscriptions</p>
               </div>
-            </CardBody>
+            </div>
           </Card>
         </div>
         <div className='col-12 col-md-6 col-lg-4 mb-2 mb-lg-0'>
           <Card
-            className='bg-white '
+            className='bg-white box-shadow-custom'
           >
-            <CardBody className='d-flex justify-content-center'>
+           <div className='d-flex justify-content-start align-items-center'>
               <div>
-                <p className='rounded-circle-number bg-light-purple dark-purple me-2'>25</p>
+                <p className='rounded-circle-number bg-light-purple dark-purple ms-4 me-3 mt-3'>22</p>
               </div>
-              <div className='mb-4'>
-                <p className='text-color fs-12 fw-500 my-1 '>Due  </p>
-                <p className='text-color fs-12 fw-500 m-0'>Subscriptions</p>
+              <div className=''>
+                <p className='text-color fs-17 fw-500 mb-0 '>Due</p>
+                <p className='text-color fs-17 fw-500 m-0'>Subscriptions</p>
               </div>
-            </CardBody>
+            </div>
 
           </Card>
         </div>
         <div className='col-12 col-md-6 col-lg-4 mb-2 mb-lg-0'>
           <Card
-            className='bg-white'
+            className='bg-white box-shadow-custom'
           >
-            <CardBody className='d-flex justify-content-center'>
+            <div className='d-flex justify-content-start align-items-center'>
               <div>
-                <p className='rounded-circle-number bg-light-purple dark-purple me-2'>20</p>
+                <p className='rounded-circle-number bg-light-purple dark-purple ms-4 me-3 mt-3'>22</p>
               </div>
-              <div className='mb-4'>
-                <p className='text-color fs-12 fw-500 my-1 '>Paid </p>
-                <p className='text-color fs-12 fw-500 m-0'>Subscriptions</p>
+              <div className=''>
+                <p className='text-color fs-17 fw-500 mb-0 '>Paid</p>
+                <p className='text-color fs-17 fw-500 m-0'>Subscriptions</p>
               </div>
-              <div>
-
-              </div>
-
-            </CardBody>
+            </div>
 
           </Card>
         </div>
       </div>
       <div className='row mt-3'>
         <div className='col-12 col-lg-4 mb-2 mb-lg-0'>
-          <Card className='bg-white'>
+          <Card className='bg-white  box-shadow-custom'>
             <CardBody className='position-relative text-center' >
               <Chart
                 chartType="PieChart"
@@ -142,14 +139,14 @@ const Dashboard = () => {
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
               }}>
-                <div className='fs-16 fw-600 text-dark'>$820.97</div>
-                <div className='fs-12 fw-400 text-color'>of $2,000 amount paid</div>
+                <div className='fs-30 fw-700 text-dark'>$820.97</div>
+                <div className='fs-15 fw-400 text-color'>of $2,000 amount paid</div>
               </div>
             </CardBody>
           </Card>
         </div>
         <div className='col-12  col-lg-8 mb-2 mb-lg-0'>
-          <Card className='bg-white'>
+          <Card className='bg-white box-shadow-custom'>
             <CardBody className='overflow-auto chart-scrollbar'>
               <Chart
                 width="750px"
@@ -164,7 +161,7 @@ const Dashboard = () => {
         </div>
 
       </div>
-      <h2 className='fs-20 fw-600 mt-2'>Upcoming Renewals</h2>
+      <h2 className='fs-24 fw-600 my-3'>Upcoming Renewals</h2>
       <div className='container'>
   <div className='row border rounded px-1 py-2'>
     <div className='col-12 col-md-10 d-flex flex-wrap align-items-center text-start'>
@@ -173,7 +170,7 @@ const Dashboard = () => {
       <p className=' text-color mt-3 ms-4 fs-12'>Due Date:18.04.2024</p>
     </div>
     <div className='col-12 col-md-2 text-end'>
-      <p className='mt-2 fs-15 fw-600'>$5.99</p>
+      <p className='mt-2 fs-15 fw-600 mt-3'>$5.99</p>
     </div>
   </div>
   <div className='row border rounded px-1 py-2 mt-2 mb-4'>
@@ -183,7 +180,7 @@ const Dashboard = () => {
       <p className='text-color mt-3 ms-4 fs-12'>Due Date:18.04.2024</p>
     </div>
     <div className='col-12 col-md-2 text-end'>
-      <p className='mt-2 fs-15 fw-600'>$5.99</p>
+      <p className='mt-2 fs-15 fw-600 mt-3'>$5.99</p>
     </div>
   </div>
 </div>
