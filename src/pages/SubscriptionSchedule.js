@@ -98,7 +98,7 @@ const PaymentScheduleCalendar = () => {
   return (
     <div className='container'>
       <div className='d-flex justify-content-between '>
-        <p className='page-heading fs-22 fw-300'>Stay on track with our subscription scheduling feature, ensuring timely <br /> payments and effortless management.</p>
+        <p className='page-heading fs-22 fw-300 mb-4'>Stay on track with our subscription scheduling feature, ensuring timely <br /> payments and effortless management.</p>
         <div className='mt-4' >
           <select className="form-select w-auto" id="month-select" value={currentMonth} onChange={handleMonthChange}>
             {monthNames.map((month, index) => (

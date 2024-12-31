@@ -69,7 +69,7 @@ const Dashboard = () => {
   return (
     <div className='container'>
       <p className='page-heading fs-22 fw-300 '>"Gain valuable insights into your subscription usage and spending habits <br /> with our powerful analytics tool."</p>
-      <div className='row'>
+      <div className='row mt-4'>
         <div className='col-12 col-md-6 col-lg-4 mb-2 mb-lg-0'>
           <Card className='bg-white box-shadow-custom'>
             <div className='d-flex justify-content-start align-items-center'>
