@@ -37,16 +37,10 @@ const Dashboard = () => {
     },
     hAxis: {
       title: 'Months',
-      titleTextStyle: {
-        fontStyle: 'normal', // Ensure plain text
-      },
-      slantedText: false, // Disable slanted text to make it horizontal
+      slantedText: false, 
     },
     vAxis: {
       title: 'Amount Spent',
-      titleTextStyle: {
-        fontStyle: 'normal', // Ensure plain text
-      },
     },
   };
 
