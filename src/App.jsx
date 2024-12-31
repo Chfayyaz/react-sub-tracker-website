@@ -4,7 +4,6 @@ import Routes from '../src/routes/index'
 
 function App() {
     return (
-       
         <Routes/>
     );
 }

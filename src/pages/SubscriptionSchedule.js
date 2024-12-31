@@ -107,9 +107,9 @@ const PaymentScheduleCalendar = () => {
           </select>
         </div>
       </div>
-      <div className="subs-pln-calendar-container" >
+      <div className="subs-pln-calendar-container " >
 
-        <div className="border rounded rounded-3 " style={{ overflowX: 'scroll' }}>
+        <div className="border rounded rounded-3 box-shadow-custom bg-white" style={{ overflowX: 'scroll' }}>
 
           <div className="subs-pln-calendar-header d-flex justify-content-between align-items-center p-4">
             <div>

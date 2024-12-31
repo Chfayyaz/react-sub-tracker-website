@@ -108,7 +108,7 @@ const SubscriptionPlanPayment = () => {
       </svg>)
     },
     {
-      id: 3, label: "new card",
+      id: 3, label: "Apple Pay",
       blackIcon: (<svg className="img-fluid" width="150" height="120" viewBox="0 0 97 119" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
@@ -137,23 +137,21 @@ const SubscriptionPlanPayment = () => {
               onClick={() => handleCardChange(index)}
             >
               <div className="d-flex flex-column justify-content-center align-items-center">
-                <div className={`px-5 py-4 mb-2 rounded-4 ${selectedCard === index ? 'dark-purple-bg' : 'bg-transparent  border'}`}>
+                <div className={`px-5 py-4 mb-2 rounded-4 box-shadow-custom ${selectedCard === index ? 'dark-purple-bg' : 'bg-transparent  border'}`}>
                   <div className="mb-3">
                     {selectedCard === index ? card.whiteIcon : card.blackIcon}
                   </div>
                   <div className="text-center">
-                    <label className={`form-check-label ${selectedCard === index ? "text-white" : "text-dark"}`}>
+                    <label className={`form-check-label fs-16 fw-400 ${selectedCard === index ? "text-white" : "text-dark"}`}>
                       {card.label}
                     </label>
                   </div>
                 </div>
-                <div className="form-check mt-3 cursor-pointer" onClick={() => handleCardChange(index)}>
+                <div className="form-check mt-3 cursor-pointer me-3" onClick={() => handleCardChange(index)}>
                   {selectedCard === index ?
                     <img src={checkboxFill} alt='icon' width={30} height={30} />
-
                     : <img src={checkboxEmpty} alt='icon' width={30} height={30} />
                   }
-
                 </div>
               </div>
             </div>
@@ -165,36 +163,36 @@ const SubscriptionPlanPayment = () => {
         <Link to="/add-new-payment-card"> <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><span className='fw-600 fs-15'>+</span>Add Card</Button></Link>
       </div>
       <div className="row my-3 ms-2">
-        <div className="col-12  col-md-2  mb-3 d-flex ">
-          <div className="form-check pt-2 p-sm-2  me-3 cursor-pointer">
+        <div className="col-12 col-md-2 mb-3 d-flex align-items-center">
+          <div className="form-check pt-2 p-sm-2 me-3 cursor-pointer">
             {checkedCard === "master" ?
               <img src={cardCheckbox} width={20} height={20} alt='' onClick={() => setCheckedCard('master')} /> :
               <img src={checkboxEmpty} width={20} height={20} alt='' onClick={() => setCheckedCard('master')} />
             }
           </div>
-          <div className="svg-bg  border  py-1 rounded text-center "  >
-            <img src={masterCard} alt='' className='text-center ms-2 me-4' width="100%" height={49}  />
+          <div className="svg-bg  rounded text-center border px-3 bg-white">
+            <img src={masterCard} alt='' className='text-center' />
           </div>
         </div>
         <div className="col-12 col-md-8 mb-3">
-          <input type="cardNumber" className="form-control  py-3  rounded border  payment-input" id="masterCard"
+          <input type="text" className="form-control py-3 rounded border payment-input" id="masterCard"
             placeholder=" &nbsp;  &nbsp; Master card   ****  3122" />
         </div>
-        <div className=" col-12 col-md-2 d-flex mt-md-2  mb-3 ">
-          <Link className='text-decoration-none text-color-light ps-1'>Remove</Link>
+        <div className="col-12 col-md-2 d-flex mb-4 pb-1 align-items-center">
+          <Link className='text-decoration-none text-color-light ps-1 '>Remove</Link>
           <Link className='text-decoration-none dark-purple ps-2'>Edit</Link>
         </div>
       </div>
       <div className="row my-3 ms-2">
         <div className="col-12  col-md-2 mb-3 d-flex gap-0">
-          <div className="form-check pt-2 p-sm-2 me-3 cursor-pointer">
+          <div className="form-check mt-2 p-sm-2 me-3 cursor-pointer">
             {checkedCard === "visa" ?
               <img src={cardCheckbox} width={20} height={20} alt='' onClick={() => setCheckedCard('visa')} /> :
               <img src={checkboxEmpty} width={20} height={20} alt='' onClick={() => setCheckedCard('visa')} />
             }
           </div>
-          <div className="svg-bg  py-1 rounded border text-center " >
-            <img src={visaCard} alt='' width="100%" height={49} className='ms-2 me-4' />
+          <div className="svg-bg   text-center border rounded px-3 bg-white ">
+            <img src={visaCard} alt='' className='text-center' />
           </div>
         </div>
         <div className="col-12 col-md-8  mb-3">

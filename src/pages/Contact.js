@@ -19,7 +19,7 @@ const Contact = () => {
 
   return (
     <>
-      <p className='text-color  fs-20 fw-400'>Need help? Contact our friendly support team for assistance <br /> with any inquiries or issues.</p>
+      <p className='page-heading fs-22 fw-300'>Need help? Contact our friendly support team for assistance <br /> with any inquiries or issues.</p>
       <h2 className='fs-20 fw-600 mt-2'> Generate Ticket</h2>
       <h2 className='fs-16 fw-600 mt-2 dark-purple'> Ticket ID: FAWER123456</h2>
       <Form>

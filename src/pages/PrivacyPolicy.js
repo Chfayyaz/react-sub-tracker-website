@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
 
   return (
     <>
-      <p className='text-color  fs-20 fw-400'>Review our Terms of Service for a clear understanding of our  <br/>platform's policies and guidelines.</p>
+      <p className='page-heading fs-22 fw-300'>Review our Terms of Service for a clear understanding of our  <br/>platform's policies and guidelines.</p>
       <h2 className='fs-20 fw-600 mt-2'> Privacy Policy</h2>
      <div className='row'>
       <div className='col-8'>

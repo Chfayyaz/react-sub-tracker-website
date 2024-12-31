@@ -22,8 +22,6 @@ import AddNewPaymentCard from '../pages/AddNewPaymentCard';
 import Budget from '../pages/Budget'
 import SubscriptionSchedule from '../pages/SubscriptionSchedule'
 
-
-
 function App() {
   return (
     <BrowserRouter>
