@@ -112,7 +112,7 @@ const Dashboard = () => {
       </div>
       <div className='row mt-3'>
         <div className='col-12 col-lg-4'>
-          <Card className='bg-white'>
+          <Card className='bg-white box-shadow-custom'>
             <CardBody className='position-relative text-center' >
               <Chart
                 chartType="PieChart"
@@ -134,7 +134,7 @@ const Dashboard = () => {
           </Card>
         </div>
         <div className='col-12  col-lg-8'>
-          <Card className='bg-white'>
+          <Card className='bg-white box-shadow-custom'>
             <CardBody className='overflow-auto chart-scrollbar'>
               <Chart
                width="750px"
@@ -151,16 +151,16 @@ const Dashboard = () => {
       </div>
       <h2 className='fs-24 fw-600 my-4'>Categories</h2>
       <div className="row g-3 mb-5">
-        <div className=" col-12 col-md-6 col-lg-3 d-flex " >
-          <div className="border rounded text-center px-3 pb-3 pt-5 w-100 " onClick={() => setIsAddCategory(!isAddCategory)}>
+        <div className=" col-12 col-md-6 col-lg-3 d-flex  " >
+          <div className="border rounded text-center px-3 pb-3 pt-5 w-100 box-shadow-custom bg-white" onClick={() => setIsAddCategory(!isAddCategory)}>
             <div className="budget-icon my-2">
               <img src={addIcon} alt="add icon" className="w-50" />
             </div>
             <h5 className=" fs-18 mt-3">Add new category</h5>
           </div>
         </div>
-        <div className="col-12 col-md-6 col-lg-3 d-flex ">
-          <div className="border rounded text-center p-3 transport w-100">
+        <div className="col-12 col-md-6 col-lg-3 d-flex  ">
+          <div className="border rounded text-center p-3 transport w-100 box-shadow-custom bg-white">
             <div className="budget-icon my-2">
               <img src={carIcon} alt="car" className="w-50" />
             </div>
@@ -173,7 +173,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="col-12 col-md-6 col-lg-3 d-flex ">
-          <div className="border rounded text-center p-3 entertainment w-100">
+          <div className="border rounded text-center p-3 entertainment w-100 box-shadow-custom bg-white">
             <div className="budget-icon my-2">
               <img src={starsIcon} alt="stars" className="w-50" />
             </div>
@@ -186,7 +186,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="col-12 col-md-6 col-lg-3 d-flex ">
-          <div className="border rounded text-center p-3 security w-100">
+          <div className="border rounded text-center p-3 security w-100 box-shadow-custom bg-white">
             <div className="budget-icon my-2">
               <img src={fingerIcon} alt="finger" className="w-50" />
             </div>

@@ -8,8 +8,8 @@ const Notification = () => {
 
   return (
     <>
-      <Dropdown className="bg-white" align="end" offset={[-140, 0]}>
-        <Dropdown.Toggle className="border-0 px-0 fw-600 bg-white fs-30 text-dark  dropdown-arrow-hidden">
+      <Dropdown className="bg-transparent" align="end" offset={[-140, 0]}>
+        <Dropdown.Toggle className="border-0 px-0 fw-600 bg-transparent fs-30 text-dark  dropdown-arrow-hidden">
           <img
             src={bell}
             width={40}

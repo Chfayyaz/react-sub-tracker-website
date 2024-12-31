@@ -47,11 +47,11 @@ const Profile = () => {
 
   return (
     <>
-      <Dropdown className="bg-white" align="end" offset={[-140, 0]}>
+      <Dropdown className="bg-transparent" align="end" offset={[-140, 0]}>
         <Dropdown.Toggle
-          className="d-flex justify-content-between align-item-center border-0 px-0 fw-600 bg-white fs-30 text-dark dropdown-arrow-hidden"
+          className="d-flex justify-content-between align-item-center border-0 px-0 fw-600 bg-transparent fs-30 text-dark dropdown-arrow-hidden"
         >
-          <p className='fs-11 fw-500 mt-2 pt-1'>John Smith</p>
+          <p className='fs-15 fw-400 mt-2 pt-1'>John Smith</p>
           <img
             src={avatar}
             width={40}
@@ -69,8 +69,8 @@ const Profile = () => {
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item className="fs-14 mt-2 px-5 bg-white" onClick={() => setIsOpenAccountSetting(!isOpenAccountSetting)}>
-            <p className='fs-18 fw-400 text-color'>
+          <Dropdown.Item className="fs-14 mt-1 mb-0 pe-4 bg-white" onClick={() => setIsOpenAccountSetting(!isOpenAccountSetting)}>
+            <p className='fs-18 fw-400 text-color my-1'>
               <img
                 src={setting}
                 width={22}
@@ -82,8 +82,8 @@ const Profile = () => {
             </p>
           </Dropdown.Item>
           <hr className='mx-4' />
-          <Dropdown.Item className="fs-14 my-1 px-5 bg-white">
-            <p className='fs-18 fw-400 text-color text-color-red'>
+          <Dropdown.Item className="fs-14 mb-0  bg-white">
+            <p className='fs-18 fw-400 mb-1 text-color-red'>
               <img
                 src={logout}
                 width={22}
@@ -122,7 +122,7 @@ const Profile = () => {
                   setIsOpenPersonalData(!isOpenPersonalData)
                 }}
               >
-                <p className='mt-2 fs-13 fw-500'>
+                <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={profile}
                     width={15}
@@ -137,7 +137,7 @@ const Profile = () => {
                   width={15}
                   height={15}
                   alt="User Avatar"
-                  className='mt-2'
+                  className='mt-3'
                 />
               </div>
               <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'
@@ -146,7 +146,7 @@ const Profile = () => {
                   setIsOpenLanguage(!isOpenLanguage)
                 }}
               >
-                <p className='mt-2 fs-13 fw-500'>
+                <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={language}
                     width={15}
@@ -161,7 +161,7 @@ const Profile = () => {
                   width={15}
                   height={15}
                   alt="arrow"
-                  className='mt-2'
+                  className='mt-3'
                 />
               </div>
               <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'
@@ -170,7 +170,7 @@ const Profile = () => {
                   setIsOpenCurrency(!isOpenCurrency)
                 }}
               >
-                <p className='mt-2 fs-13 fw-500'>
+                <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={currency}
                     width={15}
@@ -187,7 +187,7 @@ const Profile = () => {
                   width={15}
                   height={15}
                   alt="arrow"
-                  className='mt-2'
+                  className='mt-3'
                 />
               </div>
               <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'
@@ -196,7 +196,7 @@ const Profile = () => {
                 setIsOpenPassword(!isOpenPassword)
               }}
               >
-                <p className='mt-2 fs-13 fw-500'>
+                <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={key}
                     width={15}
@@ -211,11 +211,11 @@ const Profile = () => {
                   width={15}
                   height={15}
                   alt="arrow"
-                  className='mt-2'
+                  className='mt-3'
                 />
               </div>
               <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'>
-                <p className='mt-2 fs-13 fw-500'>
+                <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={BA}
                     width={15}
@@ -234,13 +234,13 @@ const Profile = () => {
                     onClick={() => {
                       setIsAllowBA(!isAllowBA);
                     }}
-                    className='mt-2'
+                    className='mt-3'
                   />
 
                 </FormGroup>
               </div>
               <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'>
-                <p className='mt-2 fs-13 fw-500'>
+                <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={TFA}
                     width={15}
@@ -259,14 +259,14 @@ const Profile = () => {
                     onClick={() => {
                       setIsAllowTFA(!isAllowTFA);
                     }}
-                    className='mt-2'
+                    className='mt-3'
                   />
 
                 </FormGroup>
 
               </div>
               <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'>
-                <p className='mt-2 fs-13 fw-500'>
+                <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={email}
                     width={15}
@@ -287,13 +287,13 @@ const Profile = () => {
                     onClick={() => {
                       setIsAllowEmailNotification(!isAllowEmailNotification);
                     }}
-                    className='mt-2'
+                    className='mt-3'
                   />
 
                 </FormGroup>
               </div>
               <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'>
-                <p className='mt-2 fs-13 fw-500'>
+                <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={delAccount}
                     width={15}
@@ -301,8 +301,6 @@ const Profile = () => {
                     alt="User Avatar"
                     className='me-2'
                   />
-
-
                   Delete Account
                 </p>
 
