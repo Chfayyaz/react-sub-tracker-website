@@ -50,8 +50,7 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
                 <Link to={path} onClick={() => getTitle(label)}>
                     <img src={isActive ? iconActive : iconInactive} alt={label} />
                 </Link>
-
-                <Link to={path} className={`text-decoration-none sidebar-text fs-18 fw-500 ${label === "Logout" && "text-color-red"}`} onClick={() => getTitle(label)}>
+                <Link to={path} className={`text-decoration-none sidebar-text fs-17 fw-400 ${label === "Logout" && "text-color-red"}`} onClick={() => getTitle(label)}>
                     {label}
                 </Link>
             </li>
@@ -60,12 +59,12 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
 
     return (
         <div className={classNames("sidebar border", { active: closeMenu })}>
-            <div className={classNames("logoContainer mt-3", { active: closeMenu })}>
+            <div className={classNames("logoContainer my-4", { active: closeMenu })}>
                 <img src={Icon} alt="icon" className="logo" width={60} height={60} />
-                <h2 className="title  fw-600">SubTrackr</h2>
+                <h2 className="title  ">SubTrackr</h2>
             </div>
             <div className={classNames("toggleIcon", { active: closeMenu })} onClick={handleCloseMenu}>
-                <img src={closeMenu ? sidebarOpen : sidebarClose} width={30} height={30} alt={closeMenu ? "open" : "close"} />
+                <img src={closeMenu ? sidebarOpen : sidebarClose} width={40} height={40} alt={closeMenu ? "open" : "close"} />
             </div>
 
             <div className={classNames("contentsContainer", { active: closeMenu })}>
