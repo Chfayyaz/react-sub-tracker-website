@@ -20,7 +20,7 @@ const FAQs = () => {
 
   return (
     <>
-      <p className='text-color  fs-20 fw-400'>Got questions? We've got answers! Check out our Frequently Asked Questions for more information.</p>
+      <p className='page-heading fs-22 fw-300'>Got questions? We've got answers! Check out our Frequently Asked Questions for more information.</p>
       <h2 className='fs-20 fw-600 mt-2'> Frequently Asked Questions</h2>
       <div>
         <Accordion open={open} toggle={toggle}>

@@ -23,7 +23,7 @@ const Dashboard = () => {
     ["Nov", 760, 730, 680],
     ["Dec", 1000, 740, 820],
   ];
-
+  
   const LineChartOptions = {
     chart: {
       title: "Amount Spent",
@@ -37,17 +37,17 @@ const Dashboard = () => {
     },
     hAxis: {
       title: 'Months',
-      slantedText: false,
-      slantedTextAngle: 45, // Adjust the angle as needed for better visibility
-      viewWindow: {
-        min: 0,
-        max: 12, // Adjust based on the number of months to remove extra space
+      titleTextStyle: {
+        fontStyle: 'normal', // Ensure plain text
       },
+      slantedText: false, // Disable slanted text to make it horizontal
     },
     vAxis: {
       title: 'Amount Spent',
+      titleTextStyle: {
+        fontStyle: 'normal', // Ensure plain text
+      },
     },
- 
   };
 
   const dountChartData = [
@@ -163,7 +163,7 @@ const Dashboard = () => {
       </div>
       <h2 className='fs-24 fw-600 my-3'>Upcoming Renewals</h2>
       <div className='container'>
-  <div className='row border rounded px-1 py-2'>
+  <div className='row border rounded px-1 py-2 box-shadow-custom bg-white'>
     <div className='col-12 col-md-10 d-flex flex-wrap align-items-center text-start'>
       <img src={renewal01} alt='icon' className='me-1' />
       <p className='mx-3  fs-15 fw-600 mb-0'>SignNTrack</p>
@@ -173,7 +173,7 @@ const Dashboard = () => {
       <p className='mt-2 fs-15 fw-600 mt-3'>$5.99</p>
     </div>
   </div>
-  <div className='row border rounded px-1 py-2 mt-2 mb-4'>
+  <div className='row border rounded px-1 py-2 mt-2 mb-4 box-shadow-custom bg-white'>
     <div className='col-12 col-md-10 d-flex flex-wrap align-items-center text-start'>
       <img src={renewal02} alt='icon' className='me-1' />
       <p className='mx-2  fs-15 fw-600 mb-0'>SignNTrack</p>

@@ -126,7 +126,7 @@ const AddNewPaymentCard = () => {
   ];
 
   return (
-    <div className='container'>
+    <div className='container '>
       <p className='page-heading fs-22 fw-300'>Secure and Hassle-Free Payment Processing</p>
 
       <div className='mt-5'>
@@ -138,7 +138,7 @@ const AddNewPaymentCard = () => {
               onClick={() => handleCardChange(index)}
             >
               <div className="d-flex flex-column justify-content-center align-items-center">
-                <div className={`px-5 py-4 mb-2 rounded-4 ${selectedCard === index ? 'dark-purple-bg' : 'bg-transparent  border'}`}>
+                <div className={`px-5 py-4 mb-2 rounded-4 box-shadow-custom ${selectedCard === index ? 'dark-purple-bg' : 'bg-transparent  border'}`}>
                   <div className="mb-3">
                     {selectedCard === index ? card.whiteIcon : card.blackIcon}
                   </div>
@@ -148,7 +148,7 @@ const AddNewPaymentCard = () => {
                     </label>
                   </div>
                 </div>
-                <div className="form-check mt-3 cursor-pointer" onClick={() => handleCardChange(index)}>
+                <div className="form-check mt-3 me-3 cursor-pointer" onClick={() => handleCardChange(index)}>
                { selectedCard === index ? 
                 <img src={checkboxFill} alt='icon' width={30} height={30} />
                 
@@ -167,13 +167,11 @@ const AddNewPaymentCard = () => {
           <div className='col-12 col-md-6'>
             <FormGroup >
               <Input
-
                 id="cardNumber"
                 name="cardNumber"
                 placeholder="Card Number"
                 type="number"
               />
-
             </FormGroup>
           </div>
           <div className='col-12 col-md-6 '>
