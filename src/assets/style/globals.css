@@ -107,7 +107,16 @@ html {
 .cursor-pointer {
    cursor: pointer;
 }
-
+.page-heading {
+   color: #211e1e9c;
+}
+ .box-shadow-custom {
+   
+   box-shadow:#00000040 !important;
+ }
+ .text-color-light {
+   color: #A2A2B5;
+ }
  .fs-8 {
     font-size: 8px !important;
  }

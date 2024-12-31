@@ -13,13 +13,14 @@ const Layout = () => {
   };
 
   const getTitle = (props) => {
-    console.log("header here", props);
     setHeaderTitle(props);
   };
 
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 991);
+      setIsSidebar(window.innerWidth <= 991)
+
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -36,7 +37,7 @@ const Layout = () => {
             <Sidebar isCloseSidebar={isCloseSidebar} getTitle={getTitle} />
           </div>
         )}
-        <div className={`${isSmallScreen ? "col-12" : isSidebar ? "col-11" : "col-9"} px-5`}>
+        <div className={`${isSmallScreen ? "col-12" : isSidebar ? "col-11" : "col-9"} px-3  px-lg-4`}>
           <Header title={headerTitle} isShowIcon={isSmallScreen} />
           <div>
             <Outlet />

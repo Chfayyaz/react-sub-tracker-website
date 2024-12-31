@@ -20,14 +20,14 @@ const Notification = () => {
         </Dropdown.Toggle>
 
         <Dropdown.Menu style={{width:350}}>
-          <Dropdown.Item >
+          <Dropdown.Item className=' bg-white'>
             <div className='d-flex justify-content-between mb-0'>
               <p className='fs-15 fw-600 mb-0'>Notifications</p>
               <p className='fs-13 fw-500 text-color-red mb-0' >CLEAR ALL</p>
             </div>
           </Dropdown.Item>
           <hr />
-          <Dropdown.Item>
+          <Dropdown.Item className=' bg-white'>
             <div className='d-flex justify-content-start mt-2'>
               <img
                 src={avatar}
@@ -42,7 +42,7 @@ const Notification = () => {
               </div>
             </div>
           </Dropdown.Item>
-          <Dropdown.Item>
+          <Dropdown.Item className=' bg-white'>
             <div className='d-flex justify-content-start mt-2'>
               <img
                 src={avatar}
@@ -56,7 +56,7 @@ const Notification = () => {
                 <p className='fs-12 fs-500 text-color m-0'>10 May, 2025 10:20 PM</p>
               </div>
             </div>
-          </Dropdown.Item> <Dropdown.Item>
+          </Dropdown.Item> <Dropdown.Item className=' bg-white'>
             <div className='d-flex justify-content-start mt-2'>
               <img
                 src={avatar}
@@ -70,7 +70,7 @@ const Notification = () => {
                 <p className='fs-12 fs-500 text-color m-0'>10 May, 2025 10:20 PM</p>
               </div>
             </div>
-          </Dropdown.Item> <Dropdown.Item>
+          </Dropdown.Item> <Dropdown.Item className=' bg-white'>
             <div className='d-flex justify-content-start mt-2'>
               <img
                 src={avatar}
@@ -84,7 +84,7 @@ const Notification = () => {
                 <p className='fs-12 fs-500 text-color m-0'>10 May, 2025 10:20 PM</p>
               </div>
             </div>
-          </Dropdown.Item> <Dropdown.Item>
+          </Dropdown.Item> <Dropdown.Item className=' bg-white'>
             <div className='d-flex justify-content-start mt-2'>
               <img
                 src={avatar}

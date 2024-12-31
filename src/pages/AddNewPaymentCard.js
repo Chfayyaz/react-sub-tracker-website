@@ -3,6 +3,9 @@ import '../assets/style/globals.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import checkboxEmpty from '../assets/images/checkboxEmpty.svg'
+import checkboxFill from '../assets/images/checkboxFill.svg'
+
 import {
   Button,
   Input,
@@ -123,11 +126,11 @@ const AddNewPaymentCard = () => {
   ];
 
   return (
-    <>
-      <p className='text-color  fs-20 fw-400'>Secure and Hassle-Free Payment Processing</p>
+    <div className='container'>
+      <p className='page-heading fs-22 fw-300'>Secure and Hassle-Free Payment Processing</p>
 
       <div className='mt-5'>
-        <Slider {...settings}>
+      <Slider {...settings}>
           {cards.map((card, index) => (
             <div
               key={card.id}
@@ -145,22 +148,20 @@ const AddNewPaymentCard = () => {
                     </label>
                   </div>
                 </div>
-                <div className="form-check">
-                  <Input
-                    className="form-check-input"
-                    type="radio"
-                    name="card"
-                    id="cardId"
-                    checked={selectedCard === index}
-                    onChange={() => handleCardChange(index)}
-                  />
+                <div className="form-check mt-3 cursor-pointer" onClick={() => handleCardChange(index)}>
+               { selectedCard === index ? 
+                <img src={checkboxFill} alt='icon' width={30} height={30} />
+                
+              : <img src={checkboxEmpty} alt='icon' width={30} height={30} />
+              }
+                
                 </div>
               </div>
             </div>
           ))}
         </Slider>
       </div>
-      <h2 className='fs-20 fw-600 mt-2'>Manage Cards</h2>
+      <h2 className='fs-24 fw-600 my-3'>Add a New Card</h2>
       <Form>
         <div className='row'>
           <div className='col-12 col-md-6'>
@@ -172,7 +173,7 @@ const AddNewPaymentCard = () => {
                 placeholder="Card Number"
                 type="number"
               />
-            
+
             </FormGroup>
           </div>
           <div className='col-12 col-md-6 '>
@@ -183,7 +184,7 @@ const AddNewPaymentCard = () => {
                 placeholder="Cardholder Name"
                 type="text"
               />
-              
+
             </FormGroup>
           </div>
         </div>
@@ -220,7 +221,7 @@ const AddNewPaymentCard = () => {
                 placeholder="CVV"
                 type="text"
               />
-             
+
             </FormGroup>
           </div>
         </div>
@@ -228,19 +229,19 @@ const AddNewPaymentCard = () => {
           <FormGroup check inline>
             <Input type="checkbox" />
             <Label check className='fs-15 fw-400 mb-2 text-color'>
-            Save Card Details
+              Save Card Details
             </Label>
           </FormGroup>
         </div>
-        <hr/>
+        <hr />
       </Form>
-<div className='text-end'>
-   <Button className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
-   <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 ms-3'  >Save & Confirm</Button>
+      <div className='text-end'>
+        <Button className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
+        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 ms-3'  >Save & Confirm</Button>
 
-</div>
+      </div>
 
-    </>
+    </div>
   );
 };
 

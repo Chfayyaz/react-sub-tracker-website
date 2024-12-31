@@ -53,7 +53,7 @@ const Dashboard = () => {
       title: "Amount Spent",
     },
     curveType: "function", // Smooths the lines
-    lineWidth: 3,
+    lineWidth: 2,
     colors: ['#758AFF', '#03E4E7', '#DC23FF'], // Colors for the lines
     legend: {
       position: "top",
@@ -71,6 +71,7 @@ const Dashboard = () => {
     vAxis: {
       title: 'Amount Spent',
     },
+   
   };
 
   const dountChartData = [
@@ -99,11 +100,11 @@ const Dashboard = () => {
 
   return (
     <>
-      <p className='text-color  fs-20 fw-400'>Take control of your budget with clear insights into your spending habits.</p>
-      <div className='d-flex justify-content-between'>
-        <div className='d-flex w-50 border ps-2 rounded'>
+      <p className='page-heading fs-22 fw-300 '>Take control of your budget with clear insights into your spending habits.</p>
+      <div className='d-flex justify-content-between flex-wrap'>
+        <div className='d-flex w-50 border ps-2 rounded mb-2'>
           <img src={darkCheck} alt='' width={20} height={20} className='mt-3' />
-          <p className='fs-12 ms-2 mt-3'>Your budgets are on track</p>
+          <p className='fs-15 ms-2 mt-3 fw-500'>Your budgets are on track</p>
         </div>
         <div>
           <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><img src={exportIcon} alt='' className='me-2' /> Export Report</Button>
@@ -126,8 +127,8 @@ const Dashboard = () => {
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
               }}>
-                <div className='fs-16 fw-600 text-dark'>$820.97</div>
-                <div className='fs-12 fw-400 text-color'>of $2,000 amount paid</div>
+               <div className='fs-30 fw-700 text-dark'>$820.97</div>
+               <div className='fs-15 fw-400 text-color'>of $2,000 budget</div>
               </div>
             </CardBody>
           </Card>
@@ -148,18 +149,18 @@ const Dashboard = () => {
         </div>
 
       </div>
-      <h2 className='fs-20 fw-600 my-4'>Categories</h2>
+      <h2 className='fs-24 fw-600 my-4'>Categories</h2>
       <div className="row g-3 mb-5">
-        <div className="col-6 col-lg-3 d-flex" >
-          <div className="border rounded text-center p-3" onClick={() => setIsAddCategory(!isAddCategory)}>
+        <div className=" col-12 col-md-6 col-lg-3 d-flex " >
+          <div className="border rounded text-center px-3 pb-3 pt-5 w-100 " onClick={() => setIsAddCategory(!isAddCategory)}>
             <div className="budget-icon my-2">
               <img src={addIcon} alt="add icon" className="w-50" />
             </div>
             <h5 className=" fs-18 mt-3">Add new category</h5>
           </div>
         </div>
-        <div className="col-6 col-lg-3 d-flex">
-          <div className="border rounded text-center p-3 transport">
+        <div className="col-12 col-md-6 col-lg-3 d-flex ">
+          <div className="border rounded text-center p-3 transport w-100">
             <div className="budget-icon my-2">
               <img src={carIcon} alt="car" className="w-50" />
             </div>
@@ -171,8 +172,8 @@ const Dashboard = () => {
             <p className=" text-color fs-14 mt-2">$25.99 of $400</p>
           </div>
         </div>
-        <div className="col-6 col-lg-3 d-flex">
-          <div className="border rounded text-center p-3 entertainment">
+        <div className="col-12 col-md-6 col-lg-3 d-flex ">
+          <div className="border rounded text-center p-3 entertainment w-100">
             <div className="budget-icon my-2">
               <img src={starsIcon} alt="stars" className="w-50" />
             </div>
@@ -184,8 +185,8 @@ const Dashboard = () => {
             <p className=" text-color fs-14 mt-2">$50.99 of $600</p>
           </div>
         </div>
-        <div className="col-6 col-lg-3 d-flex">
-          <div className="border rounded text-center p-3 security">
+        <div className="col-12 col-md-6 col-lg-3 d-flex ">
+          <div className="border rounded text-center p-3 security w-100">
             <div className="budget-icon my-2">
               <img src={fingerIcon} alt="finger" className="w-50" />
             </div>

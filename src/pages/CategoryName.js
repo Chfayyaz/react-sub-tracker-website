@@ -11,7 +11,7 @@ import breadcrumbArrowRight from '../assets/images/breadcrumbArrowRight.svg'
 
 const CategoryName = () => {
   return (
-    <>
+    <div className='container'>
     <div className='d-flex justify-content-start gap-2'>
     <img src={breadcrumbHome} width={20} height={20} alt='home' className='cursor-pointer' />
     <img src={breadcrumbArrowRight} width={20} height={20} alt='rightArrow' />
@@ -162,7 +162,7 @@ const CategoryName = () => {
 
 
 
-    </>
+    </div>
   );
 };
 
