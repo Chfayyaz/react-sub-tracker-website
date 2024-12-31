@@ -30,8 +30,6 @@ import privacyActive from '../assets/images/sidebar/privacyActive.svg';
 import logout from '../assets/images/sidebar/logout.svg';
 import sidebarBanner from '../assets/images/sidebar/sidebarBanner.png';
 
-
-
 const Sidebar = ({ isCloseSidebar, getTitle }) => {
 
     const location = useLocation();  // Get the current location (pathname)
@@ -88,12 +86,8 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
                     {renderMenuItem("/privacy-policy", privacyActive, privacy, "Privacy Policy")}
                     <div >
                         {!closeMenu && <img src={sidebarBanner} alt="" width={"80%"} className="ms-4 my-3" />}
-
                     </div>
-
                     {renderMenuItem("/", logout, logout, "Logout")}
-
-
                 </ul>
             </div>
         </div>
