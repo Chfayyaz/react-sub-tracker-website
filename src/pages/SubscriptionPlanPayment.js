@@ -126,7 +126,7 @@ const SubscriptionPlanPayment = () => {
 
   return (
     <div className='container'>
-      <p className='page-heading fs-22 fw-300'>Secure and Hassle-Free Payment Processing</p>
+      <p className='page-heading fs-20  '>Secure and Hassle-Free Payment Processing</p>
 
       <div className='mt-5'>
         <Slider {...settings}>

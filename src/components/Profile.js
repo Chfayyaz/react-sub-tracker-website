@@ -44,14 +44,13 @@ const Profile = () => {
   const [isOpenCurrency, setIsOpenCurrency] = useState(false);
   const [isOpenPassword, setIsOpenPassword] = useState(false);
 
-
   return (
     <>
       <Dropdown className="bg-transparent" align="end" offset={[-140, 0]}>
         <Dropdown.Toggle
           className="d-flex justify-content-between align-item-center border-0 px-0 fw-600 bg-transparent fs-30 text-dark dropdown-arrow-hidden"
         >
-          <p className='fs-15 fw-400 mt-2 pt-1'>John Smith</p>
+          <p className='fs-15 fw-400 mt-2 pt-1 d-none d-lg-block'>John Smith</p>
           <img
             src={avatar}
             width={40}
@@ -337,7 +336,7 @@ const Profile = () => {
                   <div className="d-flex align-items-center position-relative border px-2 rounded-4">
                     <Input
                       type="email"
-                      className="form-control fw-400 fs-12 border-0 ps-4 py-3"
+                      className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
                       id="Email"
                       placeholder="Email"
                     />
@@ -355,7 +354,7 @@ const Profile = () => {
                   <div className="d-flex align-items-center position-relative border px-2 rounded-4">
                     <Input
                       type="text"
-                      className="form-control fw-400 fs-12 border-0 ps-4 py-3"
+                      className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
                       id="Name"
                       placeholder="Name"
                     />
@@ -373,7 +372,7 @@ const Profile = () => {
                   <div className="d-flex align-items-center position-relative border px-2 rounded-4">
                     <Input
                       type="text"
-                      className="form-control fw-400 fs-12 border-0 ps-4 py-3"
+                      className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
                       id="Phone"
                       placeholder="Phone No."
                     />
@@ -728,7 +727,7 @@ const Profile = () => {
                   <div className="d-flex align-items-center position-relative border px-2 rounded-4">
                     <Input
                       type="password"
-                      className="form-control fw-400 fs-12 border-0 ps-4 py-3"
+                      className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
                       id="password"
                       placeholder="Enter Password"
                     />
@@ -746,7 +745,7 @@ const Profile = () => {
                   <div className="d-flex align-items-center position-relative border px-2 rounded-4">
                     <Input
                       type="password"
-                      className="form-control fw-400 fs-12 border-0 ps-4 py-3"
+                      className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
                       id="NewPassword"
                       placeholder="Enter New Password"
                     />
@@ -764,7 +763,7 @@ const Profile = () => {
                   <div className="d-flex align-items-center position-relative border px-2 rounded-4">
                     <Input
                       type="password"
-                      className="form-control fw-400 fs-12 border-0 ps-4 py-3"
+                      className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
                       id="confirmPassword"
                       placeholder="Enter Confirm Password"
                     />

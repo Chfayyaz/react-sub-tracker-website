@@ -19,12 +19,12 @@ const Contact = () => {
 
   return (
     <>
-      <p className='page-heading fs-22 fw-300'>Need help? Contact our friendly support team for assistance <br /> with any inquiries or issues.</p>
+      <p className='page-heading fs-20  '>Need help? Contact our friendly support team for assistance <br /> with any inquiries or issues.</p>
       <h2 className='fs-20 fw-600 mt-2'> Generate Ticket</h2>
       <h2 className='fs-16 fw-600 mt-2 dark-purple'> Ticket ID: FAWER123456</h2>
       <Form>
         <div className="row mt-2">
-          <div className="col-8">
+          <div className="col-12 col-lg-8">
             <FormGroup>
               <Label for="name" className='fs-14 fw-500'>
                 Issues
@@ -43,7 +43,7 @@ const Contact = () => {
 
         </div>
         <div className="row mt-2">
-          <div className="col-8">
+          <div className="col-12 col-lg-8">
             <FormGroup>
               <Label for="subject" className='fs-14 fw-500'>
                 Subject
@@ -59,7 +59,7 @@ const Contact = () => {
 
         </div>
         <div className="row mt-2">
-          <div className="col-8">
+          <div className="col-12 col-lg-8">
           <FormGroup>
               <Label for="description" className='fs-14 fw-500'>
                 Description
@@ -76,7 +76,7 @@ const Contact = () => {
 
         </div>
         <div className="row mt-2">
-          <div className="col-8 text-end">
+          <div className="col-12 col-lg-8 text-end">
           <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5'  > Save</Button>
 
           </div>
