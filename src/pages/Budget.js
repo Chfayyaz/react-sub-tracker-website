@@ -233,7 +233,7 @@ const Dashboard = () => {
       <h2 className='fs-24 fw-600 my-4'>Categories</h2>
       <div className="row g-3 mb-5">
         <div className=" col-12 col-md-6 col-lg-3 d-flex  " >
-          <div className="border rounded text-center px-3 pb-3 pt-5 w-100 box-shadow-custom bg-white" onClick={() => setIsAddCategory(!isAddCategory)}>
+          <div className="border rounded text-center px-3 pb-3 pt-5 w-100 box-shadow-custom bg-white cursor-pointer" onClick={() => setIsAddCategory(!isAddCategory)}>
             <div className="budget-icon my-2">
               <img src={addIcon} alt="add icon" className="w-50" />
             </div>

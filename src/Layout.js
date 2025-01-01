@@ -20,10 +20,10 @@ const Layout = () => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 991);
       setIsSidebar(window.innerWidth <= 991)
-
     };
     handleResize();
     window.addEventListener('resize', handleResize);
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -37,7 +37,7 @@ const Layout = () => {
             <Sidebar isCloseSidebar={isCloseSidebar} getTitle={getTitle} />
           </div>
         )}
-        <div className={`${isSmallScreen ? "col-12" : isSidebar ? "col-11" : "col-9"} px-3  px-lg-4`}>
+        <div className={`${isSmallScreen ? "col-12" : isSidebar ? "col-11" : "col-9"} px-md-3  px-lg-4 ` }id="layout" >
           <Header title={headerTitle} isShowIcon={isSmallScreen} />
           <div>
             <Outlet />

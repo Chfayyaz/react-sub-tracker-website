@@ -47,85 +47,84 @@ const Dashboard = () => {
     ]
   };
 
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
+ const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      display: true,
+      position: 'top',
+      align: 'end',
+      labels: {
+        usePointStyle: true,
+        pointStyle: 'circle',
+        boxWidth: 5,
+        boxHeight: 5,
+        padding: 10,
+        color: '#475467',
+        generateLabels: (chart) => {
+          const labels = chart.data.datasets.map((dataset, index) => ({
+            text: dataset.label,
+            fillStyle: dataset.borderColor,
+            strokeStyle: 'transparent', // Ensuring no border color
+            borderWidth: 0, // Ensuring no border width
+            hidden: !chart.isDatasetVisible(index),
+            datasetIndex: index,
+          }));
+          return labels;
+        },
+      },
+    },
+    tooltip: {
+      enabled: true,
+    },
+  },
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+      ticks: {
+        color: '#475467',
+        autoSkip: false,
+        maxRotation: 0,
+        minRotation: 0,
+        padding: 30,
+      },
+      title: {
         display: true,
-        position: 'top',
-        align: 'end',
-        labels: {
-          usePointStyle: true,
-          pointStyle: 'circle',
-          boxWidth: 5,
-          boxHeight: 5,
-          borderWidth: 0,
-          padding: 10,
-          color: '#475467',
-          generateLabels: (chart) => {
-            const labels = chart.data.datasets.map((dataset, index) => ({
-              text: dataset.label,
-              fillStyle: dataset.borderColor,
-              borderColor: 'transparent',
-              borderWidth: 0,
-              fontColor: '#475467',
-              hidden: !chart.isDatasetVisible(index),
-              datasetIndex: index,
-            }));
-            return labels;
-          },
+        text: 'Months',
+        color: '#475467',
+        font: {
+          size: 13,
         },
-      },
-      tooltip: {
-        enabled: true,
+        padding: { top: 0, left: 0, right: 0, bottom: 0 },
       },
     },
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-        ticks: {
-          color: '#475467',
-          autoSkip: false,
-          maxRotation: 0,
-          minRotation: 0,
-          padding: 30,
-        },
-        title: {
-          display: true,
-          text: 'Months',
-          color: '#475467',
-          font: {
-            size: 13,
-          },
-          padding: { top: 0, left: 0, right: 0, bottom: 0 },
-        },
+    y: {
+      grid: {
+        color: '#e5e5e5',
       },
-      y: {
-        grid: {
-          color: '#e5e5e5',
+      ticks: {
+        stepSize: 200,
+        color: '#475467',
+        beginAtZero: true,
+        min: 0,
+        max: 10000,
+      },
+      title: {
+        display: true,
+        text: 'Amount Spent',
+        color: '#475467',
+        font: {
+          size: 13,
         },
-        ticks: {
-          stepSize: 200,
-          color: '#475467',
-          beginAtZero: true,
-          min: 0,
-          max: 10000,
-        },
-        title: {
-          display: true,
-          text: 'Amount Spent',
-          color: '#475467',
-          font: {
-            size: 13,
-          },
-          padding: { top: 0, left: 0, right: 0, bottom: 10 },
-        },
+        padding: { top: 0, left: 0, right: 0, bottom: 10 },
       },
     },
-  };
+  },
+};
+
 
   const donutChartData = {
     labels: ["Transportation", "Entertainment", "Security", "Pending"],
@@ -231,19 +230,17 @@ const Dashboard = () => {
           </Card>
         </div>
         <div className='col-12  col-lg-8 mb-2 mb-lg-0'>
-          <Card className='bg-white box-shadow-custom'>
+          <Card className='bg-white box-shadow-custom '>
             <CardBody >
               <Line
                 data={data}
                 options={options}
-                height={280}
+                height={275}
                 width="100%"
               />
             </CardBody>
           </Card>
-
         </div>
-
       </div>
       <h2 className='fs-24 fw-600 my-3'>Upcoming Renewals</h2>
       <div className='container'>

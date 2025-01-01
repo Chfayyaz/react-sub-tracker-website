@@ -54,10 +54,10 @@ const Header = ({ title, isShowIcon }) => {
   };
   return (
 
-    <div className='container'>
+    <div className='container-fluid'>
       <div className='d-flex justify-content-between align-item-center mt-4'>
         <div className='d-flex '>
-          {isShowIcon && <div className='me-3 mt-1 cursor-pointer'> <img src={sidebarOpen} width={30} height={30} alt={'icon'} onClick={() => setIsOpenSidebar(!isOpenSidebar)}  /> </div>}
+          {isShowIcon && <div className='me-3 mt-2 cursor-pointer'> <img src={sidebarOpen} width={30} height={30} alt={'icon'} onClick={() => setIsOpenSidebar(!isOpenSidebar)}  /> </div>}
           <p className='fs-36 fw-500'>{title ? title : "Hello John! 👋"} </p>
         </div>
         <div className='d-flex justify-content-between align-item-center gap-2'>

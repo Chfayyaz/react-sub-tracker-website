@@ -13,7 +13,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 2rem 1.5rem;
+  padding: 0.1rem 1.5rem;
   width: 25%;
   height: 100vh;
   transition: 0.5s all;
@@ -35,6 +35,7 @@
       font-weight: 500;
     }
   }
+
 
   .logoContainer.active {
     justify-content: flex-start;
