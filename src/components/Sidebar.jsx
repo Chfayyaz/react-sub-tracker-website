@@ -56,42 +56,46 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
     };
 
     return (
-        <div className={classNames("sidebar border", { active: closeMenu })}>
-            <div className={classNames("logoContainer my-4", { active: closeMenu })}>
-                <img src={Icon} alt="icon" className="logo" width={60} height={60} />
-                <h2 className="title  ">SubTrackr</h2>
-            </div>
-            <div className={classNames("toggleIcon", { active: closeMenu })} onClick={handleCloseMenu}>
+        <>
+            <div className={` cursor-pointer sidebar-toggleIcon text-end`} onClick={handleCloseMenu}>
                 <img src={closeMenu ? sidebarOpen : sidebarClose} width={40} height={40} alt={closeMenu ? "open" : "close"} />
             </div>
 
-            <div className={classNames("contentsContainer", { active: closeMenu })}>
-            
-                <ul>
-                    {renderMenuItem("/", DashboardActive, Dashboard, "Dashboard")}
-                    <hr className="w-100 " />
-                    {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18 ">Subscription Management</p> }
-                    {renderMenuItem("/subscription", subscriptionActive, subscription, "Subscriptions")}
-                    {renderMenuItem("/subscription-plan", subscriptionPlanActive, subscriptionPlan, "Subscription Plans")}
-                    <hr className="w-100 " />
-                    {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18">Tracking & Analytics</p> }
+ 
+            <div className={classNames("sidebar border", { active: closeMenu })}>
+                <div className={classNames("logoContainer my-4", { active: closeMenu })}>
+                    <img src={Icon} alt="icon" className="logo" width={60} height={60} />
+                    <h2 className="title  ">SubTrackr</h2>
+                </div>
+                <div className={classNames("contentsContainer", { active: closeMenu })}>
+                    <ul>
+                        {renderMenuItem("/", DashboardActive, Dashboard, "Dashboard")}
+                        <hr className="w-100 " />
+                        {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18 ">Subscription Management</p>}
+                        {renderMenuItem("/subscription", subscriptionActive, subscription, "Subscriptions")}
+                        {renderMenuItem("/subscription-plan", subscriptionPlanActive, subscriptionPlan, "Subscription Plans")}
+                        <hr className="w-100 " />
+                        {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18">Tracking & Analytics</p>}
+ 
 
-                    {renderMenuItem("/budget-spending", spendingActive, spending, "Budget & Spending")}
-                    {renderMenuItem("/calendar", calendarActive, calendar, "Calendar")}
-                    <hr className="w-100 " />
-                    {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18">My Subtrackr Plan</p> }
-                    {renderMenuItem("/manage-payment", paymentActive, payment, "Manage Payment")}
-                    {renderMenuItem("/FAQs", FAQsActive, FAQs, "FAQs")}
-                    {renderMenuItem("/contactUs", headPhoneActive, headPhone, "Contact & Support")}
-                    {renderMenuItem("/term-of-services", servicesActive, services, "Terms of Service")}
-                    {renderMenuItem("/privacy-policy", privacyActive, privacy, "Privacy Policy")}
-                    <div >
-                        {!closeMenu && <img src={sidebarBanner} alt="" width={"80%"} className="ms-4 my-3" />}
-                    </div>
-                    {renderMenuItem("/", logout, logout, "Logout")}
-                </ul>
+                        {renderMenuItem("/budget-spending", spendingActive, spending, "Budget & Spending")}
+                        {renderMenuItem("/calendar", calendarActive, calendar, "Calendar")}
+                        <hr className="w-100 " />
+                        {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18">My Subtrackr Plan</p>}
+                        {renderMenuItem("/manage-payment", paymentActive, payment, "Manage Payment")}
+                        {renderMenuItem("/FAQs", FAQsActive, FAQs, "FAQs")}
+                        {renderMenuItem("/contactUs", headPhoneActive, headPhone, "Contact & Support")}
+                        {renderMenuItem("/term-of-services", servicesActive, services, "Terms of Service")}
+                        {renderMenuItem("/privacy-policy", privacyActive, privacy, "Privacy Policy")}
+                        <div >
+                            {!closeMenu && <img src={sidebarBanner} alt="" width={"80%"} className="ms-4 my-3" />}
+                        </div>
+                        {renderMenuItem("/", logout, logout, "Logout")}
+                    </ul>
+                </div>
             </div>
-        </div>
+        </>
+
     );
 };
 

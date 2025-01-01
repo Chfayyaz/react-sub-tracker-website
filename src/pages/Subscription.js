@@ -60,7 +60,7 @@ const Subscription = () => {
 
   return (
     <div className='container'>
-      <p className='page-heading fs-22 fw-300 '>Here you can view and manage all your subscriptions</p>
+      <p className='page-heading fs-20   '>Here you can view and manage all your subscriptions</p>
       <div className='d-flex justify-content-end gap-2 flex-wrap'>
         <Button className='btn-outline-color fw-500 fs-15 py-2' outline onClick={() => setIsAddCategory(!isAddCategory)}>
           <span className='fw-600 fs-15'>+</span> Add Category
