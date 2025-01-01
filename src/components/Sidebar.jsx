@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import classNames from "classnames";
 import '../assets/style/sidebar.scss';
@@ -54,14 +54,23 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
             </li>
         );
     };
+    useEffect(() => {
+        const handleResize = () => {
+            setCloseMenu(window.innerWidth <= 991);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
 
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <>
             <div className={` cursor-pointer sidebar-toggleIcon text-end`} onClick={handleCloseMenu}>
                 <img src={closeMenu ? sidebarOpen : sidebarClose} width={40} height={40} alt={closeMenu ? "open" : "close"} />
             </div>
 
- 
             <div className={classNames("sidebar border", { active: closeMenu })}>
                 <div className={classNames("logoContainer my-4", { active: closeMenu })}>
                     <img src={Icon} alt="icon" className="logo" width={60} height={60} />
@@ -76,7 +85,6 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
                         {renderMenuItem("/subscription-plan", subscriptionPlanActive, subscriptionPlan, "Subscription Plans")}
                         <hr className="w-100 " />
                         {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18">Tracking & Analytics</p>}
- 
 
                         {renderMenuItem("/budget-spending", spendingActive, spending, "Budget & Spending")}
                         {renderMenuItem("/calendar", calendarActive, calendar, "Calendar")}
@@ -100,3 +108,5 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
 };
 
 export default Sidebar;
+
+
