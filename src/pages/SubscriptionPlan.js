@@ -13,7 +13,7 @@ import subscriptionArrowRightWhite from '../assets/images/subscriptionArrowRight
 const SubscriptionPlan = () => {
   return (
     < div className='container'>
-      <p className='page-heading fs-22 fw-300 mb-4'>Choose the Plan That Fits Your Subscription Needs</p>
+      <p className='page-heading fs-20   mb-4'>Choose the Plan That Fits Your Subscription Needs</p>
 
       <div className="row bg-white border rounded">
         <div className="col-12 col-lg-5 px-0 mx-0">

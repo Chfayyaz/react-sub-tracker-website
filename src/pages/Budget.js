@@ -14,7 +14,8 @@ import {
   Input,
   Label
 } from "reactstrap"
-import { Chart } from "react-google-charts";
+import { Line, Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, LineElement, PointElement, LinearScale, Title, Tooltip, Legend, CategoryScale } from 'chart.js';
 import addIcon from '../assets/images/Add.png'
 import carIcon from '../assets/images/car.png'
 import fingerIcon from '../assets/images/finger.png'
@@ -32,75 +33,152 @@ const Dashboard = () => {
     { value: "2", label: "category-02" },
     { value: "3", label: "category-03" },
     { value: "4", label: "category-04" }]);
-    const LineChartData = [
-      ["Month", "Entertainment", "Transportation", "Security"],
-      ["Jan", 1200, 800, 1000],
-      ["Feb", 1250, 820, 1020],
-      ["Mar", 1150, 840, 980],
-      ["Apr", 1300, 860, 1040],
-      ["May", 1100, 880, 960],
-      ["Jun", 1350, 900, 1060],
-      ["Jul", 1050, 920, 940],
-      ["Aug", 1400, 940, 1080],
-      ["Sep", 1000, 960, 920],
-      ["Oct", 1450, 980, 1100],
-      ["Nov", 950, 1000, 900],
-      ["Dec", 1500, 1020, 1120],
-    ];
-
-  const LineChartOptions = {
-    chart: {
-      title: "Amount Spent",
-    },
-    curveType: "function", // Smooths the lines
-    lineWidth: 2,
-    colors: ['#758AFF', '#03E4E7', '#DC23FF'], // Colors for the lines
-    legend: {
-      position: "top",
-      maxLines: 3,
-    },
-    hAxis: {
-      title: 'Months',
-      slantedText: false,
-      slantedTextAngle: 45, // Adjust the angle as needed for better visibility
-      viewWindow: {
-        min: 0,
-        max: 12, // Adjust based on the number of months to remove extra space
-      },
-    },
-    vAxis: {
-      title: 'Amount Spent',
-    },
-   
-  };
-
-  const dountChartData = [
-    ["Task", "Hours per Day"],
-    ["Transportation", 5],  
-    ["Entertainment", 8],    
-    ["Security", 11],         
-    ["Pending", 20],         
-  ];
+    const data = {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      datasets: [
+        {
+          label: 'Entertainment',
+          data: [100, 120, 140, 180, 200, 230, 280, 300, 325, 360, 380, 420],
+          borderColor: '#4c6ef5',
+          backgroundColor: 'rgba(76, 110, 245, 0.1)',
+          fill: true,
+          tension: 1,
+          borderWidth: 2,
+          pointRadius: 0,
+        },
+        {
+          label: 'Transportation',
+          data: [400, 425, 450, 460, 475, 495, 520, 535, 550, 575, 595, 600],
+          borderColor: '#03E4E7',
+          backgroundColor: 'rgba(3, 228, 231, 0.1)',
+          fill: true,
+          tension: 1,
+          borderWidth: 2,
+          pointRadius: 0,
+        },
+        {
+          label: 'Security',
+          data: [600, 625, 650, 700, 725, 775, 700, 725, 750, 800, 850, 820],
+          borderColor: '#da77f2',
+          backgroundColor: 'rgba(218, 119, 242, 0.1)',
+          fill: true,
+          tension: 1,
+          borderWidth: 2,
+          pointRadius: 0,
+        }
+      ]
+    };
   
-  const dountChartOptions = {
-    pieHole: 0.9,
-    is3D: false,
-    legend: { position: 'none' },
-    pieStartAngle: 240, 
-    colors: ['#03E4E7', '#758AFF', '#DC23FF', "#4E4E61"],
-    pieSliceText: 'none',
-    chartArea: {
-      left: '10%',
-      top: '10%',
-      width: '80%',
-      height: '80%',
-    },
-  };
+    const options = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          align: 'end',
+          labels: {
+            usePointStyle: true,
+            pointStyle: 'circle',
+            boxWidth: 5,
+            boxHeight: 5,
+            borderWidth: 0,
+            padding: 10,
+            color: 'black',
+            generateLabels: (chart) => {
+              const labels = chart.data.datasets.map((dataset, index) => ({
+                text: dataset.label,
+                fillStyle: dataset.borderColor,
+                borderColor: 'transparent',
+                borderWidth: 0,
+                fontColor: 'black',
+                hidden: !chart.isDatasetVisible(index),
+                datasetIndex: index,
+              }));
+              return labels;
+            },
+          },
+        },
+        tooltip: {
+          enabled: true,
+        },
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+          },
+          ticks: {
+            color: 'black',
+            autoSkip: false,
+            maxRotation: 0,
+            minRotation: 0,
+            padding: 30,
+          },
+          title: {
+            display: true,
+            text: 'Months',
+            color: 'black',
+            font: {
+              size: 14,
+            },
+            padding: { top: 0, left: 0, right: 0, bottom: 0 },
+          },
+        },
+        y: {
+          grid: {
+            color: '#e5e5e5',
+          },
+          ticks: {
+            stepSize: 200,
+            color: 'black',
+            beginAtZero: true,
+            min: 0,
+            max: 10000,
+          },
+          title: {
+            display: true,
+            text: 'Amount Spent',
+            color: 'black',
+            font: {
+              size: 14,
+            },
+            padding: { top: 0, left: 0, right: 0, bottom: 10 },
+          },
+        },
+      },
+    };
+  
+    const donutChartData = {
+      labels: ["Transportation", "Entertainment", "Security", "Pending"],
+      datasets: [
+        {
+          data: [5, 8, 11, 20],
+          backgroundColor: ['#03E4E7', '#758AFF', '#DC23FF', "#4E4E61"],
+          borderWidth: 0,
+        },
+      ],
+    };
+  
+    const donutChartOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          enabled: true,
+        },
+        legend: {
+          display: false,
+        },
+      },
+      cutout: '90%',
+      rotation: 240,
+    };
 
 
   return (
     <>
-      <p className='page-heading fs-22 fw-300 '>Take control of your budget with clear insights into your spending habits.</p>
+      <p className='page-heading fs-20  '>Take control of your budget with clear insights into your spending habits.</p>
       <div className='d-flex justify-content-between flex-wrap'>
         <div className='d-flex w-50 border ps-2 rounded mb-2'>
           <img src={darkCheck} alt='' width={20} height={20} className='mt-3' />
@@ -110,45 +188,48 @@ const Dashboard = () => {
           <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><img src={exportIcon} alt='' className='me-2' /> Export Report</Button>
         </div>
       </div>
-      <div className='row mt-3'>
-        <div className='col-12 col-lg-4'>
-          <Card className='bg-white box-shadow-custom'>
-            <CardBody className='position-relative text-center' >
-              <Chart
-                chartType="PieChart"
-                width="100%"
-                height="300px"
-                data={dountChartData}
-                options={dountChartOptions}
-              />
-              <div style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}>
-               <div className='fs-30 fw-700 text-dark'>$820.97</div>
-               <div className='fs-15 fw-400 text-color'>of $2,000 budget</div>
-              </div>
-            </CardBody>
-          </Card>
-        </div>
-        <div className='col-12  col-lg-8'>
-          <Card className='bg-white box-shadow-custom'>
-            <CardBody className='overflow-auto chart-scrollbar'>
-              <Chart
-               width="750px"
-                height="300px"
-                chartType="LineChart"
-                data={LineChartData}
-                options={LineChartOptions}
-              />
-            </CardBody>
-          </Card>
-
-        </div>
-
-      </div>
+     <div className='row mt-3'>
+            <div className='col-12 col-lg-4 mb-2 mb-lg-0'>
+              <Card className='bg-white box-shadow-custom' >
+                <CardBody style={{ height: '310px' }} className='pt-4'>
+                  <div style={{ position: 'relative', height: '250px' }}>
+                    <Doughnut
+                      data={donutChartData}
+                      options={donutChartOptions}
+                      height={250}
+                      width="100%"
+                    />
+                  </div>
+    
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                    }}
+                  >
+                    <div className='fs-30 fw-700 text-dark text-center'>$820.97</div>
+                    <div className='fs-15 fw-400 text-color-light'>of $2,000 budget</div>
+                  </div>
+                </CardBody>
+              </Card>
+            </div>
+            <div className='col-12  col-lg-8 mb-2 mb-lg-0'>
+              <Card className='bg-white box-shadow-custom'>
+                <CardBody >
+                  <Line
+                    data={data}
+                    options={options}
+                    height={280}
+                    width="100%"
+                  />
+                </CardBody>
+              </Card>
+    
+            </div>
+    
+          </div>
       <h2 className='fs-24 fw-600 my-4'>Categories</h2>
       <div className="row g-3 mb-5">
         <div className=" col-12 col-md-6 col-lg-3 d-flex  " >
