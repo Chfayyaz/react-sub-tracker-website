@@ -61,6 +61,7 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
                 <img src={closeMenu ? sidebarOpen : sidebarClose} width={40} height={40} alt={closeMenu ? "open" : "close"} />
             </div>
 
+ 
             <div className={classNames("sidebar border", { active: closeMenu })}>
                 <div className={classNames("logoContainer my-4", { active: closeMenu })}>
                     <img src={Icon} alt="icon" className="logo" width={60} height={60} />
@@ -75,6 +76,7 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
                         {renderMenuItem("/subscription-plan", subscriptionPlanActive, subscriptionPlan, "Subscription Plans")}
                         <hr className="w-100 " />
                         {!closeMenu && <p className="ms-4 my-2  fw-500 text-color fs-18">Tracking & Analytics</p>}
+ 
 
                         {renderMenuItem("/budget-spending", spendingActive, spending, "Budget & Spending")}
                         {renderMenuItem("/calendar", calendarActive, calendar, "Calendar")}
