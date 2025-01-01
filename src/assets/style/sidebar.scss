@@ -1,16 +1,4 @@
-// .open-sidebar {
-//   position: absolute;
-//   z-index: 9999999;
-//   left: 23.5%;
-//   top: 30px;
-// }
 
-// .close-sidebar {
-//   position: absolute;
-//   z-index: 9999999;
-//   left: 7%;
-//   top: 30px;
-// }
 .sidebar-toggleIcon {
   position: -webkit-sticky; /* For Safari */
   position: sticky;
@@ -88,7 +76,7 @@
         height: 52px;
 
         img {
-          padding-left: 0.5rem;
+          padding-right: 0.5rem;
           width: 35px;
           height: 30px;
         }

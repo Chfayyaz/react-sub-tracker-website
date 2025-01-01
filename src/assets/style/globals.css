@@ -6,6 +6,7 @@ html {
     padding: 0px;
     margin: 0px;
  }
+ 
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
  body {
@@ -251,3 +252,78 @@ html {
  .fw-800 {
     font-weight: 800;
  }
+
+ @media (max-width: 768px) {
+  
+   .fs-45 {
+      font-size: 25px !important;
+   }
+
+   .fs-55 {
+      font-size: 25px !important;
+   }
+
+   .fs-15 {
+      font-size: 11px !important;
+   }
+   .fs-14 {
+      font-size: 11px !important;
+   }
+   .fs-10 {
+      font-size: 8px !important;
+   }
+   .fs-13 {
+      font-size: 11px !important;
+   }
+   .fs-16 {
+      font-size: 14px !important;
+   }
+
+   .fs-17 {
+      font-size: 13px !important;
+   }
+   .fs-18 {
+      font-size: 14px !important;
+   }
+   .fs-19 {
+      font-size: 15px !important;
+   }
+   .fs-20 {
+      font-size: 16px !important;
+   }
+   .fs-26 {
+      font-size: 20px !important;
+   }
+
+   .fs-30 {
+      font-size: 20px !important;
+   }
+
+   .fs-35 {
+      font-size: 25px !important;
+   }
+   .fs-36 {
+      font-size: 19px !important;
+      padding-top: 10px;
+   }
+
+   .fs-40 {
+      font-size: 25px !important;
+   }
+
+   .fw-500 {
+      font-weight: 400 !important;
+   }
+
+   .fw-600 {
+      font-weight: 500 !important;
+   }
+
+   .fw-700 {
+      font-weight: 600 !important;
+   }
+
+   .fw-800 {
+      font-weight: 700 !important;
+   }
+}

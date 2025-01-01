@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Notification from './Notification';
 import Profile from './Profile';
 import { Link, useLocation } from "react-router-dom";
-import '../assets/style/dashboard.css';
+import Icon from '../assets/images/sidebar/logo.svg';
+import Sidebar_style from '../assets/style/canvasSidebar.css'
 import {
   Offcanvas,
   OffcanvasHeader,
@@ -56,7 +57,7 @@ const Header = ({ title, isShowIcon }) => {
     <div className='container'>
       <div className='d-flex justify-content-between align-item-center mt-4'>
         <div className='d-flex '>
-          {isShowIcon && <div className='me-3 mt-1 cursor-pointer'> <img src={sidebarOpen} width={35} height={35} alt={'icon'} onClick={() => setIsOpenSidebar(!isOpenSidebar)}  /> </div>}
+          {isShowIcon && <div className='me-3 mt-1 cursor-pointer'> <img src={sidebarOpen} width={30} height={30} alt={'icon'} onClick={() => setIsOpenSidebar(!isOpenSidebar)}  /> </div>}
           <p className='fs-36 fw-500'>{title ? title : "Hello John! 👋"} </p>
         </div>
         <div className='d-flex justify-content-between align-item-center gap-2'>
@@ -71,11 +72,14 @@ const Header = ({ title, isShowIcon }) => {
         direction="start"
       >
         <OffcanvasHeader className='border-bottom fs-16' toggle={() => setIsOpenSidebar(!isOpenSidebar)}>
-
+        <div className='Brand'>
+                <img src={Icon} alt="icon" className="logo" />
+                <h2 className="title">SubTrackr</h2>
+        </div>
         </OffcanvasHeader>
         <OffcanvasBody>
           <div className={classNames("contentsContainer")}>
-            <ul>
+            <ul className="links_list">
               {renderMenuItem("/", DashboardActive, Dashboard, "Dashboard")}
               {renderMenuItem("/budget-spending", spendingActive, spending, "Budget & Spending")}
               {renderMenuItem("/calendar", calendarActive, calendar, "Calendar")}
