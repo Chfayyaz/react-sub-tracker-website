@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Notification from './Notification';
 import Profile from './Profile';
 import { Link, useLocation } from "react-router-dom";
-
+import Icon from '../assets/images/sidebar/logo.svg';
+import Sidebar_style from '../assets/style/canvasSidebar.css'
 import {
   Offcanvas,
   OffcanvasHeader,
@@ -71,11 +72,14 @@ const Header = ({ title, isShowIcon }) => {
         direction="start"
       >
         <OffcanvasHeader className='border-bottom fs-16' toggle={() => setIsOpenSidebar(!isOpenSidebar)}>
-
+        <div className='Brand'>
+                <img src={Icon} alt="icon" className="logo" />
+                <h2 className="title">SubTrackr</h2>
+        </div>
         </OffcanvasHeader>
         <OffcanvasBody>
           <div className={classNames("contentsContainer")}>
-            <ul>
+            <ul className="links_list">
               {renderMenuItem("/", DashboardActive, Dashboard, "Dashboard")}
               {renderMenuItem("/budget-spending", spendingActive, spending, "Budget & Spending")}
               {renderMenuItem("/calendar", calendarActive, calendar, "Calendar")}

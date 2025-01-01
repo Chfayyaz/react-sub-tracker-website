@@ -66,6 +66,7 @@ const Sidebar = ({ isCloseSidebar, getTitle }) => {
             </div>
 
             <div className={classNames("contentsContainer", { active: closeMenu })}>
+            
                 <ul>
                     {renderMenuItem("/", DashboardActive, Dashboard, "Dashboard")}
                     <hr className="w-100 " />
