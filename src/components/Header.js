@@ -13,6 +13,7 @@ import classNames from "classnames";
 import Sidebar from './Sidebar';
 import sidebarClose from '../assets/images/sidebar/sidebarClose.svg';
 import sidebarOpen from '../assets/images/sidebar/sidebarOpen.svg';
+import  openbaricon from '../assets/images/sidebar/baricon.svg';
 import DashboardActive from '../assets/images/sidebar/dashboardActive.svg';
 import Dashboard from '../assets/images/sidebar/dashboard.svg';
 import subscription from '../assets/images/sidebar/subscription.svg';
@@ -63,17 +64,25 @@ const Header = ({ title, isShowIcon }) => {
   };
   return (
 
-    <div className='container-fluid'>
-      <div className='d-flex justify-content-between align-item-center mt-4'>
+    <div className='container-fluid px-0 px-md-1 '>
+   <div>
+
+   <div className='d-flex justify-content-between align-item-center mt-4'>
         <div className='d-flex '>
-          {isShowIcon && <div className='me-3 mt-2 cursor-pointer'> <img src={sidebarOpen} width={30} height={30} alt={'icon'} onClick={() => setIsOpenSidebar(!isOpenSidebar)} /> </div>}
-          <p className='fs-36 fw-500'>{headerTitle ? headerTitle : "Hello John! 👋"} </p>
+          {isShowIcon && <div className='me-3 mt-2 cursor-pointer'> <img src={openbaricon} width={35} height={35} alt={'icon'} onClick={() => setIsOpenSidebar(!isOpenSidebar)} /> </div>}
+          <p className='fs-36 fw-500 d-none d-md-block'>{headerTitle ? headerTitle : "Hello John! 👋"} </p>
         </div>
         <div className='d-flex justify-content-between align-item-center gap-2'>
           <Notification />
           <Profile />
         </div>
       </div>
+
+      <div className='d-md-none d-block'>
+          
+          <p className='fs-40 fw-500 mt-3'>{headerTitle ? headerTitle : "Hello John! 👋"} </p>
+        </div>
+   </div>
 
       <Offcanvas
         isOpen={isOpenSidebar}

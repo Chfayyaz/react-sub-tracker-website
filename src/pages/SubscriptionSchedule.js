@@ -97,9 +97,9 @@ const PaymentScheduleCalendar = () => {
 
   return (
     <div className='container'>
-      <div className='d-flex justify-content-between '>
-        <p className='page-heading fs-20   mb-4'>Stay on track with our subscription scheduling feature, ensuring timely <br /> payments and effortless management.</p>
-        <div className='mt-4' >
+      <div className='d-md-flex justify-content-between '>
+        <p className='page-heading fs-20   mb-3 mb-md-4 '>Stay on track with our subscription scheduling feature, ensuring timely <br /> payments and effortless management.</p>
+        <div className='mt-4 mb-3 mb-md-0' >
           <select className="form-select w-auto" id="month-select" value={currentMonth} onChange={handleMonthChange}>
             {monthNames.map((month, index) => (
               <option key={index} value={index}>{month}</option>
@@ -163,25 +163,25 @@ const PaymentScheduleCalendar = () => {
           <p className='fs-18 fw-400 text-color-light m-0'> in upcoming bills</p>
         </div>
       </div>
-      <div className='row mb-5'>
-        <div className='col-12 col-md-3 col-lg-2'>
+      <div className='row mb-5 mt-4  mt-md-0'>
+        <div className='col-12 col-md-3 col-lg-2 text-center text-md-start'>
           <div className='ps-2 py-3 calendar-card rounded-4'>
             <img src={lockIcon} alt='icon' width={40} height={40} />
-            <p className='fs-16 fw-400 mt-5 mb-1'>Tresorly</p>
+            <p className='fs-16 fw-400 mt-3 mt-md-5 mb-1'>Tresorly</p>
             <h2 className='fs-20 fw-600'>$24.98</h2>
           </div>
         </div>
-        <div className='col-12 col-md-3 col-lg-2'>
+        <div className='col-12 col-md-3 col-lg-2 text-center text-md-start'>
           <div className='ps-2 py-3 calendar-card rounded-4 mt-4 mt-md-0'>
             <img src={ptarp} alt='icon' width={40} height={40} />
-            <p className='fs-16 fw-400 mt-5 mb-1'>Profilio</p>
+            <p className='fs-16 fw-400 mt-3 mt-md-5 mb-1'>Profilio</p>
             <h2 className='fs-20 fw-600'>$18.99</h2>
           </div>
         </div>
-        <div className='col-12 col-md-3 col-lg-2 '>
+        <div className='col-12 col-md-3 col-lg-2 text-center text-md-start '>
           <div className='ps-2 py-3 calendar-card rounded-4 mt-4 mt-md-0'>
             <img src={icon} alt='icon' width={40} height={40} />
-            <p className='fs-16 fw-400 mt-5 mb-1'>SignNTrack</p>
+            <p className='fs-16 fw-400 mt-3 mt-md-5 mb-1'>SignNTrack</p>
             <h2 className='fs-20 fw-600'>$5.99</h2>
           </div>
         </div>

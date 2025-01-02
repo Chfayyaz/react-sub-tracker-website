@@ -180,12 +180,12 @@ const Dashboard = () => {
     <>
       <p className='page-heading fs-20  '>Take control of your budget with clear insights into your spending habits.</p>
       <div className='d-flex justify-content-between flex-wrap'>
-        <div className='d-flex w-50 border ps-2 rounded mb-2'>
+        <div className='d-flex  w-md-50 border ps-2 rounded mb-2'>
           <img src={darkCheck} alt='' width={20} height={20} className='mt-3' />
           <p className='fs-15 ms-2 mt-3 fw-500'>Your budgets are on track</p>
         </div>
         <div>
-          <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2'  ><img src={exportIcon} alt='' className='me-2' /> Export Report</Button>
+          <Button type='button' className=' fw-500 fs-15 btn-fill-color border-1 border-white py-2'  ><img src={exportIcon} alt='' className='me-2' /> Export Report</Button>
         </div>
       </div>
      <div className='row mt-3'>

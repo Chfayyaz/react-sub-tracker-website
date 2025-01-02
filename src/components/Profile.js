@@ -59,7 +59,7 @@ const Profile = () => {
         <Dropdown.Toggle
           className="d-flex justify-content-between align-item-center border-0 px-0 fw-600 bg-transparent fs-30 text-dark dropdown-arrow-hidden"
         >
-          <p className='fs-15 fw-400 mt-2 pt-0 d-none d-lg-block'>John Smith</p>
+          <p className='fs-15 fw-400 mt-2 pt-0 px-2'>John Smith</p>
           <img
             src={avatar}
             width={40}
@@ -124,7 +124,7 @@ const Profile = () => {
                 alt="User Avatar"
               />
               <p className='fs-16 fw-600 mt-3'>John Smith</p>
-              <div className='d-flex justify-content-between align-item-center border rounded px-2 mx-3 cursor-pointer hover-effect'
+              <div className='d-flex justify-content-between align-item-center border rounded px-2 mx-3 cursor-pointer hover-effect box-shadow-custom'
                 onClick={() => {
                   setIsOpenAccountSetting(!isOpenAccountSetting)
                   setIsOpenPersonalData(!isOpenPersonalData)
@@ -148,7 +148,7 @@ const Profile = () => {
                   className='mt-3'
                 />
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect box-shadow-custom'
                 onClick={() => {
                   setIsOpenAccountSetting(!isOpenAccountSetting)
                   setIsOpenLanguage(!isOpenLanguage)
@@ -172,7 +172,7 @@ const Profile = () => {
                   className='mt-3'
                 />
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect box-shadow-custom'
                 onClick={() => {
                   setIsOpenAccountSetting(!isOpenAccountSetting)
                   setIsOpenCurrency(!isOpenCurrency)
@@ -198,7 +198,7 @@ const Profile = () => {
                   className='mt-3'
                 />
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect box-shadow-custom'
                 onClick={() => {
                   setIsOpenAccountSetting(!isOpenAccountSetting)
                   setIsOpenPassword(!isOpenPassword)
@@ -222,7 +222,7 @@ const Profile = () => {
                   className='mt-3'
                 />
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'>
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect box-shadow-custom'>
                 <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={BA}
@@ -247,7 +247,7 @@ const Profile = () => {
 
                 </FormGroup>
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'>
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect box-shadow-custom'>
                 <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={TFA}
@@ -273,7 +273,7 @@ const Profile = () => {
                 </FormGroup>
 
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'>
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect box-shadow-custom'>
                 <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={email}
@@ -300,7 +300,7 @@ const Profile = () => {
 
                 </FormGroup>
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'>
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect box-shadow-custom'>
                 <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={delAccount}

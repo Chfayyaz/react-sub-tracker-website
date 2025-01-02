@@ -166,7 +166,7 @@ html {
  }
 
 ::-webkit-scrollbar {
-   width: 0.5em;
+   width: 0.3em;
    border-radius: 10px; 
  }
  
@@ -305,7 +305,25 @@ html {
     font-weight: 800;
  }
 
+ .form-control:focus{
+   box-shadow: 0 0 0 1px #2684FF !important;
+   border-color: #2684FF !important;
+ }
+
+ .w-md-50{
+   width: 50% !important;
+}
+ @media(max-width:768px)
+ {
+   .w-md-50{
+      width: 100% !important;
+   }
+ }
  @media (max-width: 768px) {
+
+   .fs-25 {
+      font-size: 18px;
+   }
    .fs-13 {
       font-size: 12px !important;
   }

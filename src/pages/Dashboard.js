@@ -156,7 +156,7 @@ const Dashboard = () => {
     <div className='container'>
       <p className='page-heading fs-20'>"Gain valuable insights into your subscription usage and spending habits <br /> with our powerful analytics tool."</p>
       <div className='row mt-4'>
-        <div className='col-12 col-md-6 col-lg-4 mb-2 mb-lg-0'>
+        <div className='col-12 col-md-6 col-lg-4 mb-3 mb-lg-0'>
           <Card className='bg-white box-shadow-custom'>
             <div className='d-flex justify-content-start align-items-center'>
               <div>
@@ -169,7 +169,7 @@ const Dashboard = () => {
             </div>
           </Card>
         </div>
-        <div className='col-12 col-md-6 col-lg-4 mb-2 mb-lg-0'>
+        <div className='col-12 col-md-6 col-lg-4 mb-3 mb-lg-0'>
           <Card
             className='bg-white box-shadow-custom'
           >
@@ -185,7 +185,7 @@ const Dashboard = () => {
 
           </Card>
         </div>
-        <div className='col-12 col-md-6 col-lg-4 mb-2 mb-lg-0'>
+        <div className='col-12 col-md-6 col-lg-4 mb-3 mb-lg-0'>
           <Card
             className='bg-white box-shadow-custom'
           >
@@ -202,8 +202,8 @@ const Dashboard = () => {
           </Card>
         </div>
       </div>
-      <div className='row mt-3'>
-        <div className='col-12 col-lg-4 mb-2 mb-lg-0'>
+      <div className='row  mt-md-3'>
+        <div className='col-12 col-lg-4 mb-3 mb-lg-0'>
           <Card className='bg-white box-shadow-custom' >
             <CardBody style={{ height: '310px' }} className='pt-4'>
               <div style={{ position: 'relative', height: '250px' }}>
@@ -249,18 +249,18 @@ const Dashboard = () => {
       </div>
       <h2 className='fs-24 fw-600 my-3'>Upcoming Renewals</h2>
       <div className='container'>
-        <div className='row border rounded px-1 py-2 box-shadow-custom bg-white'>
-          <div className='col-12 col-md-10 d-flex flex-wrap align-items-center text-start'>
+        <div className='row border rounded px-1 py-2 box-shadow-custom bg-white mb-3 mb-md-0'>
+          <div className='col-12 col-md-10 d-flex flex-wrap align-items-center text-start  mb-3 mb-md-0'>
             <img src={renewal01} alt='icon' className='me-1' />
             <p className='mx-3  fs-15 fw-600 mb-0'>SignNTrack</p>
             <p className=' text-color mt-3 ms-4 fs-12'>Due Date:18.04.2024</p>
           </div>
-          <div className='col-12 col-md-2 text-end'>
+          <div className='col-12 col-md-2 text-end '>
             <p className='mt-2 fs-15 fw-600 mt-3'>$5.99</p>
           </div>
         </div>
         <div className='row border rounded px-1 py-2 mt-2 mb-4 box-shadow-custom bg-white'>
-          <div className='col-12 col-md-10 d-flex flex-wrap align-items-center text-start'>
+          <div className='col-12 col-md-10 d-flex flex-wrap align-items-center text-start '>
             <img src={renewal02} alt='icon' className='me-1' />
             <p className='mx-2  fs-15 fw-600 mb-0'>SignNTrack</p>
             <p className='text-color mt-3 ms-4 fs-12'>Due Date:18.04.2024</p>

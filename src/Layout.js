@@ -21,9 +21,9 @@ const Layout = () => {
       setIsSmallScreen(window.innerWidth <= 991);
       setIsSidebar(window.innerWidth <= 991)
     };
+
     handleResize();
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
     };

@@ -112,9 +112,9 @@ const NewSubscription = () => {
       <div className='d-flex justify-content-start gap-2'>
         <img src={breadcrumbHome} width={20} height={20} alt='home' className='cursor-pointer' />
         <img src={breadcrumbArrowRight} width={20} height={20} alt='rightArrow' />
-        <p className='fs-12 text-muted cursor-pointer'>Subscriptions</p>
+        <p className='fs-14 text-muted fw-500 cursor-pointer'>Subscriptions</p>
         <img src={breadcrumbArrowRight} width={20} height={20} alt='rightArrow' />
-        <p className='fs-12 dark-purple cursor-pointer'>New Subscription</p>
+        <p className='fs-14 fw-500 dark-purple cursor-pointer'>New Subscription</p>
       </div>
 
       <div className='d-flex justify-content-end gap-2'>
@@ -128,7 +128,7 @@ const NewSubscription = () => {
               <div className="image-upload">
                 {preview ? (
                   <div className="image-preview position-relative ">
-                    <img src={preview} alt="uploaded" className="uploaded-image" width={50} height={50} />
+                    <img src={preview} alt="uploaded" className="uploaded-image" width={100} height={100} />
                     <img src={deleteIcon} alt="uploaded" className="icon-button position-absolute bottom-0 cursor-pointer" width={20} height={20} onClick={handleRemoveImage} />
                   </div>
                 ) : (

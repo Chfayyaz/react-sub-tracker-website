@@ -77,9 +77,9 @@ const SpotifySubscription = () => {
       <div className='d-flex justify-content-start gap-2'>
         <img src={breadcrumbHome} width={20} height={20} alt='home' className='cursor-pointer' />
         <img src={breadcrumbArrowRight} width={20} height={20} alt='rightArrow' />
-        <p className='fs-12 text-muted cursor-pointer'>Subscriptions</p>
+        <p className='fs-14   fw-500 text-muted cursor-pointer'>Subscriptions</p>
         <img src={breadcrumbArrowRight} width={20} height={20} alt='rightArrow' />
-        <p className='fs-12 dark-purple cursor-pointer'>New Subscription</p>
+        <p className='fs-14  fw-500  dark-purple cursor-pointer'>New Subscription</p>
       </div>
 
       <div className='d-flex justify-content-end gap-2'>
