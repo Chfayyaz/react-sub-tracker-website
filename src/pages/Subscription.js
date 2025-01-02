@@ -34,25 +34,35 @@ const Subscription = () => {
         <Dropdown.Toggle
           className=" border-0  bg-white dropdown-arrow-hidden"
         >
-          <img src={dots} alt='Options' width={20} height={20} className='text-center'/>
+          <img src={dots} alt='Options' width={20} height={20} className='text-center' />
         </Dropdown.Toggle>
 
-        <Dropdown.Menu>
-          <Dropdown.Item className="fs-14 pt-2 ps-3 border-bottom bg-white">
-            <p className='fs-13 fw-400 text-color'>
-              View
-            </p>
+        <Dropdown.Menu className='p-0'>
+          <Dropdown.Item className="p-0">
+            <Link
+              to="/spotify-subscription"
+              className="d-block fs-14 py-2 ps-3 hover-effect border-bottom bg-white text-decoration-none"
+            >
+              <span className="fs-13 fw-400 text-color">View</span>
+            </Link>
           </Dropdown.Item>
-          <Dropdown.Item className="fs-14 pt-3 ps-3 border-bottom bg-white">
-            <p className='fs-13 fw-400 text-color'>
-              Edit
-            </p>
+          <Dropdown.Item className="p-0">
+            <Link
+              to="/spotify-subscription"
+              className="d-block fs-14 py-2 ps-3 hover-effect border-bottom bg-white text-decoration-none"
+            >
+              <span className="fs-13 fw-400 text-color">Edit</span>
+            </Link>
           </Dropdown.Item>
-          <Dropdown.Item className="fs-14 pt-3 ps-3 bg-white">
-            <p className='fs-13 fw-400 text-color'>
-              Delete
-            </p>
+          <Dropdown.Item className="p-0">
+            <Link
+              to="/spotify-subscription"
+              className="d-block fs-14 py-2 ps-3 hover-effect border-bottom bg-white text-decoration-none"
+            >
+              <span className="fs-13 fw-400 text-color">Delete</span>
+            </Link>
           </Dropdown.Item>
+          
         </Dropdown.Menu>
       </Dropdown>
     );
@@ -65,10 +75,10 @@ const Subscription = () => {
         <Button type='button' className='btn-outline-color fw-500 fs-15 py-2' outline onClick={() => setIsAddCategory(!isAddCategory)}>
           <span className='fw-600 fs-15'>+</span> Add Category
         </Button>
-        <Link  to="/new-subscription">
-        <Button type='button' className='fw-500 fs-15 btn-fill-color border-1 border-white py-2'>
-          <span className='fw-600 fs-15'>+</span> Add Subscription
-        </Button>
+        <Link to="/new-subscription">
+          <Button type='button' className='fw-500 fs-15 btn-fill-color border-1 border-white py-2'>
+            <span className='fw-600 fs-15'>+</span> Add Subscription
+          </Button>
         </Link>
       </div>
       <div className='mt-3 border rounded'>

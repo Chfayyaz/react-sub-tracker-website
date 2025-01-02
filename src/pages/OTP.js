@@ -36,7 +36,7 @@ function OTP() {
         <div className='container'>
             <div className='row'>
                 <div className='col-12 col-lg-6 '>
-                    <div className=' m-lg-5 border bg-white  p-2 p-md-5 my-2 '>
+                    <div className=' m-lg-5 border bg-white  p-2 p-md-5 my-2 box-shadow-custom'>
                         <div className='text-center mt-5'>
                             <img src={logoTitle} alt='icon' />
                         </div>
