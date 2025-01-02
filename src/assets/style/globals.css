@@ -31,26 +31,27 @@ html {
 }
 .svg-bg {
    display: inline-block;
-   width: 100%; 
-   box-sizing: border-box; 
+   width: 100%;
+   box-sizing: border-box;
  }
  
  .svg-bg img {
    max-width: 100%;
    height: 55px;
-   display: block; 
-   margin: 0 auto; 
+   display: block;
+   margin: 0 auto;
  }
  
  @media (max-width: 767px) {
    .svg-bg {
-     padding-left: 10px; 
-     padding-right: 10px; 
+     padding-left: 10px;
+     padding-right: 10px;
    }
    .svg-bg img {
      height: auto;
    }
  }
+ 
 
 .header-badges {
    background-color: #F1F1FF;
@@ -84,12 +85,37 @@ html {
    background-color: #758AFF !important;
    color: white !important;
 }
+.btn-fill-light-outline {
+   background-color: white !important;
+   color: white !important;
+   border: solid 1px #D0D5DD !important;
+}
 .btn-fill-color:hover {
    background-color: white !important;
    color: #758AFF !important;
    border: solid 1px #758AFF !important;
 
 }
+/* for OTP */
+.otp-input {
+   appearance: textfield;
+   -moz-appearance: textfield;
+   -webkit-appearance: none;
+}
+
+.otp-input::-webkit-outer-spin-button,
+.otp-input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+.otp-input::-moz-outer-spin-button,
+.otp-input::-moz-inner-spin-button {
+   -moz-appearance: none;
+   margin: 0;
+}
+/* End OTP */
+
 .table-head-bg {
    background-color: #758AFF1A !important;
 }
@@ -286,7 +312,9 @@ html {
  }
 
  @media (max-width: 768px) {
-  
+   .fs-13 {
+      font-size: 12px !important;
+  }
    .fs-45 {
       font-size: 25px !important;
    }

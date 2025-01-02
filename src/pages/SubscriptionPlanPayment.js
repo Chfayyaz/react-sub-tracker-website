@@ -160,17 +160,17 @@ const SubscriptionPlanPayment = () => {
       </div>
       <div className='mx-2 d-flex justify-content-between'>
         <h2 className='fs-24 fw-600 my-3 '>Manage Cards</h2>
-        <Link to="/add-new-payment-card"> <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><span className='fw-600 fs-15'>+</span>Add Card</Button></Link>
+        <Link to="/add-new-payment-card"> <Button  type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2'  ><span className='fw-600 fs-15'>+</span>Add Card</Button></Link>
       </div>
       <div className="row my-3 ms-2">
-        <div className="col-12 col-md-2 mb-3 d-flex align-items-center">
+        <div className="col-8 col-md-2 mb-3 d-flex align-items-center">
           <div className="form-check pt-2 p-sm-2 me-3 cursor-pointer">
             {checkedCard === "master" ?
               <img src={cardCheckbox} width={20} height={20} alt='' onClick={() => setCheckedCard('master')} /> :
               <img src={checkboxEmpty} width={20} height={20} alt='' onClick={() => setCheckedCard('master')} />
             }
           </div>
-          
+
           <div className="svg-bg  rounded text-center border  bg-white">
             <img src={masterCard} alt='' className='text-start text-md-center ' />
           </div>
@@ -185,27 +185,44 @@ const SubscriptionPlanPayment = () => {
         </div>
       </div>
       <div className="row my-3 ms-2">
-        <div className="col-12  col-md-2 mb-3 d-flex gap-0">
+        <div className="col-8 col-md-2 mb-3 d-flex align-items-center gap-0">
           <div className="form-check mt-2 p-sm-2 me-3 cursor-pointer">
-            {checkedCard === "visa" ?
-              <img src={cardCheckbox} width={20} height={20} alt='' onClick={() => setCheckedCard('visa')} /> :
-              <img src={checkboxEmpty} width={20} height={20} alt='' onClick={() => setCheckedCard('visa')} />
-            }
+            {checkedCard === "visa" ? (
+              <img
+                src={cardCheckbox}
+                width={20}
+                height={20}
+                alt=""
+                onClick={() => setCheckedCard("visa")}
+              />
+            ) : (
+              <img
+                src={checkboxEmpty}
+                width={20}
+                height={20}
+                alt=""
+                onClick={() => setCheckedCard("visa")}
+              />
+            )}
           </div>
-          <div className="svg-bg   text-center border rounded bg-white ">
-            <img src={visaCard} alt='' className='text-start text-md-center ' />
+          <div className="svg-bg text-center border rounded bg-white">
+            <img src={visaCard} alt="" className="text-start text-md-center" />
           </div>
         </div>
-        <div className="col-12 col-md-8  mb-3">
-          <input type="cardNumber" className="form-control py-3  rounded border   payment-input" id="masterCard"
-            placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Visa   ****  2020" />
+        <div className="col-12 col-md-8 mb-3">
+          <input
+            type="text"
+            className="form-control py-3 rounded border payment-input"
+            id="visaCard"
+            placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Visa   ****  2020"
+          />
         </div>
-
-        <div className="col-12 col-md-2 d-flex mt-md-2 d-flex mt-md-2  mb-3">
-          <Link className='text-decoration-none text-danger'>Remove</Link>
-          <Link className='text-decoration-none dark-purple ps-2'>Edit</Link>
+        <div className="col-12 col-md-2 d-flex mt-md-2 mb-3 align-items-center">
+          <Link className="text-decoration-none text-danger">Remove</Link>
+          <Link className="text-decoration-none dark-purple ps-2">Edit</Link>
         </div>
       </div>
+
 
       <h2 className='fs-24 fw-600 my-3'>Billing</h2>
       <div className="d-flex justify-content-between my-3 bg-light-purple px-4 rounded-2 pt-3  px-1  ">
@@ -213,7 +230,7 @@ const SubscriptionPlanPayment = () => {
         <p className='fs-14 fw-500'>290.95 CHF</p>
       </div>
       <div className='text-end mb-3'>
-        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  > Checkout</Button>
+        <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2'  > Checkout</Button>
       </div>
 
     </div>

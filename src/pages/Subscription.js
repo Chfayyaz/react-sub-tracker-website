@@ -62,11 +62,11 @@ const Subscription = () => {
     <div className='container'>
       <p className='page-heading fs-20   '>Here you can view and manage all your subscriptions</p>
       <div className='d-flex justify-content-end gap-2 flex-wrap'>
-        <Button className='btn-outline-color fw-500 fs-15 py-2' outline onClick={() => setIsAddCategory(!isAddCategory)}>
+        <Button type='button' className='btn-outline-color fw-500 fs-15 py-2' outline onClick={() => setIsAddCategory(!isAddCategory)}>
           <span className='fw-600 fs-15'>+</span> Add Category
         </Button>
         <Link  to="/new-subscription">
-        <Button className='fw-500 fs-15 btn-fill-color border-0 py-2'>
+        <Button type='button' className='fw-500 fs-15 btn-fill-color border-1 border-white py-2'>
           <span className='fw-600 fs-15'>+</span> Add Subscription
         </Button>
         </Link>
@@ -150,7 +150,7 @@ const Subscription = () => {
               <Input id="budget" name="budget" placeholder="Enter Budget" type="number" />
             </FormGroup>
             <FormGroup className='text-center'>
-              <Button className='fw-500 fs-15 btn-fill-color border-0 py-2 px-5 text-center' onClick={() => setIsAddCategory(!isAddCategory)}>Add</Button>
+              <Button type='button' className='fw-500 fs-15 btn-fill-color border-1 border-white py-2 px-5 text-center' onClick={() => setIsAddCategory(!isAddCategory)}>Add</Button>
             </FormGroup>
           </Form>
         </ModalBody>

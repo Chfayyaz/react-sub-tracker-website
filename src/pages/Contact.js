@@ -77,7 +77,7 @@ const Contact = () => {
         </div>
         <div className="row mt-2">
           <div className="col-12 col-lg-8 text-end">
-          <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5'  > Save</Button>
+          <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 px-5'  > Save</Button>
 
           </div>
 

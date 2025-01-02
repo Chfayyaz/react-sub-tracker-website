@@ -337,7 +337,7 @@ const Profile = () => {
               />
               <p className='fs-16 fw-600 mt-3'>John Smith</p>
               <div className='text-center'>
-                <Button className=' fw-500 fs-15  btn-light-purple-color border-0 py-2 rounded-4'  > Change</Button>
+                <Button className=' fw-500 fs-15  btn-light-purple-color border-0 py-2 rounded-4' type='button' > Change</Button>
 
               </div>
               <Form className="text-start">
@@ -397,7 +397,7 @@ const Profile = () => {
                 </FormGroup>
               </Form>
               <div className='mt-5 pt-5'>
-                <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5 rounded-4'  > Save</Button>
+                <Button className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 px-5 rounded-4' type='button'  > Save</Button>
               </div>
             </div>
           </OffcanvasBody>
@@ -558,7 +558,7 @@ const Profile = () => {
 
             </div>
             <div className='text-center mt-5'>
-              <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5 rounded-4'  > Save</Button>
+              <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 px-5 rounded-4'  > Save</Button>
             </div>
           </OffcanvasBody>
         </Offcanvas>
@@ -718,7 +718,7 @@ const Profile = () => {
 
             </div>
             <div className='text-center mt-5'>
-              <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5 rounded-4'  > Save</Button>
+              <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 px-5 rounded-4'  > Save</Button>
             </div>
           </OffcanvasBody>
         </Offcanvas>
@@ -793,7 +793,7 @@ const Profile = () => {
 
             </div>
             <div className='mt-5 pt-5 d-flex justify-content-center align-item-end'>
-              <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5 rounded-4 mt-5'  > Save</Button>
+              <Button  type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 px-5 rounded-4 mt-5'  > Save</Button>
             </div>
           </OffcanvasBody>
         </Offcanvas>
