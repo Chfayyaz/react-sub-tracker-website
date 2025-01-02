@@ -6,9 +6,7 @@ html {
     padding: 0px;
     margin: 0px;
  }
- 
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
  body {
    font-family: 'Poppins', sans-serif;
    background-color: #c5ccf21a !important;
@@ -31,10 +29,28 @@ html {
 .calendar-card {
    background-color: #F1F1FF;
 }
-.svg-bg img {
-  max-width: 100%;
-  height: 55px;
-}
+.svg-bg {
+   display: inline-block;
+   width: 100%; 
+   box-sizing: border-box; 
+ }
+ 
+ .svg-bg img {
+   max-width: 100%;
+   height: 55px;
+   display: block; 
+   margin: 0 auto; 
+ }
+ 
+ @media (max-width: 767px) {
+   .svg-bg {
+     padding-left: 10px; 
+     padding-right: 10px; 
+   }
+   .svg-bg img {
+     height: auto;
+   }
+ }
 
 .header-badges {
    background-color: #F1F1FF;
@@ -67,6 +83,12 @@ html {
 .btn-fill-color {
    background-color: #758AFF !important;
    color: white !important;
+}
+.btn-fill-color:hover {
+   background-color: white !important;
+   color: #758AFF !important;
+   border: solid 1px #758AFF !important;
+
 }
 .table-head-bg {
    background-color: #758AFF1A !important;
@@ -103,14 +125,6 @@ html {
    --bs-progress-height:0.3rem !important;
    --bs-progress-bg:#4E4E61 !important
 }
-.chart-scrollbar {
-   scrollbar-width: none; 
-   -ms-overflow-style: none;
-}
-
-.chart-scrollbar-::-webkit-scrollbar {
-   width: 0px; 
-}
 .cursor-pointer {
    cursor: pointer;
 }
@@ -130,7 +144,25 @@ html {
  .text-color-light {
    color: #A2A2B5;
  }
+
+::-webkit-scrollbar {
+   width: 0.5em;
+   border-radius: 10px; 
+ }
  
+::-webkit-scrollbar-track {
+   box-shadow: inset 0 0 6px white;
+   border-radius: 10px; 
+ }
+ 
+::-webkit-scrollbar-thumb {
+   background-color: #EAECF0;
+   outline: 1px solid #EAECF0;
+   border-radius: 10px; 
+ }
+ .hover-effect:hover {
+   background-color: #eff1f5 !important;
+ }
  .fs-8 {
     font-size: 8px !important;
  }
@@ -263,28 +295,6 @@ html {
       font-size: 25px !important;
    }
 
-   .fs-15 {
-      font-size: 11px !important;
-   }
-   .fs-14 {
-      font-size: 11px !important;
-   }
-   .fs-10 {
-      font-size: 8px !important;
-   }
-   .fs-13 {
-      font-size: 11px !important;
-   }
-   .fs-16 {
-      font-size: 14px !important;
-   }
-
-   .fs-17 {
-      font-size: 13px !important;
-   }
-   .fs-18 {
-      font-size: 14px !important;
-   }
    .fs-19 {
       font-size: 15px !important;
    }

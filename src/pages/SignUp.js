@@ -14,8 +14,9 @@ function SignUp() {
     const [isViewConfirmPassword, setIsViewConfirmPassword] = useState(false);
 
     return (
+        <div className='container'>
         <div className='row'>
-            <div className='col-12 col-lg-6'>
+            <div className='col-12 col-lg-6 d-none d-lg-block'>
                 <div className='position-relative d-flex justify-content-center align-items-center vh-100' >
                     <div className='text-center'>
                         <img src={banner01} alt='banner01' width={400} />
@@ -27,7 +28,10 @@ function SignUp() {
             </div>
 
             <div className='col-12 col-lg-6 '>
-                <div className=' m-5 border bg-white  p-5'>
+                    <div className=' m-lg-5 border bg-white  p-5'>
+                        <div className='d-block d-lg-none  text-center'>
+                            <img src={banner01} alt='banner01' className='img-fluid' />
+                        </div>
                     <h4 className='fs-25 fw-600 mt-5 text-center'>Create an Account</h4>
                     <p className='text-color fs-14 fw-500 text-center mt-2'>Welcome! Please enter your details</p>
                     <Form>
@@ -104,6 +108,7 @@ function SignUp() {
                 </div>
 
             </div>
+        </div>
         </div>
     );
 }

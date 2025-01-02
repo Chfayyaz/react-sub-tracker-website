@@ -14,8 +14,7 @@ const SubscriptionPlan = () => {
   return (
     < div className='container'>
       <p className='page-heading fs-20   mb-4'>Choose the Plan That Fits Your Subscription Needs</p>
-
-      <div className="row bg-white border rounded">
+      <div className="row bg-white border rounded mb-5">
         <div className="col-12 col-lg-5 px-0 mx-0">
           <p className="dark-purple-bg text-white w-50 ps-5 py-2 mt-4">Free For 1 Month</p>
           <div className="px-lg-5 px-md-4 px-3 py-0 py-md-4 pb-3 pb-0">
@@ -71,9 +70,6 @@ const SubscriptionPlan = () => {
           </div>
         </div>
       </div>
-
-
-
     </div>
   );
 };
