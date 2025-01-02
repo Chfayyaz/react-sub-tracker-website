@@ -18,8 +18,8 @@ const Dashboard = () => {
         label: 'Entertainment',
         data: [100, 120, 140, 180, 200, 230, 280, 300, 325, 360, 380, 420],
         borderColor: '#4c6ef5',
-        backgroundColor: 'rgba(10, 55, 233, 0.9)', 
-        fill: true,  
+        backgroundColor: 'rgba(10, 55, 233, 0.9)',
+        fill: true,
         tension: 1,
         borderWidth: 2,
         pointRadius: 0,
@@ -28,8 +28,8 @@ const Dashboard = () => {
         label: 'Transportation',
         data: [400, 425, 450, 460, 475, 495, 520, 535, 550, 575, 595, 600],
         borderColor: '#03E4E7',
-        backgroundColor: 'rgba(3, 228, 231, 0.3)', 
-        fill: true,  
+        backgroundColor: 'rgba(3, 228, 231, 0.3)',
+        fill: true,
         tension: 1,
         borderWidth: 2,
         pointRadius: 0,
@@ -38,8 +38,8 @@ const Dashboard = () => {
         label: 'Security',
         data: [600, 625, 650, 700, 725, 775, 700, 725, 750, 800, 850, 820],
         borderColor: '#da77f2',
-        backgroundColor: 'rgba(218, 119, 242, 0.3)', 
-        fill: true,  
+        backgroundColor: 'rgba(218, 119, 242, 0.3)',
+        fill: true,
         tension: 1,
         borderWidth: 2,
         pointRadius: 0,
@@ -60,16 +60,14 @@ const Dashboard = () => {
           pointStyle: 'circle',
           boxWidth: 5,
           boxHeight: 5,
-          borderWidth: 0,
           padding: 10,
           color: '#475467',
           generateLabels: (chart) => {
             const labels = chart.data.datasets.map((dataset, index) => ({
               text: dataset.label,
               fillStyle: dataset.borderColor,
-              borderColor: 'transparent',
-              borderWidth: 0,
-              fontColor: '#475467',
+              strokeStyle: 'transparent', // Ensuring no border color
+              borderWidth: 0, // Ensuring no border width
               hidden: !chart.isDatasetVisible(index),
               datasetIndex: index,
             }));
@@ -126,6 +124,7 @@ const Dashboard = () => {
       },
     },
   };
+
 
   const donutChartData = {
     labels: ["Transportation", "Entertainment", "Security", "Pending"],
@@ -232,18 +231,21 @@ const Dashboard = () => {
         </div>
         <div className='col-12  col-lg-8 mb-2 mb-lg-0'>
           <Card className='bg-white box-shadow-custom'>
-            <CardBody >
-              <Line
-                data={data}
-                options={options}
-                height={280}
-                width="100%"
-              />
+            <CardBody>
+              <div className="chart-wrapper">
+                <div className="chart-container">
+                  <Line
+                    data={data}
+                    options={options}
+                    height={275}
+                    width="100%"
+                  />
+                </div>
+              </div>
             </CardBody>
           </Card>
 
         </div>
-
       </div>
       <h2 className='fs-24 fw-600 my-3'>Upcoming Renewals</h2>
       <div className='container'>

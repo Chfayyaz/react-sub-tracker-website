@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dropdown } from "react-bootstrap";
 import {
   Offcanvas,
@@ -44,13 +44,22 @@ const Profile = () => {
   const [isOpenCurrency, setIsOpenCurrency] = useState(false);
   const [isOpenPassword, setIsOpenPassword] = useState(false);
 
+  useEffect(() => {
+    const layoutElement = document.getElementById('layout');
+    if (isOpenAccountSetting || isOpenPassword || isOpenPersonalData || isOpenLanguage || isOpenCurrency) {
+      layoutElement.style.filter = 'blur(3px)';
+    } else {
+      layoutElement.style.filter = 'none';
+    }
+  }, [isOpenAccountSetting, isOpenPassword, isOpenPersonalData, isOpenLanguage, isOpenCurrency])
   return (
+
     <>
       <Dropdown className="bg-transparent" align="end" offset={[-140, 0]}>
         <Dropdown.Toggle
           className="d-flex justify-content-between align-item-center border-0 px-0 fw-600 bg-transparent fs-30 text-dark dropdown-arrow-hidden"
         >
-          <p className='fs-15 fw-400 mt-2 pt-1 d-none d-lg-block'>John Smith</p>
+          <p className='fs-15 fw-400 mt-2 pt-0 d-none d-lg-block'>John Smith</p>
           <img
             src={avatar}
             width={40}
@@ -67,8 +76,8 @@ const Profile = () => {
           />
         </Dropdown.Toggle>
 
-        <Dropdown.Menu>
-          <Dropdown.Item className="fs-14 mt-1 mb-0 pe-4 bg-white" onClick={() => setIsOpenAccountSetting(!isOpenAccountSetting)}>
+        <Dropdown.Menu >
+          <Dropdown.Item className="fs-14 pt-2 mb-0 pe-4 bg-white hover-effect" onClick={() => setIsOpenAccountSetting(!isOpenAccountSetting)}>
             <p className='fs-18 fw-400 text-color my-1'>
               <img
                 src={setting}
@@ -81,7 +90,7 @@ const Profile = () => {
             </p>
           </Dropdown.Item>
           <hr className='mx-4' />
-          <Dropdown.Item className="fs-14 mb-0  bg-white">
+          <Dropdown.Item className="fs-14 mb-0  bg-white hover-effect">
             <p className='fs-18 fw-400 mb-1 text-color-red'>
               <img
                 src={logout}
@@ -97,11 +106,11 @@ const Profile = () => {
       </Dropdown>
 
       <div>
-        {/* main canvas for Account Settings */}
         <Offcanvas
           isOpen={isOpenAccountSetting}
           toggle={() => setIsOpenAccountSetting(!isOpenAccountSetting)}
           direction="end"
+          backdrop={false}
         >
           <OffcanvasHeader className='border-bottom fs-16' toggle={() => setIsOpenAccountSetting(!isOpenAccountSetting)}>
             Account Settings
@@ -115,7 +124,7 @@ const Profile = () => {
                 alt="User Avatar"
               />
               <p className='fs-16 fw-600 mt-3'>John Smith</p>
-              <div className='d-flex justify-content-between align-item-center border rounded px-2 mx-3 cursor-pointer'
+              <div className='d-flex justify-content-between align-item-center border rounded px-2 mx-3 cursor-pointer hover-effect'
                 onClick={() => {
                   setIsOpenAccountSetting(!isOpenAccountSetting)
                   setIsOpenPersonalData(!isOpenPersonalData)
@@ -124,8 +133,8 @@ const Profile = () => {
                 <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={profile}
-                    width={15}
-                    height={15}
+                    width={12}
+                    height={12}
                     alt="User Avatar"
                     className='me-2'
                   />
@@ -139,7 +148,7 @@ const Profile = () => {
                   className='mt-3'
                 />
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'
                 onClick={() => {
                   setIsOpenAccountSetting(!isOpenAccountSetting)
                   setIsOpenLanguage(!isOpenLanguage)
@@ -163,7 +172,7 @@ const Profile = () => {
                   className='mt-3'
                 />
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'
                 onClick={() => {
                   setIsOpenAccountSetting(!isOpenAccountSetting)
                   setIsOpenCurrency(!isOpenCurrency)
@@ -189,11 +198,11 @@ const Profile = () => {
                   className='mt-3'
                 />
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'
-               onClick={() => {
-                setIsOpenAccountSetting(!isOpenAccountSetting)
-                setIsOpenPassword(!isOpenPassword)
-              }}
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'
+                onClick={() => {
+                  setIsOpenAccountSetting(!isOpenAccountSetting)
+                  setIsOpenPassword(!isOpenPassword)
+                }}
               >
                 <p className='mt-3 fs-13 fw-500'>
                   <img
@@ -213,7 +222,7 @@ const Profile = () => {
                   className='mt-3'
                 />
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'>
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'>
                 <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={BA}
@@ -238,7 +247,7 @@ const Profile = () => {
 
                 </FormGroup>
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'>
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'>
                 <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={TFA}
@@ -264,7 +273,7 @@ const Profile = () => {
                 </FormGroup>
 
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'>
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'>
                 <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={email}
@@ -291,7 +300,7 @@ const Profile = () => {
 
                 </FormGroup>
               </div>
-              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2'>
+              <div className='d-flex justify-content-between border rounded px-2 mx-3 cursor-pointer mt-2 hover-effect'>
                 <p className='mt-3 fs-13 fw-500'>
                   <img
                     src={delAccount}
@@ -313,6 +322,7 @@ const Profile = () => {
           isOpen={isOpenPersonalData}
           toggle={() => setIsOpenPersonalData(!isOpenPersonalData)}
           direction="end"
+          backdrop={false}
         >
           <OffcanvasHeader className='border-bottom fs-16' toggle={() => setIsOpenPersonalData(!isOpenPersonalData)}>
             Personal Data
@@ -397,6 +407,7 @@ const Profile = () => {
           isOpen={isOpenLanguage}
           toggle={() => setIsOpenLanguage(!isOpenLanguage)}
           direction="end"
+          backdrop={false}
         >
           <OffcanvasHeader className='border-bottom fs-16' toggle={() => setIsOpenLanguage(!isOpenLanguage)}>
             Language
@@ -556,6 +567,7 @@ const Profile = () => {
           isOpen={isOpenCurrency}
           toggle={() => setIsOpenCurrency(!isOpenCurrency)}
           direction="end"
+          backdrop={false}
         >
           <OffcanvasHeader className='border-bottom fs-16' toggle={() => setIsOpenCurrency(!isOpenCurrency)}>
             Currency
@@ -589,7 +601,7 @@ const Profile = () => {
                 English (UK)
               </p>
               <p className='pt-3 fs-11 '>
-              GBP
+                GBP
               </p>
 
             </div>
@@ -605,7 +617,7 @@ const Profile = () => {
                 Pakistan
               </p>
               <p className='pt-3 fs-11 '>
-              PKR
+                PKR
               </p>
 
             </div>
@@ -637,7 +649,7 @@ const Profile = () => {
                 English (UK)
               </p>
               <p className='pt-3 fs-11 '>
-              GBP
+                GBP
               </p>
 
             </div>
@@ -653,7 +665,7 @@ const Profile = () => {
                 Pakistan
               </p>
               <p className='pt-3 fs-11 '>
-              PKR
+                PKR
               </p>
 
             </div>
@@ -685,7 +697,7 @@ const Profile = () => {
                 English (UK)
               </p>
               <p className='pt-3 fs-11 '>
-              GBP
+                GBP
               </p>
 
             </div>
@@ -701,7 +713,7 @@ const Profile = () => {
                 Pakistan
               </p>
               <p className='pt-3 fs-11 '>
-              PKR
+                PKR
               </p>
 
             </div>
@@ -710,14 +722,15 @@ const Profile = () => {
             </div>
           </OffcanvasBody>
         </Offcanvas>
-         {/* main canvas for Change password */}
-         <Offcanvas
+        {/* main canvas for Change password */}
+        <Offcanvas
           isOpen={isOpenPassword}
           toggle={() => setIsOpenPassword(!isOpenPassword)}
           direction="end"
+          backdrop={false}
         >
           <OffcanvasHeader className='border-bottom fs-16' toggle={() => setIsOpenPassword(!isOpenPassword)}>
-          Change Password
+            Change Password
           </OffcanvasHeader>
           <OffcanvasBody>
             <div className='text-center pb-5 '>
@@ -777,11 +790,11 @@ const Profile = () => {
                   </div>
                 </FormGroup>
               </Form>
-             
+
             </div>
             <div className='mt-5 pt-5 d-flex justify-content-center align-item-end'>
-                <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5 rounded-4 mt-5'  > Save</Button>
-              </div>
+              <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5 rounded-4 mt-5'  > Save</Button>
+            </div>
           </OffcanvasBody>
         </Offcanvas>
       </div>

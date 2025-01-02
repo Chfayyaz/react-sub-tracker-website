@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/style/globals.css';
+import '../assets/style/dashboard.css';
+
 import Select from "react-select";
 import {
   Card,
@@ -82,16 +84,14 @@ const Dashboard = () => {
             pointStyle: 'circle',
             boxWidth: 5,
             boxHeight: 5,
-            borderWidth: 0,
             padding: 10,
-            color: 'black',
+            color: '#475467',
             generateLabels: (chart) => {
               const labels = chart.data.datasets.map((dataset, index) => ({
                 text: dataset.label,
                 fillStyle: dataset.borderColor,
-                borderColor: 'transparent',
-                borderWidth: 0,
-                fontColor: 'black',
+                strokeStyle: 'transparent', // Ensuring no border color
+                borderWidth: 0, // Ensuring no border width
                 hidden: !chart.isDatasetVisible(index),
                 datasetIndex: index,
               }));
@@ -109,7 +109,7 @@ const Dashboard = () => {
             display: false,
           },
           ticks: {
-            color: 'black',
+            color: '#475467',
             autoSkip: false,
             maxRotation: 0,
             minRotation: 0,
@@ -118,9 +118,9 @@ const Dashboard = () => {
           title: {
             display: true,
             text: 'Months',
-            color: 'black',
+            color: '#475467',
             font: {
-              size: 14,
+              size: 13,
             },
             padding: { top: 0, left: 0, right: 0, bottom: 0 },
           },
@@ -131,7 +131,7 @@ const Dashboard = () => {
           },
           ticks: {
             stepSize: 200,
-            color: 'black',
+            color: '#475467',
             beginAtZero: true,
             min: 0,
             max: 10000,
@@ -139,9 +139,9 @@ const Dashboard = () => {
           title: {
             display: true,
             text: 'Amount Spent',
-            color: 'black',
+            color: '#475467',
             font: {
-              size: 14,
+              size: 13,
             },
             padding: { top: 0, left: 0, right: 0, bottom: 10 },
           },
@@ -216,16 +216,21 @@ const Dashboard = () => {
               </Card>
             </div>
             <div className='col-12  col-lg-8 mb-2 mb-lg-0'>
+            
               <Card className='bg-white box-shadow-custom'>
-                <CardBody >
-                  <Line
-                    data={data}
-                    options={options}
-                    height={280}
-                    width="100%"
-                  />
-                </CardBody>
-              </Card>
+                          <CardBody>
+                            <div className="chart-wrapper">
+                              <div className="chart-container">
+                                <Line
+                                  data={data}
+                                  options={options}
+                                  height={275}
+                                  width="100%"
+                                />
+                              </div>
+                            </div>
+                          </CardBody>
+                        </Card>
     
             </div>
     
@@ -233,7 +238,7 @@ const Dashboard = () => {
       <h2 className='fs-24 fw-600 my-4'>Categories</h2>
       <div className="row g-3 mb-5">
         <div className=" col-12 col-md-6 col-lg-3 d-flex  " >
-          <div className="border rounded text-center px-3 pb-3 pt-5 w-100 box-shadow-custom bg-white" onClick={() => setIsAddCategory(!isAddCategory)}>
+          <div className="border rounded text-center px-3 pb-3 pt-5 w-100 box-shadow-custom bg-white cursor-pointer" onClick={() => setIsAddCategory(!isAddCategory)}>
             <div className="budget-icon my-2">
               <img src={addIcon} alt="add icon" className="w-50" />
             </div>
