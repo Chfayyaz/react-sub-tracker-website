@@ -31,7 +31,7 @@ html {
 }
 .svg-bg {
    display: inline-block;
-   width: 100%;
+   width: 85px;
    box-sizing: border-box;
  }
  
@@ -310,6 +310,14 @@ html {
    border-color: #2684FF !important;
  }
 
+/* Base styles for the list items */
+.password-strength-indicator li {
+   height: 10px;
+   list-style-type: none;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
+   background-color: #3535421A;
+ }
  .w-md-50{
    width: 50% !important;
 }

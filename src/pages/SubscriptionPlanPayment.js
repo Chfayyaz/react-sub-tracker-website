@@ -164,7 +164,7 @@ const SubscriptionPlanPayment = () => {
       </div>
       <div className="row my-3 ms-2">
         <div className="col-8 col-md-2 mb-3 d-flex align-items-center">
-          <div className="form-check pt-2 p-sm-2 me-3 cursor-pointer">
+          <div className="form-check my-2 ps-1  me-3 cursor-pointer">
             {checkedCard === "master" ?
               <img src={cardCheckbox} width={20} height={20} alt='' onClick={() => setCheckedCard('master')} /> :
               <img src={checkboxEmpty} width={20} height={20} alt='' onClick={() => setCheckedCard('master')} />
@@ -179,14 +179,14 @@ const SubscriptionPlanPayment = () => {
           <input type="text" className="form-control py-3 rounded border payment-input" id="masterCard"
             placeholder=" &nbsp;  &nbsp; Master card   ****  3122" />
         </div>
-        <div className="col-12 col-md-2 d-flex mb-4 pb-1 align-items-center">
-          <Link className='text-decoration-none text-color-light ps-1 '>Remove</Link>
+        <div className="col-12 col-md-2 d-flex justify-content-md-start justify-content-end  mb-4 pb-1 align-items-center">
+          <Link className='text-decoration-none text-color-light  '>Remove</Link>
           <Link className='text-decoration-none dark-purple ps-2'>Edit</Link>
         </div>
       </div>
       <div className="row my-3 ms-2">
         <div className="col-8 col-md-2 mb-3 d-flex align-items-center gap-0">
-          <div className="form-check mt-2 p-sm-2 me-3 cursor-pointer">
+          <div className="form-check my-2 ps-1  me-3 cursor-pointer">
             {checkedCard === "visa" ? (
               <img
                 src={cardCheckbox}
@@ -217,7 +217,7 @@ const SubscriptionPlanPayment = () => {
             placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Visa   ****  2020"
           />
         </div>
-        <div className="col-12 col-md-2 d-flex mt-md-2 mb-3 align-items-center">
+        <div className="col-12 col-md-2 d-flex justify-content-md-start justify-content-end mt-md-2 mb-3 align-items-center">
           <Link className="text-decoration-none text-danger">Remove</Link>
           <Link className="text-decoration-none dark-purple ps-2">Edit</Link>
         </div>

@@ -33,6 +33,8 @@ import pak from '../assets/images/header/PK.svg'
 import ps from '../assets/images/header/PS.svg'
 import sw from '../assets/images/header/sw.svg'
 import lock from '../assets/images/header/lock.svg'
+import openLock from '../assets/images/header/openLock.svg'
+
 
 const Profile = () => {
   const [isOpenAccountSetting, setIsOpenAccountSetting] = useState(false);
@@ -43,6 +45,9 @@ const Profile = () => {
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
   const [isOpenCurrency, setIsOpenCurrency] = useState(false);
   const [isOpenPassword, setIsOpenPassword] = useState(false);
+  const [isViewPassword, setIsViewPassword] = useState(false);
+  const [isViewNewPassword, setIsViewNewPassword] = useState(false);
+  const [isViewConfirmPassword, setIsViewConfirmPassword] = useState(false);
 
   useEffect(() => {
     const layoutElement = document.getElementById('layout');
@@ -343,7 +348,7 @@ const Profile = () => {
               <Form className="text-start">
                 <FormGroup>
                   <Label for="Email" className=' text-color fs-14 fw-500'>E-mail address</Label>
-                  <div className="d-flex align-items-center position-relative border px-2 rounded-4">
+                  <div className="d-flex align-items-center position-relative border rounded-3">
                     <Input
                       type="email"
                       className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
@@ -361,7 +366,7 @@ const Profile = () => {
                 </FormGroup>
                 <FormGroup>
                   <Label className=' text-color fs-14 fw-500' for="Name">Name</Label>
-                  <div className="d-flex align-items-center position-relative border px-2 rounded-4">
+                  <div className="d-flex align-items-center position-relative border rounded-3">
                     <Input
                       type="text"
                       className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
@@ -379,7 +384,7 @@ const Profile = () => {
                 </FormGroup>
                 <FormGroup>
                   <Label className=' text-color fs-14 fw-500' for="Phone">Phone No.</Label>
-                  <div className="d-flex align-items-center position-relative border px-2 rounded-4">
+                  <div className="d-flex align-items-center position-relative border rounded-3">
                     <Input
                       type="text"
                       className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
@@ -733,67 +738,77 @@ const Profile = () => {
             Change Password
           </OffcanvasHeader>
           <OffcanvasBody>
-            <div className='text-center pb-5 '>
+            <div className='text-center pb-2 '>
               <Form className="text-start">
                 <FormGroup>
                   <Label for="password" className=' text-color fs-14 fw-500'>Password</Label>
-                  <div className="d-flex align-items-center position-relative border px-2 rounded-4">
+                  <div className="d-flex align-items-center position-relative border  rounded-3">
                     <Input
-                      type="password"
+                      type={isViewPassword ? "text" : "password"}
                       className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
                       id="password"
                       placeholder="Enter Password"
                     />
                     <img
-                      src={lock}
+                      src={isViewPassword ? openLock : lock}
                       height={16}
                       width={16}
                       alt="email icon"
-                      className="position-absolute end-0 me-3"
+                      className="position-absolute end-0 me-3 cursor-pointer"
+                      onClick={() => setIsViewPassword(!isViewPassword)}
                     />
                   </div>
                 </FormGroup>
                 <FormGroup>
                   <Label className=' text-color fs-14 fw-500' for="NewPassword">New Password</Label>
-                  <div className="d-flex align-items-center position-relative border px-2 rounded-4">
+                  <div className="d-flex align-items-center position-relative border rounded-3">
                     <Input
-                      type="password"
+                      type={isViewNewPassword ? "text" : "password"}
                       className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
                       id="NewPassword"
                       placeholder="Enter New Password"
                     />
                     <img
-                      src={lock}
+                      src={isViewNewPassword ? openLock : lock}
                       height={16}
                       width={16}
                       alt="email icon"
-                      className="position-absolute end-0 me-3"
+                      className="position-absolute end-0 me-3 cursor-pointer"
+                      onClick={() => setIsViewNewPassword(!isViewNewPassword)}
                     />
                   </div>
                 </FormGroup>
                 <FormGroup>
                   <Label className=' text-color fs-14 fw-500' for="confirmPassword">Confirm Password</Label>
-                  <div className="d-flex align-items-center position-relative border px-2 rounded-4">
+                  <div className="d-flex align-items-center position-relative border rounded-3">
                     <Input
-                      type="password"
+                      type={isViewConfirmPassword ? "text" : "password"}
                       className="form-control fw-400 fs-12 border-0 ps-4 py-3 shadow-none"
                       id="confirmPassword"
                       placeholder="Enter Confirm Password"
                     />
                     <img
-                      src={lock}
+                      src={isViewConfirmPassword ? openLock : lock}
                       height={16}
                       width={16}
                       alt="email icon"
-                      className="position-absolute end-0 me-3"
+                      className="position-absolute end-0 me-3 cursor-pointer"
+                      onClick={() => setIsViewConfirmPassword(!isViewConfirmPassword)}
                     />
                   </div>
                 </FormGroup>
               </Form>
+           
 
             </div>
+            <div className='d-flex justify-content-center align-items-center gap-2 password-strength-indicator'>
+                <li className='w-25 '></li>
+                <li className='w-25 '></li>
+                <li className='w-25 '></li>
+                <li className='w-25 '></li>
+              </div>
             <div className='mt-5 pt-5 d-flex justify-content-center align-item-end'>
-              <Button  type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 px-5 rounded-4 mt-5'  > Save</Button>
+              <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 px-5 rounded-4 mt-5'  > Save</Button>
             </div>
           </OffcanvasBody>
         </Offcanvas>
