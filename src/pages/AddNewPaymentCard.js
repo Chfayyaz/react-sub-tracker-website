@@ -234,8 +234,8 @@ const AddNewPaymentCard = () => {
         <hr />
       </Form>
       <div className='text-end'>
-        <Button className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
-        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 ms-3'  >Save & Confirm</Button>
+        <Button type='button' className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
+        <Button  type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 ms-3'  >Save & Confirm</Button>
 
       </div>
 

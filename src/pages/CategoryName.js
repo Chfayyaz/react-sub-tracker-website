@@ -21,7 +21,7 @@ const CategoryName = () => {
     </div>
     
       <div className='d-flex justify-content-end gap-2'>
-        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><span className='fw-600 fs-15'>+</span> Add Subscription</Button>
+        <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2'  ><span className='fw-600 fs-15'>+</span> Add Subscription</Button>
       </div>
       <div className='mt-3 border rounded'>
         <Table responsive hover>

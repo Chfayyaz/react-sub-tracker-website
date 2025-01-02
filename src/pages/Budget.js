@@ -185,7 +185,7 @@ const Dashboard = () => {
           <p className='fs-15 ms-2 mt-3 fw-500'>Your budgets are on track</p>
         </div>
         <div>
-          <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><img src={exportIcon} alt='' className='me-2' /> Export Report</Button>
+          <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2'  ><img src={exportIcon} alt='' className='me-2' /> Export Report</Button>
         </div>
       </div>
      <div className='row mt-3'>
@@ -317,7 +317,7 @@ const Dashboard = () => {
               />
             </FormGroup>
             <FormGroup className='text-center'>
-              <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2  px-5 text-center' onClick={() => setIsAddCategory(!isAddCategory)}>Add</Button>
+              <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2  px-5 text-center' onClick={() => setIsAddCategory(!isAddCategory)}>Add</Button>
 
             </FormGroup>
 

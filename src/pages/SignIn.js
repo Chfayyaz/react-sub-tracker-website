@@ -6,14 +6,14 @@ import eye from '../assets/images/auth/eye.svg'
 import crossEye from '../assets/images/auth/cross-eye.svg'
 import apple from '../assets/images/auth/Apple.svg'
 import google from '../assets/images/auth/google.svg'
-
+import logoTitle from '../assets/images/auth/logoTitle.svg';
 import { Link } from 'react-router-dom';
 
 function SignIn() {
     const [isViewPassword, setIsViewPassword] = useState(false);
 
     return (
-        <div className='container'>
+        <div className='container-fluid'>
             <div className='row'>
                 <div className='col-12 col-lg-6 d-none d-lg-block'>
                     <div className='position-relative d-flex justify-content-center align-items-center vh-100' >
@@ -27,11 +27,11 @@ function SignIn() {
                 </div>
 
                 <div className='col-12 col-lg-6 '>
-                    <div className=' m-lg-5 border bg-white  p-5'>
-                        <div className='d-block d-lg-none  text-center'>
-                            <img src={banner01} alt='banner01' className='img-fluid' />
+                    <div className=' m-lg-5 border bg-white p-2 p-md-5 my-2'>
+                        <div className='d-block d-lg-none  text-center mt-2'>
+                            <img src={logoTitle} alt='icon' />
                         </div>
-                        <h4 className='fs-25 fw-600 mt-5 text-center'>Welcome Back</h4>
+                        <h4 className='fs-25 fw-600 mt-3 mt-lg-5 text-center'>Welcome Back</h4>
                         <p className='text-color fs-14 fw-500 text-center mt-2'>Welcome back! Please enter your details</p>
                         <Form>
                             <FormGroup className='mt-5'>
@@ -67,20 +67,20 @@ function SignIn() {
                                 </div>
                             </FormGroup>
                             <div className='d-flex justify-content-between mb-3 mt-2'>
-                                <FormGroup check inline>
+                                <FormGroup check inline className='d-flex justify-content-between  align-item-center gap-2'>
                                     <Input type="checkbox" />
-                                    <Label check className='fs-13 fw-500 mb-2'>
+                                    <Label check className='fs-13 fw-500 mt-1'>
                                         Remember for 30 days
                                     </Label>
                                 </FormGroup>
                                 <div>
-                                    <Link to="#" className='text-decoration-none fs-13 fw-500 dark-purple'> Forgot password?</Link>
+                                    <Link to="/forgot-password" className='text-decoration-none fs-13 fw-500 dark-purple'> Forgot password?</Link>
                                 </div>
                             </div>
                             <div className="d-grid gap-3">
-                                <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  > Sign In</Button>
-                                <Button className=' fw-500 fs-15 py-2 text-dark ' outline  > <img src={google} width={20} height={20} alt='icon' className='me-1' /> Sign In with Google</Button>
-                                <Button className=' fw-500 fs-15   border-0 py-2' color="dark"  ><img src={apple} width={20} height={20} alt='icon' className='me-1' /> Sign In with Apple</Button>
+                                <Button className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2' type='button' > Sign In</Button>
+                                <Button className=' fw-500 fs-15 py-2 text-dark btn-fill-light-outline'type='button' > <img src={google} width={20} height={20} alt='icon' className='me-1' /> Sign In with Google</Button>
+                                <Button className=' fw-500 fs-15   border-0 py-2' color="dark" type='button' ><img src={apple} width={20} height={20} alt='icon' className='me-1' /> Sign In with Apple</Button>
 
                             </div>
 
