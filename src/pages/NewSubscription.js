@@ -118,7 +118,7 @@ const NewSubscription = () => {
       </div>
 
       <div className='d-flex justify-content-end gap-2'>
-      {/* onClick={() => setIsUploadFileModal(!isUploadFileModal)} */}
+        {/* onClick={() => setIsUploadFileModal(!isUploadFileModal)} */}
         <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2'  ><span className='fw-600 fs-15'>+</span> Add Document</Button>
       </div>
       <Form>
@@ -129,18 +129,18 @@ const NewSubscription = () => {
                 {preview ? (
                   <div className="image-preview position-relative ">
                     <img src={preview} alt="uploaded" className="uploaded-image" width={50} height={50} />
-                    <img src={deleteIcon} alt="uploaded" className="icon-button position-absolute bottom-0 " width={20} height={20} onClick={handleRemoveImage} />
+                    <img src={deleteIcon} alt="uploaded" className="icon-button position-absolute bottom-0 cursor-pointer" width={20} height={20} onClick={handleRemoveImage} />
                   </div>
                 ) : (
                   <div className="upload-placeholder">
                     <label htmlFor="fileInput" className="icon-button">
                       <div className="upload-placeholder position-relative">
                         <img src={bannerImage} alt="uploaded" className="uploaded-image" width={100} height={100} />
-                        <img src={edit} alt="uploaded" className="uploaded-image position-absolute bottom-0 end-0" width={20} height={20} />
+                        <img src={edit} alt="uploaded" className="uploaded-image position-absolute bottom-0 end-0 cursor-pointer" width={20} height={20} />
                         <input
                           type="file"
                           id="fileInput"
-                          accept="image/*"
+                          accept=".png, .jpg, .jpeg, .svg"
                           onChange={handleImageUpload}
                           style={{ display: 'none' }}
                         />
@@ -149,7 +149,7 @@ const NewSubscription = () => {
                     <input
                       type="file"
                       id="fileInput"
-                      accept="image/*"
+                      accept=".png, .jpg, .jpeg, .svg"
                       onChange={handleImageUpload}
                       style={{ display: 'none' }}
                     />
@@ -365,51 +365,51 @@ const NewSubscription = () => {
       <Modal isOpen={isUploadFileModal} toggle={() => setIsUploadFileModal(!isUploadFileModal)} >
         <ModalHeader toggle={() => setIsUploadFileModal(!isUploadFileModal)} className='border-0'></ModalHeader>
         <ModalBody>
-        <div className="file-upload-container">
-      <form>
-        <label htmlFor="file-upload" className="file-icon-label">
-          <img src={fileIcon} alt="File Icon" className="file-icon" />
-        </label>
-        <input
-          id="file-upload"
-          type="file"
-          accept=".txt, .pdf"
-          onChange={handleFileChange}
-          className="file-input"
-          hidden
-        />
-      </form>
-
-      {fileError && <p className="file-error">{fileError}</p>}
-
-      {selectedFile && (
-        <div className="file-info">
-          <p><strong>File Name:</strong> {selectedFile.name}</p>
-          <p><strong>File Size:</strong> {(selectedFile.size / 1024).toFixed(2)} KB</p>
-
-          {/* Preview for text files */}
-          {selectedFile.type === 'text/plain' && (
-            <div className="file-preview">
-              <h5>Text File Preview:</h5>
-              <pre>{selectedFile.text}</pre>
-            </div>
-          )}
-
-          {/* Preview for PDF files */}
-          {selectedFile.type === 'application/pdf' && (
-            <div className="file-preview">
-              <h5>PDF File Preview:</h5>
-              <embed
-                src={URL.createObjectURL(selectedFile)}
-                width="100%"
-                height="500px"
-                type="application/pdf"
+          <div className="file-upload-container">
+            <form>
+              <label htmlFor="file-upload" className="file-icon-label">
+                <img src={fileIcon} alt="File Icon" className="file-icon" />
+              </label>
+              <input
+                id="file-upload"
+                type="file"
+                accept=".txt, .pdf"
+                onChange={handleFileChange}
+                className="file-input"
+                hidden
               />
-            </div>
-          )}
-        </div>
-      )}
-    </div>
+            </form>
+
+            {fileError && <p className="file-error">{fileError}</p>}
+
+            {selectedFile && (
+              <div className="file-info">
+                <p><strong>File Name:</strong> {selectedFile.name}</p>
+                <p><strong>File Size:</strong> {(selectedFile.size / 1024).toFixed(2)} KB</p>
+
+                {/* Preview for text files */}
+                {selectedFile.type === 'text/plain' && (
+                  <div className="file-preview">
+                    <h5>Text File Preview:</h5>
+                    <pre>{selectedFile.text}</pre>
+                  </div>
+                )}
+
+                {/* Preview for PDF files */}
+                {selectedFile.type === 'application/pdf' && (
+                  <div className="file-preview">
+                    <h5>PDF File Preview:</h5>
+                    <embed
+                      src={URL.createObjectURL(selectedFile)}
+                      width="100%"
+                      height="500px"
+                      type="application/pdf"
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         </ModalBody>
 
       </Modal>
