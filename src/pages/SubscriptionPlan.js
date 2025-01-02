@@ -63,7 +63,7 @@ const SubscriptionPlan = () => {
                 <p className='fs-15 fw-500 text-white'>Priority Support</p>
               </div>
               <div className='my-3'>
-              <Button className='border border-white  text-white fw-500 fs-15 py-2' outline  >  Get Started <img src={subscriptionArrowRightWhite} width={20} height={20} alt='' /></Button>
+              <Button type='button' className='border border-white  text-white fw-500 fs-15 py-2' outline  >  Get Started <img src={subscriptionArrowRightWhite} width={20} height={20} alt='' /></Button>
 
               </div>
             </div>

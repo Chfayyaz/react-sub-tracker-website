@@ -104,7 +104,7 @@ const NewSubscription = () => {
 
       <div className='d-flex justify-content-end gap-2'>
         {/* onClick={() => setIsUploadFileModal(!isUploadFileModal)}  */}
-        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  ><span className='fw-600 fs-15'>+</span> Add Document</Button>
+        <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2'  ><span className='fw-600 fs-15'>+</span> Add Document</Button>
       </div>
       <Form>
         <div className='d-flex justify-content-center my-4'>
@@ -343,8 +343,8 @@ const NewSubscription = () => {
 
 
       <div className='d-flex justify-content-end gap-2 my-5 flex-wrap'>
-        <Button className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
-        <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2 px-5'  > Save</Button>
+        <Button type='button' className='btn-outline-color fw-500 fs-15 py-2 px-5' outline  >  Cancel</Button>
+        <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 px-5'  > Save</Button>
       </div>
 
       <Modal isOpen={isUploadFileModal} toggle={() => setIsUploadFileModal(!isUploadFileModal)} >

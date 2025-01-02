@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Notification from './Notification';
 import Profile from './Profile';
 import { Link, useLocation } from "react-router-dom";
@@ -10,7 +10,7 @@ import {
   OffcanvasBody
 } from 'reactstrap'
 import classNames from "classnames";
-import Sidebar from './Sidebar'; 
+import Sidebar from './Sidebar';
 import sidebarClose from '../assets/images/sidebar/sidebarClose.svg';
 import sidebarOpen from '../assets/images/sidebar/sidebarOpen.svg';
 import DashboardActive from '../assets/images/sidebar/dashboardActive.svg';
@@ -38,11 +38,18 @@ import privacyActive from '../assets/images/sidebar/privacyActive.svg';
 const Header = ({ title, isShowIcon }) => {
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
   const location = useLocation();
+  const [headerTitle, setHeaderTitle] = useState('')
+  useEffect(() => {
+    setHeaderTitle(title)
+  }, [title]);
   const renderMenuItem = (path, iconActive, iconInactive, label) => {
     const isActive = location.pathname === path;
     return (
       <li className={classNames({ active: isActive })} >
-        <div onClick={() => setIsOpenSidebar(!isOpenSidebar)}>
+        <div onClick={() => {
+          setIsOpenSidebar(!isOpenSidebar)
+          setHeaderTitle(label)
+        }}>
           <img src={isActive ? iconActive : iconInactive} alt={label} />
           <Link to={path} className="text-decoration-none" >
             {label}
@@ -57,8 +64,8 @@ const Header = ({ title, isShowIcon }) => {
     <div className='container-fluid'>
       <div className='d-flex justify-content-between align-item-center mt-4'>
         <div className='d-flex '>
-          {isShowIcon && <div className='me-3 mt-2 cursor-pointer'> <img src={sidebarOpen} width={30} height={30} alt={'icon'} onClick={() => setIsOpenSidebar(!isOpenSidebar)}  /> </div>}
-          <p className='fs-36 fw-500'>{title ? title : "Hello John! 👋"} </p>
+          {isShowIcon && <div className='me-3 mt-2 cursor-pointer'> <img src={sidebarOpen} width={30} height={30} alt={'icon'} onClick={() => setIsOpenSidebar(!isOpenSidebar)} /> </div>}
+          <p className='fs-36 fw-500'>{headerTitle ? headerTitle : "Hello John! 👋"} </p>
         </div>
         <div className='d-flex justify-content-between align-item-center gap-2'>
           <Notification />
@@ -72,10 +79,10 @@ const Header = ({ title, isShowIcon }) => {
         direction="start"
       >
         <OffcanvasHeader className='border-bottom fs-16' toggle={() => setIsOpenSidebar(!isOpenSidebar)}>
-        <div className='Brand'>
-                <img src={Icon} alt="icon" className="logo" />
-                <h2 className="title">SubTrackr</h2>
-        </div>
+          <div className='Brand'>
+            <img src={Icon} alt="icon" className="logo" />
+            <h2 className="title">SubTrackr</h2>
+          </div>
         </OffcanvasHeader>
         <OffcanvasBody>
           <div className={classNames("contentsContainer")}>

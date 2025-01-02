@@ -9,7 +9,7 @@ function ForgotPassword() {
         <div className='container'>
             <div className='row'>
                 <div className='col-12 col-lg-6 '>
-                    <div className=' m-lg-5 border bg-white  p-5 '>
+                    <div className=' m-lg-5 border bg-white  p-2 p-md-5 my-2 '>
                         <div className='text-center mt-5'>
                             <img src={logoTitle} alt='icon' />
                         </div>
@@ -34,7 +34,7 @@ function ForgotPassword() {
                             </div>
 
                             <div className="d-grid gap-3 pb-5 mb-5">
-                                <Button className=' fw-500 fs-15  btn-fill-color border-0 py-2'  > Send Recovery Link</Button>
+                                <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2'  > Send Recovery Link</Button>
 
                             </div>
 
