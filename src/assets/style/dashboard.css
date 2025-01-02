@@ -13,4 +13,21 @@
     left: 24%; 
 
   }
+  .chart-wrapper {
+    width: 100%; 
+  }
+  
+  .chart-container {
+    width: 100%; 
+  }
+  
+  @media (max-width: 767px) {
+    .chart-wrapper {
+      overflow-x: auto; 
+    }
+  
+    .chart-container {
+      min-width: 600px; 
+    }
+  }
  

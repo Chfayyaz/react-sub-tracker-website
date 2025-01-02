@@ -18,8 +18,8 @@ const Dashboard = () => {
         label: 'Entertainment',
         data: [100, 120, 140, 180, 200, 230, 280, 300, 325, 360, 380, 420],
         borderColor: '#4c6ef5',
-        backgroundColor: 'rgba(10, 55, 233, 0.9)', 
-        fill: true,  
+        backgroundColor: 'rgba(10, 55, 233, 0.9)',
+        fill: true,
         tension: 1,
         borderWidth: 2,
         pointRadius: 0,
@@ -28,8 +28,8 @@ const Dashboard = () => {
         label: 'Transportation',
         data: [400, 425, 450, 460, 475, 495, 520, 535, 550, 575, 595, 600],
         borderColor: '#03E4E7',
-        backgroundColor: 'rgba(3, 228, 231, 0.3)', 
-        fill: true,  
+        backgroundColor: 'rgba(3, 228, 231, 0.3)',
+        fill: true,
         tension: 1,
         borderWidth: 2,
         pointRadius: 0,
@@ -38,8 +38,8 @@ const Dashboard = () => {
         label: 'Security',
         data: [600, 625, 650, 700, 725, 775, 700, 725, 750, 800, 850, 820],
         borderColor: '#da77f2',
-        backgroundColor: 'rgba(218, 119, 242, 0.3)', 
-        fill: true,  
+        backgroundColor: 'rgba(218, 119, 242, 0.3)',
+        fill: true,
         tension: 1,
         borderWidth: 2,
         pointRadius: 0,
@@ -47,83 +47,83 @@ const Dashboard = () => {
     ]
   };
 
- const options = {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: {
-      display: true,
-      position: 'top',
-      align: 'end',
-      labels: {
-        usePointStyle: true,
-        pointStyle: 'circle',
-        boxWidth: 5,
-        boxHeight: 5,
-        padding: 10,
-        color: '#475467',
-        generateLabels: (chart) => {
-          const labels = chart.data.datasets.map((dataset, index) => ({
-            text: dataset.label,
-            fillStyle: dataset.borderColor,
-            strokeStyle: 'transparent', // Ensuring no border color
-            borderWidth: 0, // Ensuring no border width
-            hidden: !chart.isDatasetVisible(index),
-            datasetIndex: index,
-          }));
-          return labels;
-        },
-      },
-    },
-    tooltip: {
-      enabled: true,
-    },
-  },
-  scales: {
-    x: {
-      grid: {
-        display: false,
-      },
-      ticks: {
-        color: '#475467',
-        autoSkip: false,
-        maxRotation: 0,
-        minRotation: 0,
-        padding: 30,
-      },
-      title: {
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
         display: true,
-        text: 'Months',
-        color: '#475467',
-        font: {
-          size: 13,
+        position: 'top',
+        align: 'end',
+        labels: {
+          usePointStyle: true,
+          pointStyle: 'circle',
+          boxWidth: 5,
+          boxHeight: 5,
+          padding: 10,
+          color: '#475467',
+          generateLabels: (chart) => {
+            const labels = chart.data.datasets.map((dataset, index) => ({
+              text: dataset.label,
+              fillStyle: dataset.borderColor,
+              strokeStyle: 'transparent', // Ensuring no border color
+              borderWidth: 0, // Ensuring no border width
+              hidden: !chart.isDatasetVisible(index),
+              datasetIndex: index,
+            }));
+            return labels;
+          },
         },
-        padding: { top: 0, left: 0, right: 0, bottom: 0 },
+      },
+      tooltip: {
+        enabled: true,
       },
     },
-    y: {
-      grid: {
-        color: '#e5e5e5',
-      },
-      ticks: {
-        stepSize: 200,
-        color: '#475467',
-        beginAtZero: true,
-        min: 0,
-        max: 10000,
-      },
-      title: {
-        display: true,
-        text: 'Amount Spent',
-        color: '#475467',
-        font: {
-          size: 13,
+    scales: {
+      x: {
+        grid: {
+          display: false,
         },
-        padding: { top: 0, left: 0, right: 0, bottom: 10 },
+        ticks: {
+          color: '#475467',
+          autoSkip: false,
+          maxRotation: 0,
+          minRotation: 0,
+          padding: 30,
+        },
+        title: {
+          display: true,
+          text: 'Months',
+          color: '#475467',
+          font: {
+            size: 13,
+          },
+          padding: { top: 0, left: 0, right: 0, bottom: 0 },
+        },
+      },
+      y: {
+        grid: {
+          color: '#e5e5e5',
+        },
+        ticks: {
+          stepSize: 200,
+          color: '#475467',
+          beginAtZero: true,
+          min: 0,
+          max: 10000,
+        },
+        title: {
+          display: true,
+          text: 'Amount Spent',
+          color: '#475467',
+          font: {
+            size: 13,
+          },
+          padding: { top: 0, left: 0, right: 0, bottom: 10 },
+        },
       },
     },
-  },
-};
+  };
 
 
   const donutChartData = {
@@ -230,16 +230,21 @@ const Dashboard = () => {
           </Card>
         </div>
         <div className='col-12  col-lg-8 mb-2 mb-lg-0'>
-          <Card className='bg-white box-shadow-custom '>
-            <CardBody >
-              <Line
-                data={data}
-                options={options}
-                height={275}
-                width="100%"
-              />
+          <Card className='bg-white box-shadow-custom'>
+            <CardBody>
+              <div className="chart-wrapper">
+                <div className="chart-container">
+                  <Line
+                    data={data}
+                    options={options}
+                    height={275}
+                    width="100%"
+                  />
+                </div>
+              </div>
             </CardBody>
           </Card>
+
         </div>
       </div>
       <h2 className='fs-24 fw-600 my-3'>Upcoming Renewals</h2>

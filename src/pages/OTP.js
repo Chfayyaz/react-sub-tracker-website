@@ -33,9 +33,10 @@ function OTP() {
         )}:${String(seconds).padStart(2, "0")}`;
     };
     return (
+        <div className='container'>
         <div className='row'>
             <div className='col-12 col-lg-6 '>
-                <div className=' m-5 border bg-white  p-5 '>
+                <div className=' m-lg-5 border bg-white  p-5 '>
                     <div className='text-center mt-5'>
                         <img src={logoTitle} alt='icon' />
                     </div>
@@ -82,7 +83,7 @@ function OTP() {
                 </div>
 
             </div>
-            <div className='col-12 col-lg-6'>
+            <div className='col-12 col-lg-6 d-none d-lg-block'>
                 <div className='position-relative d-flex justify-content-center align-items-end vh-100' >
                     <div className='text-center'>
                         <img src={otpBanner} alt='banner01' className='h-75 w-75' />
@@ -92,6 +93,7 @@ function OTP() {
             </div>
 
 
+        </div>
         </div>
     );
 }

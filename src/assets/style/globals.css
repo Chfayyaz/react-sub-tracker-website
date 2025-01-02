@@ -6,9 +6,7 @@ html {
     padding: 0px;
     margin: 0px;
  }
- 
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
  body {
    font-family: 'Poppins', sans-serif;
    background-color: #c5ccf21a !important;
@@ -31,10 +29,28 @@ html {
 .calendar-card {
    background-color: #F1F1FF;
 }
-.svg-bg img {
-  max-width: 100%;
-  height: 55px;
-}
+.svg-bg {
+   display: inline-block;
+   width: 100%; 
+   box-sizing: border-box; 
+ }
+ 
+ .svg-bg img {
+   max-width: 100%;
+   height: 55px;
+   display: block; 
+   margin: 0 auto; 
+ }
+ 
+ @media (max-width: 767px) {
+   .svg-bg {
+     padding-left: 10px; 
+     padding-right: 10px; 
+   }
+   .svg-bg img {
+     height: auto;
+   }
+ }
 
 .header-badges {
    background-color: #F1F1FF;
@@ -108,14 +124,6 @@ html {
    --bs-progress-bar-bg: #DC23FF !important;
    --bs-progress-height:0.3rem !important;
    --bs-progress-bg:#4E4E61 !important
-}
-.chart-scrollbar {
-   scrollbar-width: none; 
-   -ms-overflow-style: none;
-}
-
-.chart-scrollbar-::-webkit-scrollbar {
-   width: 0px; 
 }
 .cursor-pointer {
    cursor: pointer;

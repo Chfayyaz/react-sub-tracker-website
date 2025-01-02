@@ -170,8 +170,9 @@ const SubscriptionPlanPayment = () => {
               <img src={checkboxEmpty} width={20} height={20} alt='' onClick={() => setCheckedCard('master')} />
             }
           </div>
-          <div className="svg-bg  rounded text-center border px-3 bg-white">
-            <img src={masterCard} alt='' className='text-center' />
+          
+          <div className="svg-bg  rounded text-center border  bg-white">
+            <img src={masterCard} alt='' className='text-start text-md-center ' />
           </div>
         </div>
         <div className="col-12 col-md-8 mb-3">
@@ -191,8 +192,8 @@ const SubscriptionPlanPayment = () => {
               <img src={checkboxEmpty} width={20} height={20} alt='' onClick={() => setCheckedCard('visa')} />
             }
           </div>
-          <div className="svg-bg   text-center border rounded px-3 bg-white ">
-            <img src={visaCard} alt='' className='text-center' />
+          <div className="svg-bg   text-center border rounded bg-white ">
+            <img src={visaCard} alt='' className='text-start text-md-center ' />
           </div>
         </div>
         <div className="col-12 col-md-8  mb-3">
