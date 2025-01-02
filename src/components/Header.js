@@ -35,6 +35,8 @@ import services from '../assets/images/sidebar/services.svg';
 import servicesActive from '../assets/images/sidebar/servicesActive.svg';
 import privacy from '../assets/images/sidebar/privacy.svg';
 import privacyActive from '../assets/images/sidebar/privacyActive.svg';
+import logout from '../assets/images/sidebar/logout.svg';
+
 const Header = ({ title, isShowIcon }) => {
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
   const location = useLocation();
@@ -51,7 +53,7 @@ const Header = ({ title, isShowIcon }) => {
           setHeaderTitle(label)
         }}>
           <img src={isActive ? iconActive : iconInactive} alt={label} />
-          <Link to={path} className="text-decoration-none" >
+          <Link to={path} className={`text-decoration-none ${label === "Logout" && "text-color-red"}`} >
             {label}
           </Link>
         </div>
@@ -97,6 +99,7 @@ const Header = ({ title, isShowIcon }) => {
               {renderMenuItem("/contactUs", headPhoneActive, headPhone, "Contact & Support")}
               {renderMenuItem("/term-of-services", servicesActive, services, "Terms of Service")}
               {renderMenuItem("/privacy-policy", privacyActive, privacy, "Privacy Policy")}
+              {renderMenuItem("/", logout, logout, "Logout")}
             </ul>
           </div>
         </OffcanvasBody>

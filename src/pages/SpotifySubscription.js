@@ -21,7 +21,8 @@ import checkbox from '../assets/images/checkbox.svg'
 import fileIcon from '../assets/images/fileIcon.svg'
 import subscriptionIcon from '../assets/images/renewal01.svg'
 import documentDelete from '../assets/images/documentDelete.svg'
-
+import editPencil from '../assets/images/editPencil.svg'
+import deleteIcon from '../assets/images/deleteIcon.svg'
 
 
 const SpotifySubscription = () => {
@@ -64,12 +65,12 @@ const SpotifySubscription = () => {
 
   const handleStartDate = (selectedDate) => {
     setStartDate(selectedDate);
-    setShowStartDateCalendar(false); // Close the calendar after selection
+    setShowStartDateCalendar(false); 
   };
 
   const handleRenewalDate = (selectedDate) => {
     setRenewalDate(selectedDate);
-    setShowRenewalDateCalendar(false); // Close the calendar after selection
+    setShowRenewalDateCalendar(false); 
   };
   return (
     <div className='container'>
@@ -83,14 +84,16 @@ const SpotifySubscription = () => {
 
       <div className='d-flex justify-content-end gap-2'>
         {/* onClick={() => setIsUploadFileModal(!isUploadFileModal)}  */}
-        <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2'  ><span className='fw-600 fs-15'>+</span> Add Document</Button>
+        <img src={deleteIcon} alt="delete" className="cursor-pointer" />
+        <Button type='button' className='btn-outline-color fw-500 fs-15 px-4 py-1' outline  >  <img src={editPencil} alt="icon" width={15} height={15} className="me-1"/> Edit</Button>
+        <Button type='button' className=' fw-500 fs-15  btn-fill-color border-1 border-white py-2 px-4'  ><span className='fw-600 fs-15'>+</span> Add Document</Button>
       </div>
       <Form>
         <div className='d-flex justify-content-center my-4'>
           <div className='text-center border rounded px-5 py-4 bg-light'>
             <img src={subscriptionIcon} alt='icon' width={70} height={70} />
             <h2 className='fs-20 fw-600 mt-2'>SignNTrack</h2>
-            <p className='text-muted fs-14 fw-500'> $5.99/month</p>
+            <p className='text-color-light fs-14 fw-500'> $5.99/month</p>
           </div>
         </div>
 
@@ -270,7 +273,7 @@ const SpotifySubscription = () => {
       <h2 className='fs-20 fw-600 mt-1'>Documents</h2>
       <div className='row mt-4 '>
         <div className='col-12  col-md-6'>
-          <div className='row border rounded p-2 mb-4 mx-1'>
+          <div className='row border rounded p-2 mb-4 mx-1 bg-white'>
             <div className='col-3 col-md-3 col-lg-2 text-start text-sm-center text-md-center text-lg-center mt-md-0 mt-3'>
               <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
             </div>
@@ -286,7 +289,7 @@ const SpotifySubscription = () => {
           </div>
         </div>
         <div className='col-12  col-md-6'>
-          <div className='row border rounded p-2 mb-4 mx-1'>
+          <div className='row border rounded p-2 mb-4 mx-1 bg-white'>
             <div className='col-3 col-md-3 col-lg-2 text-start text-sm-center text-md-center text-lg-center mt-md-0 mt-3'>
               <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
             </div>
@@ -304,7 +307,7 @@ const SpotifySubscription = () => {
       </div>
       <div className='row mt-4 '>
         <div className='col-12  col-md-6'>
-          <div className='row border rounded p-2 mb-4 mx-1'>
+          <div className='row border rounded p-2 mb-4 mx-1 bg-white' >
             <div className='col-3 col-md-3 col-lg-2 text-start text-sm-center text-md-center text-lg-center mt-md-0 mt-3'>
               <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
             </div>
@@ -320,7 +323,7 @@ const SpotifySubscription = () => {
           </div>
         </div>
         <div className='col-12  col-md-6'>
-          <div className='row border rounded p-2 mb-4 mx-1'>
+          <div className='row border rounded p-2 mb-4 mx-1 bg-white'>
             <div className='col-3 col-md-3 col-lg-2 text-start text-sm-center text-md-center text-lg-center mt-md-0 mt-3'>
               <img src={fileIcon} alt='icon' className='mt-1' width={22} height={22} />
             </div>
